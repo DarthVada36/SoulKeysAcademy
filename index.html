@@ -3,9 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./src/CCS/style.css">
+    <title>Soul Keys Academy</title>
 </head>
 <body>
-    
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="" alt="logo-SKA">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#about">Sobre nosotros</a></li>
+                    <li><a href="#teachers">Profesores</a></li>
+                    <li><a href="#instruments">Instrumentos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <img src="./src/assets/img/bg-hero.png" alt="background banner">
+                <p>
+                    Somos la única
+                </p>
+                <h1>
+                    ESCUELA DE MÚSICA
+                </h1>
+                <p>
+                    con alma y corazón
+                </p>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <article class="intro">
+                <div class="container">
+                    <h2><span>SOUL KEYS</span> <br>ACADEMY</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Mi pharetra id bibendum turpis sit ac posuere. Enim ut egestas vel at accumsan arcu.
+                    </p>
+                    <p>
+                        “Lorem Ipsum dolor sit amet”
+                    </p>
+                    <p>
+                        Ut dignissim vestibulum gravida nibh cras et vel sapien. Laoreet lacinia leo ut sit mi tincidunt ac vitae. Vitae eget adipiscing enim gravida dapibus proin faucibus elit quis. 
+                    </p>
+                </div>
+            </article>
+            <article class="commitment">
+                <div class="container">
+                    <h3><span>Entregamos el alma</span> <br>en cada clase</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Mi pharetra id bibendum turpis sit ac posuere. Enim ut egestas vel at accumsan arcu. 
+                    </p>
+                    <div class="testimonial">
+                        <img src="./src/assets/img/nota-musical.png" alt="nota musical">
+                        <blockquote>
+                            La mejor academia de música de toda la historia, si músicos cómo Freddie Mercury o Beethoven pudieran verlo, seguro hubieran estudiado aquí.
+                        </blockquote>
+                        <p>
+                            [ RS en Español CEO — Jason Allen ]
+                        </p>
+                        <img src="./src/assets/img/Rolling_Stone_Logo.png" alt="logo RollingStone">
+                        <img src="./src/assets/img/stars-5.png" alt="">
+                    </div>
+                </div>
+            </article>
+            <article class="achivements">
+                <div class="container">
+                    <h4>Nuestro éxito es <span>el brillo</span> de <br>nuestros alumnos</h4>
+                    <p>
+                        Cursus cursus id turpis ac purus consequat. Vestibulum phasellus dui dis vel massa. Dui lacus nunc massa non tellus. Fermentum eros felis sit lorem vitae ullamcorper. At lorem odio tempus nunc nulla adipiscing enim. A orci bibendum quam blandit. Gravida imperdiet tellus ac arcu.
+                    </p>
+                    <p>
+                        Excelencia Académica
+                    </p>
+                    <div class="gallery">
+                        <img src="./src/assets/img/freddie-mercury-71848_1280-3.png" alt="persona tocando un piano">
+                        <img src="./src/assets/img/freddie-mercury-71848_1280-1.png" alt="Freddy Mercury cantando">
+                        <img src="./src/assets/img/freddie-mercury-71848_1280-2.png" alt="integrante de banda de Freddy Mercury">
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="teachers" id="teachers">
+            <div class="container">
+                <div class="card">
+                    <div class="avatar">
+                        <img src="./src/assets/img/bg-guitar.png" alt="background guitarra">
+                        <img src="./src/assets/img/avatar-JUAN.png" alt="avatar Juan Vásquez">
+                    </div>
+                    <div class="description">
+                        <h4>Juan Vásquez</h4>
+                        <p>Product Owner</p>
+                        <p>Profesor de Batería</p>
+                        <p>
+                            ¡Conozcan a Juan, el Project Manager de desarrollo web que no solo organiza sprints como un ninja digital, sino que también es el mejor profesor de guitarra del mundo! 
+                        </p>
+                        <div class="rrss rrss__teacher">
+                            <img src="./src/assets/img/facebook-logo.png" alt="logo-facebook">
+                            <img src="./src/assets/img/github-logo.png" alt="logo-GitHub">
+                            <img src="./src/assets/img/linkedin-logo.png" alt="logo-LinkedIn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="instruments" id="instruments">
+            <div class="container">
+                <div class="card">
+                    <div class="instrument">
+                        <img src="" alt="icono de piano">
+                    </div>
+                    <div class="description">
+                        <h4>Piano</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="container">
+                <div>
+                    <h2>Contacta con nosotros</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                </div>
+                <div class="contactForm">
+                    <form action="" method="post">
+                        <label for="name"> Nombre
+                        </label>
+                        <input id="name" type="text" required>
+                        <label for="email"> Correo electrónico
+                        </label>
+                        <input id="email" type="email" required>
+                        <label for="message"> Mensaje
+                        </label>
+                        <textarea name="message" id="message" rows="6" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Soul Keys Academy. Todos los derechos reservados.</p>
+            <div class="rrss">
+                <img src="./src/assets/img/facebook-logo.png" alt="logo-facebook">
+                <img src="" alt="logo-Instagram">
+                <img src="" alt="logo-LinkedIn">
+            </div>
+        </div>
+    </footer>
+    <script src="./src/scripts/main.js"></script>
 </body>
 </html>
