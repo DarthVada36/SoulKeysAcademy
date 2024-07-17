@@ -22,6 +22,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -29,6 +30,8 @@ body {
     background-color: var(--main-bg-color);
     color: var(--text-primary-color);
     font-size: var(--text-size-xs);
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 /* Header // NavBar */
@@ -63,7 +66,7 @@ nav {
     color: var(--text-primary-color);
 }
 
-/* Container */
+/* Container general*/
 .container {
     width: 100%;
     height: 100%;
@@ -120,11 +123,27 @@ h1 {
     left: 0;
 }
 
-/* Contact */
-.contact form {
-    width: 500px;
-    display: flex;
-    flex-direction: column;
+/* about (intro) */
+.scrollingContainer {
+    height: 8rem;
+    position: relative;
+    margin: 30px;
+    white-space: nowrap;
+}
+
+.scrollingText {
+    font-family: var(--text-title);
+    font-size: var(--text-size-xl);
+    /* letter-spacing: 1.1rem; */
+    /* word-spacing: 2rem; */
+    left: 0;
+    white-space: nowrap;
+    position: absolute;
+    /* transition: transform 1s linear; */
+}
+
+.scrollingText span {
+    color: var(--text-secondary-color);
 }
 
 /* Footer */
