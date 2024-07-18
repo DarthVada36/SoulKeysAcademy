@@ -3,31 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header class="header">
-        <div class="header__logo">Soul Keys Academy</div>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item">
-                    <a href="#inicio" class="header__nav-link">Inicio</a>
-                </li>
-                <li class="header__nav-item">
-                    <a href="#acerca-de" class="header__nav-link">Acerca de</a>
-                </li>
-                <li class="header__nav-item">
-                    <a href="#instrumentos" class="header__nav-link">Instrumentos</a>
-                </li>
-                <li class="header__nav-item">
-                    <a href="#partituras" class="header__nav-link">Partituras</a>
-                </li>
-                <li class="header__nav-item">
-                    <a href="#contacto" class="header__nav-link">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Soul Keys Academy</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="#"><img src="" alt="logo-SKA"></a>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#about">Sobre nosotros</a></li>
+                    <li><a href="#instruments">Instrumentos</a></li>
+                    <li><a href="#">Partituras</a></li>
+                    <li><a href="./pages/contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
 
     <main class="main-content">
         <section class="construction-page">
@@ -46,32 +38,16 @@
         </section>
     </main>
     
-    <footer class="footer">
-        <div class="footer__social-media">
-            <ul class="footer__social-media-list">
-                <li class="footer__social-media-item">
-                    <a href="https://www.instagram.com/tuusuario" class="footer__social-media-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
-                </li>
-                <li class="footer__social-media-item">
-                    <a href="https://www.linkedin.com/in/tuusuario" class="footer__social-media-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                </li>
-                <li class="footer__social-media-item">
-                    <a href="https://github.com/tuusuario" class="footer__social-media-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer__contact">
-            <p class="footer__contact-info">
-                Contacto: <a href="mailto:contacto@tudominio.com" class="footer__contact-link">contacto@tudominio.com</a>
-            </p>
+    <footer>
+        <div class="container container__footer">
+            <p>&copy; 2024 Soul Keys Academy. Todos los derechos reservados.</p>
+            <div class="rrss">
+                <img src="./public/assets/images/facebook-logo.png" alt="logo-facebook">
+                <img src="" alt="logo-Instagram">
+                <img src="./public/assets/images/linkedin-logo.png" alt="logo-LinkedIn">
+            </div>
         </div>
     </footer>
-    <script src="./script.js"></script>   
+    <script src="./src/scripts/main.js"></script>   
 </body>
 </html>
