@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+/* Variables */
+:root {
+    --main-bg-color: #28282D;
+    --text-primary-color: #EDF1FF;
+    --text-secondary-color: #6667AB;
+    --button-cta-color: #62617E;
+    --button-secondary-color: #BABEBF;
+    --text-title: 'DM Serif Display', sans-serif;
+    --text-paragraph: 'EB Garamond', sans-serif;
+    --text-size-xl: 128px;
+    --text-size-l: 64px;
+    --text-size-m: 36px;
+    --text-size-s: 24px;
+    --text-size-xs: 16px;
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--text-paragraph);
+    background-color: var(--main-bg-color);
+    color: var(--text-primary-color);
+    font-size: var(--text-size-xs);
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Header // NavBar */
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+}
+
+.logo {
+    width: 100px;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: var(--text-size-s);
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--text-primary-color);
+}
+
+/* Container general*/
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 5% 10%;
+}
+
+/* Hero // Banner */
+.hero {
+    width: 100%;
+    height: 100%;
+}
+
+.container__hero {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+}
+
+.container__hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-family: var(--text-title);
+    color: var(--text-secondary-color);
+    font-size: var(--text-size-xl);
+}
+
+.heroText {
+    margin: 0 10%;
+}
+
+.heroText p {
+    font-family: var(--text-title);
+    font-size: var(--text-size-m);
+    color: var(--text-primary-color);
+}
+
+.luminousEffect {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* about (intro) */
+.scrollingContainer {
+    height: 8rem;
+    position: relative;
+    margin: 30px;
+    white-space: nowrap;
+}
+
+.scrollingText {
+    font-family: var(--text-title);
+    font-size: var(--text-size-xl);
+    /* letter-spacing: 1.1rem; */
+    /* word-spacing: 2rem; */
+    left: 0;
+    white-space: nowrap;
+    position: absolute;
+    /* transition: transform 1s linear; */
+}
+
+.scrollingText span {
+    color: var(--text-secondary-color);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+}
+
+.container__footer {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
