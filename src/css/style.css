@@ -157,3 +157,98 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+
+
+/* ..........FEATURE-CONTACT PAGE.......... */
+.container-contact{
+    max-width: 350px;
+	/* height: 630px; */
+	background-color: #fff;
+	border-radius: 16px;
+    display: flex;
+    grid-template-columns: 1;
+    margin-top: 1px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 32px;
+}
+.container-contact h3{
+    margin: .4rem;
+    color: var(--text-secondary-color);
+}
+
+.fieldset-container {
+    display: flex;
+    border: none;
+    margin-bottom: 20px;
+}
+
+legend {
+	position: relative;
+	bottom: 3px;
+	font-size: 0.9em;
+	color: #8b8a8a;
+	font-weight: 500;
+}
+
+
+/*  form */
+
+form {
+	width: 100%;
+}
+.form-group {
+	max-height: 65px;
+	margin: 10px 0;
+    padding: 2%;
+}
+label {
+	position: relative;
+	bottom: 3px;
+	font-size: 0.9em;
+	color: #8b8a8a;
+	font-weight: 500;
+}
+
+input {
+    display: flex;
+    width: 100%;
+	border: 1px solid #f3f3f3;
+	padding: 10px 5px;
+	height: 34px;
+	outline: none;
+	border-radius: 6px;
+	box-sizing: border-box;
+	font-family: inherit;
+	transition: all 0.3s;
+}
+
+
+button {
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	padding: 15px 0;
+	border-radius: 6px;
+	font-family: inherit;
+	background-color: #000;
+	color: var(--text-secondary-color);
+	transition: all 0.3s ease;
+}
+
+button:hover {
+	background-color: var(--button-secondary-color);
+}
+button:focus {
+	outline: none;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+h1 {
+	font-size: 1.6em;
+}

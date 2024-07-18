@@ -4,40 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/src/css/style.css">
 </head>
 <body>
-<section class="contact-container">
-    <div contact container>
-        <h1>Contáctanos</h1>
-        <div><form id="contactForm" onsubmit="validateForm()">
-            <h3>Tu nuevo camino comienza hoy</h3>
-            
-            <label for="name">Nombre y Apellido</label>
-            <input type="text" id="name" name="name">
-
-            <label for="email">Dirección de Correo</label>
-            <input type="email" name="email" id="email">
-
-            <label for="message"></label>
-            <textarea name="message" id="message"></textarea>
-
-            <fieldset>
-                <legend>
-                    <label for=""></label>
-                    <label for=""></label>
-                    <label for=""></label>
-                    <label for=""></label>
-                    <label for=""></label>
-                </legend>
-            </fieldset>
-
-            <button src="">Enviar</button>
-
-
-        </form></div>
+<section class="contact">
+    <div class="container">
+        <h1>Contactanos</h1>
     </div>
+
+    <div class="container-contact">
+		<!-- form -->
+		<form id="form">
+            <h3 id="h3">Tu nuevo camino comienza hoy</h3>
+			<!-- full name -->
+            <div class="form-group">
+                <label for="name">Nombre completo</label>
+                <input type="text" id="name" placeholder="Nombre Apellido" name="name" />
+            </div>
+            <!-- phone -->
+            <div class="form-group">
+                <label for="phone">Teléfono (10 dígitos)</label>
+                <input type="tel" id="phone" placeholder="5555555555" name="phone" />
+            </div>
+            <!-- email -->
+            <div class="form-group">
+                <label for="email">Correo</label>
+                <input type="email" id="email" placeholder="email@address.com" name="email" />
+            </div>
+            <!-- message -->
+            <div class="form-group message-box">
+                <label for="message-m">Mensaje</label>
+                <input type="text" id="message-m" placeholder="Mensaje" name="message-m"/>
+            </div>
+            <!-- instrumento -->
+            <div class="form-group">
+                <fieldset class="fieldset-container">
+                    <label for="text">¿Qué instrumento quieres tocar?</label>
+                    <div>
+                        <input type="checkbox" id="piano" name="instrument" value="Piano">
+                        <label for="piano">Piano</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="guitarra" name="instrument" value="Guitarra">
+                        <label for="guitarra">Guitarra</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="bateria" name="instrument" value="Batería">
+                        <label for="bateria">Batería</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="tuba" name="instrument" value="Tuba">
+                        <label for="tuba">Tuba</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="otro" name="instrument" value="Otro">
+                        <label for="otro">Otro</label>
+                    </div>              
+                </fieldset>
+            </div>
+            <!-- m -->
+            <div class="form-group">
+                <button type="submit">Enviar</button>
+            </div>
+            <!-- error ? success message -->
+
+		</form>
+        <p id="error-message" class="error-message"></p>
+	</div>
 </section>
-    <script src=""></script>
+
+    <script src="/src/scripts/main.js"></script>
 </body>
 </html>

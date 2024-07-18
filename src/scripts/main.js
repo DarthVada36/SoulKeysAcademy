@@ -57,3 +57,90 @@ document.addEventListener('DOMContentLoaded', function() {
     setInitialPosition();
     animate();
 });
+
+
+// FEATURE-CONTACT PAGE JS
+
+document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevenir el envío del formulario
+
+    const nameInput = document.getElementById('name');
+    const phoneInput = document.getElementById('phone');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message-m');
+    const errorMessage = document.getElementById('error-message');
+    const choseInstrument = document.getElementById
+
+    const nameValue = nameInput.value.trim();
+    const phoneValue = phoneInput.value.trim();
+    const emailValue = emailInput.value.trim();
+    const messageValue = messageInput.value.trim();
+
+    let valid = true;
+
+    // Limpiar mensaje de error
+    errorMessage.textContent = '';
+
+    // Validación del nombre
+    if (nameValue === "" || nameValue.length < 3 || nameValue.length > 100) {
+        nameInput.classList.add('error');
+        valid = false;
+    } else {
+        nameInput.classList.remove('error');
+    }
+
+    // Validación del teléfono
+    const phonePattern = /^[0-9]{10}$/;
+    if (!phonePattern.test(phoneValue)) {
+        phoneInput.classList.add('error');
+        valid = false;
+    } else {
+        phoneInput.classList.remove('error');
+    }
+
+    // Validación del correo
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailValue === "" || !emailPattern.test(emailValue)) {
+        emailInput.classList.add('error');
+        valid = false;
+    } else {
+        emailInput.classList.remove('error');
+    }
+
+    // Validación del mensaje
+    if (messageValue === "" || messageValue.length < 5 || messageValue.length > 400) {
+        messageInput.classList.add('error');
+        valid = false;
+    } else {
+        messageInput.classList.remove('error');
+    }
+
+    // Validación de instrumentos
+    let instrumentSelected = false;
+    instrumentInputs.forEach(function(input) {
+        if (input.checked) {
+            instrumentSelected = true;
+        }
+    });
+
+    if (!instrumentSelected) {
+        instrumentInputs.forEach(function(input) {
+            input.classList.add('error');
+        });
+        valid = false;
+    } else {
+        instrumentInputs.forEach(function(input) {
+            input.classList.remove('error');
+        });
+    }
+
+    if (valid) {
+        alert('Formulario enviado correctamente');
+        // Aquí puedes añadir la lógica para enviar el formulario
+        // form.submit(); // Descomenta esta línea si deseas enviar el formulario
+    } else {
+        errorMessage.textContent = 'Por favor, corrige los errores en el formulario.';
+    }
+
+    
+});
