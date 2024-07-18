@@ -36,22 +36,22 @@ window.onload = function () {
   function mostrarPartitura(partitura) {
     let imagen = document.getElementById("partitura");
     if (partitura.target.value === "2") {
-      imagen.setAttribute("src", "./assets/sounds/partituras/cumpleaños feliz.PNG")
+      imagen.setAttribute("src", "../public/assets/images/partituras/cumpleaños feliz.PNG")
     }
     if (partitura.target.value === "3") {
-      imagen.setAttribute("src", "./assets/sounds/partituras/parti1.PNG")
+      imagen.setAttribute("src", "../public/assets/images/partituras/parti1.PNG")
     }
     if (partitura.target.value === "4") {
-      imagen.setAttribute("src", "./assets/sounds/partituras/parti2.PNG")
+      imagen.setAttribute("src", "../public/assets/images/partituras/parti2.PNG")
     }
     if (partitura.target.value === "5") {
-      imagen.setAttribute("src", "./assets/sounds/partituras/parti3.PNG")
+      imagen.setAttribute("src", "../public/assets/images/partituras/parti3.PNG")
     }
     if (partitura.target.value === "6") {
-      imagen.setAttribute("src", "./assets/sounds/partituras/parti4.PNG")
+      imagen.setAttribute("src", "../public/assets/images/partituras/parti4.PNG")
     }
     if (partitura.target.value === "1") {
-      imagen.setAttribute("src", "./assets/sounds/partituras/noche de paz.PNG")
+      imagen.setAttribute("src", "../public/assets/images/partituras/parti5.PNG")
     }
   }
 
@@ -75,10 +75,9 @@ function StopNotas(){
   }
 
 
-
 // Arrays de teclas y notas
 const teclas = ['d', 'f', 'g', 'h','j','k','l','z','x','c','v','b','n','m'];
-const notas = ['./assets/sounds/piano/do1.mp3', './assets/sounds/piano/re1.mp3', './assets/sounds/piano/mi1.mp3', './assets/sounds/piano/fa1.mp3','./assets/sounds/piano/sol1.mp3','./assets/sounds/piano/la1.mp3','./assets/sounds/piano/si1.mp3','./assets/sounds/piano/do1.mp3', './assets/sounds/piano/re1.mp3', './assets/sounds/piano/mi1.mp3', './assets/sounds/piano/fa1.mp3','./assets/sounds/piano/sol1.mp3','./assets/sounds/piano/la1.mp3','./assets/sounds/piano/si1.mp3'];
+const notas = ['../public/assets/sounds/piano/do1.mp3', '../public/assets/sounds/piano/re1.mp3', '../public/assets/sounds/piano/mi1.mp3', '../public/assets/sounds/piano/fa1.mp3','../public/assets/sounds/piano/sol1.mp3','../public/assets/sounds/piano/la1.mp3','../public/assets/sounds/piano/si1.mp3','../public/assets/sounds/piano/do1.mp3', '../public/assets/sounds/piano/re1.mp3', '../public/assets/sounds/piano/mi1.mp3', '../public/assets/sounds/piano/fa1.mp3','../public/assets/sounds/piano/sol1.mp3','../public/assets/sounds/piano/la1.mp3','../public/assets/sounds/piano/si1.mp3'];
 const notasBateria = ['./assets/sounds/batewria/bat1.mp3','bat2','bat3','bat4','bat5','bat6','bat7'];
 const notasFlauta = ['fla1','fla2','fla3','fla4','fla5','fla6','fla7'];
 

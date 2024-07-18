@@ -18,6 +18,7 @@ body {
     align-items: center;
 }
 
+
 #partitura {
     width: 350px;
     height: 350px;
@@ -56,6 +57,7 @@ body {
 .piano__key--la:hover,
 .piano__key--si:hover {
     background-color: rgb(203, 203, 203);
+    /* PROBANDO A PONER DEDO AL TOCAR TECLA*/
     cursor: url('./img/fondo.jpg'), auto;
 }
 
@@ -69,7 +71,7 @@ body {
     height: 100px;
     background-color: black;
     margin-bottom: 40px;
-    margin-left: 30px;
+    margin-left: 35px;
     position: relative;
 }
 
@@ -98,9 +100,7 @@ body {
 
 
 
-
-/*PROBANDO MODAL*/
-
+/*PROBANDO MODAL INICIAL Y MODAL PARA OFRECER PLANES*/
 
 .modal {
     display: none;
@@ -189,3 +189,14 @@ body {
     padding: 8px;
 }
 
+
+.hide{
+    display: none;
+}
+
+
+@media (max-width:780px){
+    #tecla-z,#tecla-x,#tecla-c,#tecla-v,#tecla-b,#tecla-n,#tecla-m{
+        display: none;
+    }
+}
