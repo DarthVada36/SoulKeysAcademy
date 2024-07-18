@@ -1,11 +1,183 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+
+    <!-- MODAL TIPS -->
+    <div id="myModal" class="modal">
+        <div class="modal__content">
+            <span class="modal__close">&times;</span>
+            <p class="modal__text">Tips de nuestro amigo Bach</p>
+            <img class="modal__image" id="tipBach" src="./assets/img/bachTexto.png" alt="Imagen de ejemplo">
+        </div>
+    </div>
+
+    <!-- MODAL HAS ALCANZADO EL LÍMITE DE NOTAS -->
+    <div id="keypressModal" class="modal">
+        <div class="modal__content2">
+            <span class="modal__close">&times;</span>
+            <p class="keypressModal__message">¡WOW! Parece que estas partituras son sencillas para ti, estás preparada
+                para subir el nivel y escoger uno de nuestros planes para seguir con partituras más complejas</p>
+            <div class="keypressModal__linkSpace"><a class="keypressModal__link" href="./planes.html">IR A PLANES DE
+                    APRENDIZAJE</a></div>
+        </div>
+    </div>
+
+    <!-- CABECERA CON SELECTOR DE PARTITURAS -->
+    <header class="header">
+        <form class="header__form" action="" method="post">
+            <label class="header__label" for="miSelect">Selecciona una canción:</label>
+            <select class="header__select" id="miSelect" name="opcionSeleccionada" onchange="mostrarPartitura(event)">
+                <option class="header__option" value="1">Noche de paz</option>
+                <option class="header__option" value='2'>Cumpleaños feliz</option>
+                <option class="header__option" value="3">All you need is love</option>
+                <option class="header__option" value='4'>Yesterday</option>
+                <option class="header__option" value="5">Hello</option>
+                <option class="header__option" value='6'>Bohemian Rapshody</option>
+            </select>
+            <br>
+            <img id="partitura" class="header__option__image" src="./assets/sounds/partituras/noche de paz.PNG"
+                alt="Noche de paz">
+        </form>
+    </header>
+<!-- SELECTOR DE SONIDOS -->
+<label for="instrumento">Selecciona un instrumento:</label>
+<select id="instrumento">
+    <option value="piano">Piano</option>
+    <option value="bateria">Batería</option>
+    <option value="flauta">Flauta</option>
+</select>
+
+    <main id="piano">
+        
+        <!-- 7 TECLAS DEL PIANO-->
+        <article class="piano__key--do" onclick="reproducirNota('sonido')" id="tecla-d">
+            <button class="piano__button">Do</button>
+            <h1 class="piano__letter">D</h1>
+            <audio id="sonido" src="./assets/sounds/piano/do1.mp3"></audio>
+            <div class="piano__black">
+            </div>
+        </article>
+        <article class="piano__key--re" onclick="reproducirNota('sonido2')" id="tecla-f">
+            <button class="piano__button">Re</button>
+            <h1 class="piano__letter">F</h1>
+            <audio id="sonido2" src="./assets/sounds/piano/re1.mp3"></audio>
+            <div class="piano__black">
+
+            </div>
+        </article>
+        <article class="piano__key--mi" onclick="reproducirNota('sonido3')" id="tecla-g">
+            <button class="piano__button">Mi</button>
+            <h1 class="piano__letter">G</h1>
+            <audio id="sonido3" src="./assets/sounds/piano/mi1.mp3"></audio>
+            <div class="piano__black__transparent">
+
+            </div>
+        </article>
+        <article class="piano__key--fa" onclick="reproducirNota('sonido4')" id="tecla-h">
+            <button class="piano__button">Fa</button>
+            <h1 class="piano__letter">H</h1>
+            <audio id="sonido4" src="./assets/sounds/piano/fa1.mp3"></audio>
+            <div class="piano__black">
+
+            </div>
+        </article>
+        <article class="piano__key--sol" onclick="reproducirNota('sonido5')" id="tecla-j">
+            <button class="piano__button">Sol</button>
+            <h1 class="piano__letter">J</h1>
+            <audio id="sonido5" src="./assets/sounds/piano/sol1.mp3"></audio>
+            <div class="piano__black">
+
+            </div>
+        </article>
+        <article class="piano__key--la" onclick="reproducirNota('sonido6')" id="tecla-k">
+            <button class="piano__button">La</button>
+            <h1 class="piano__letter">k</h1>
+            <audio id="sonido6" src="./assets/sounds/piano/la1.mp3"></audio>
+            <div class="piano__black">
+
+            </div>
+        </article>
+        <article class="piano__key--si" onclick="reproducirNota('sonido7')" id="tecla-l">
+            <button class="piano__button">Si</button>
+            <h1 class="piano__letter">l</h1>
+            <audio id="sonido7" src="./assets/sounds/piano/si1.mp3"></audio>
+            <div class="piano__black__transparent">
+
+            </div>
+        </article>
+
+
+        <!-- OTRAS 7 TECLAS -->
+
+        <article class="piano__key--do" onclick="reproducirNota('sonido')" id="tecla-z">
+            <button class="piano__button">Do</button>
+            <h1 class="piano__letter">z</h1>
+            <audio id="sonido" src="./assets/sounds/piano/do1.mp3"></audio>
+            <div class="piano__black">
+            </div>
+        </article>
+        <article class="piano__key--re" onclick="reproducirNota('sonido2')" id="tecla-x">
+            <button class="piano__button">Re</button>
+            <h1 class="piano__letter">x</h1>
+            <audio id="sonido2" src="./assets/sounds/piano/re1.mp3"></audio>
+            <div class="piano__black">
+
+            </div>
+        </article>
+        <article class="piano__key--mi" onclick="reproducirNota('sonido3')" id="tecla-c">
+            <button class="piano__button">Mi</button>
+            <h1 class="piano__letter">c</h1>
+            <audio id="sonido3" src="./assets/sounds/piano/mi1.mp3"></audio>
+            <div class="piano__black__transparent">
+
+            </div>
+        </article>
+        <article class="piano__key--fa" onclick="reproducirNota('sonido4')" id="tecla-v">
+            <button class="piano__button">Fa</button>
+            <h1 class="piano__letter">v</h1>
+            <audio id="sonido4" src="./assets/sounds/piano/fa1.mp3"></audio>
+            <div class="piano__black">
+
+            </div>
+        </article>
+        <article class="piano__key--sol" onclick="reproducirNota('sonido5')" id="tecla-b">
+            <button class="piano__button">Sol</button>
+            <h1 class="piano__letter">b</h1>
+            <audio id="sonido5" src="./assets/sounds/piano/sol1.mp3"></audio>
+            <div class="piano__black">
+
+            </div>
+        </article>
+        <article class="piano__key--la" onclick="reproducirNota('sonido6')" id="tecla-n">
+            <button class="piano__button">La</button>
+            <h1 class="piano__letter">n</h1>
+            <audio id="sonido6" src="./assets/sounds/piano/la1.mp3"></audio>
+            <div class="piano__black">
+
+            </div>
+        </article>
+        <article class="piano__key--si" onclick="reproducirNota('sonido7')" id="tecla-m">
+            <button class="piano__button">Si</button>
+            <h1 class="piano__letter">m</h1>
+            <audio id="sonido7" src="./assets/sounds/piano/si1.mp3"></audio>
+            <div class="piano__black__transparent">
+
+            </div>
+        </article>
+
+    </main>
+
+    <script src="pianoNuevo.js"></script>
+
 </body>
+
 </html>
