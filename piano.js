@@ -51,7 +51,7 @@ window.onload = function () {
       imagen.setAttribute("src", "../public/assets/images/partituras/parti4.PNG")
     }
     if (partitura.target.value === "1") {
-      imagen.setAttribute("src", "../public/assets/images/partituras/parti5.PNG")
+      imagen.setAttribute("src", "../public/assets/images/partituras/noche de paz.PNG")
     }
   }
 
