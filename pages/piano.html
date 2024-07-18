@@ -35,7 +35,7 @@
     <header class="header">
         <form class="header__form" action="" method="post">
             <label class="header__label" for="miSelect">Selecciona una canción:</label>
-            <select class="header__select" id="miSelect" name="opcionSeleccionada" onchange="mostrarPartitura(event)">
+            <select class="header__select" id="miSelect" name="opcionSeleccionada" onchange="showSheetMusic(event)">
                 <option class="header__option" value="1">Noche de paz</option>
                 <option class="header__option" value='2'>Cumpleaños feliz</option>
                 <option class="header__option" value="3">All you need is love</option>
@@ -44,7 +44,7 @@
                 <option class="header__option" value='6'>Bohemian Rapshody</option>
             </select>
             <br>
-            <img id="partitura" class="header__image" src="../public/assets/images/partituras/noche de paz.PNG"
+            <img id="sheetMusic" class="header__image" src="../public/assets/images/partituras/noche de paz.PNG"
                 alt="Noche de paz">
         </form>
     </header>
@@ -52,57 +52,57 @@
     <main id="piano">
         
         <!-- 7 TECLAS DEL PIANO-->
-        <article class="piano__key--do" onclick="reproducirNota('sonido')" id="tecla-d">
+        <article class="piano__key--do" onclick="reproduceNote('sound')" id="key-d">
             <button class="piano__button">Do</button>
             <h1 class="piano__letter">D</h1>
-            <audio id="sonido" src="../public/assets/sounds/piano/do1.mp3"></audio>
+            <audio id="sound" src="../public/assets/sounds/piano/do1.mp3"></audio>
             <div class="piano__black">
             </div>
         </article>
-        <article class="piano__key--re" onclick="reproducirNota('sonido2')" id="tecla-f">
+        <article class="piano__key--re" onclick="reproduceNote('sound2')" id="key-f">
             <button class="piano__button">Re</button>
             <h1 class="piano__letter">F</h1>
-            <audio id="sonido2" src="../public/assets/sounds/piano/re1.mp3"></audio>
+            <audio id="sound2" src="../public/assets/sounds/piano/re1.mp3"></audio>
             <div class="piano__black">
 
             </div>
         </article>
-        <article class="piano__key--mi" onclick="reproducirNota('sonido3')" id="tecla-g">
+        <article class="piano__key--mi" onclick="reproduceNote('sound3')" id="key-g">
             <button class="piano__button">Mi</button>
             <h1 class="piano__letter">G</h1>
-            <audio id="sonido3" src="../public/assets/sounds/piano/mi1.mp3"></audio>
+            <audio id="sound3" src="../public/assets/sounds/piano/mi1.mp3"></audio>
             <div class="piano__black__transparent">
 
             </div>
         </article>
-        <article class="piano__key--fa" onclick="reproducirNota('sonido4')" id="tecla-h">
+        <article class="piano__key--fa" onclick="reproduceNote('sound4')" id="key-h">
             <button class="piano__button">Fa</button>
             <h1 class="piano__letter">H</h1>
-            <audio id="sonido4" src="../public/assets/sounds/piano/fa1.mp3"></audio>
+            <audio id="sound4" src="../public/assets/sounds/piano/fa1.mp3"></audio>
             <div class="piano__black">
 
             </div>
         </article>
-        <article class="piano__key--sol" onclick="reproducirNota('sonido5')" id="tecla-j">
+        <article class="piano__key--sol" onclick="reproduceNote('sound5')" id="key-j">
             <button class="piano__button">Sol</button>
             <h1 class="piano__letter">J</h1>
-            <audio id="sonido5" src="../public/assets/sounds/piano/sol1.mp3"></audio>
+            <audio id="sound5" src="../public/assets/sounds/piano/sol1.mp3"></audio>
             <div class="piano__black">
 
             </div>
         </article>
-        <article class="piano__key--la" onclick="reproducirNota('sonido6')" id="tecla-k">
+        <article class="piano__key--la" onclick="reproduceNote('sound6')" id="key-k">
             <button class="piano__button">La</button>
             <h1 class="piano__letter">k</h1>
-            <audio id="sonido6" src="../public/assets/sounds/piano/la1.mp3"></audio>
+            <audio id="sound6" src="../public/assets/sounds/piano/la1.mp3"></audio>
             <div class="piano__black">
 
             </div>
         </article>
-        <article class="piano__key--si" onclick="reproducirNota('sonido7')" id="tecla-l">
+        <article class="piano__key--si" onclick="reproduceNote('sound7')" id="key-l">
             <button class="piano__button">Si</button>
             <h1 class="piano__letter">l</h1>
-            <audio id="sonido7" src="../public/assets/sounds/piano/si1.mp3"></audio>
+            <audio id="sound7" src="../public/assets/sounds/piano/si1.mp3"></audio>
             <div class="piano__black__transparent">
 
             </div>
@@ -111,57 +111,57 @@
 
         <!-- OTRAS 7 TECLAS -->
 
-        <article class="piano__key--do" onclick="reproducirNota('sonido')" id="tecla-z">
+        <article class="piano__key--do" onclick="reproduceNote('sound')" id="key-z">
             <button class="piano__button">Do</button>
             <h1 class="piano__letter">z</h1>
-            <audio id="sonido" src="./assets/sounds/piano/do1.mp3"></audio>
+            <audio id="sound" src="./assets/sounds/piano/do1.mp3"></audio>
             <div class="piano__black">
             </div>
         </article>
-        <article class="piano__key--re" onclick="reproducirNota('sonido2')" id="tecla-x">
+        <article class="piano__key--re" onclick="reproduceNote('sound2')" id="key-x">
             <button class="piano__button">Re</button>
             <h1 class="piano__letter">x</h1>
-            <audio id="sonido2" src="./assets/sounds/piano/re1.mp3"></audio>
+            <audio id="sound2" src="./assets/sounds/piano/re1.mp3"></audio>
             <div class="piano__black">
 
             </div>
         </article>
-        <article class="piano__key--mi" onclick="reproducirNota('sonido3')" id="tecla-c">
+        <article class="piano__key--mi" onclick="reproduceNote('sound3')" id="key-c">
             <button class="piano__button">Mi</button>
             <h1 class="piano__letter">c</h1>
-            <audio id="sonido3" src="./assets/sounds/piano/mi1.mp3"></audio>
+            <audio id="sound3" src="./assets/sounds/piano/mi1.mp3"></audio>
             <div class="piano__black__transparent">
 
             </div>
         </article>
-        <article class="piano__key--fa" onclick="reproducirNota('sonido4')" id="tecla-v">
+        <article class="piano__key--fa" onclick="reproduceNote('sound4')" id="key-v">
             <button class="piano__button">Fa</button>
             <h1 class="piano__letter">v</h1>
-            <audio id="sonido4" src="./assets/sounds/piano/fa1.mp3"></audio>
+            <audio id="sound4" src="./assets/sounds/piano/fa1.mp3"></audio>
             <div class="piano__black">
 
             </div>
         </article>
-        <article class="piano__key--sol" onclick="reproducirNota('sonido5')" id="tecla-b">
+        <article class="piano__key--sol" onclick="reproduceNote('sound5')" id="key-b">
             <button class="piano__button">Sol</button>
             <h1 class="piano__letter">b</h1>
-            <audio id="sonido5" src="./assets/sounds/piano/sol1.mp3"></audio>
+            <audio id="sound5" src="./assets/sounds/piano/sol1.mp3"></audio>
             <div class="piano__black">
 
             </div>
         </article>
-        <article class="piano__key--la" onclick="reproducirNota('sonido6')" id="tecla-n">
+        <article class="piano__key--la" onclick="reproduceNote('sound6')" id="key-n">
             <button class="piano__button">La</button>
             <h1 class="piano__letter">n</h1>
-            <audio id="sonido6" src="./assets/sounds/piano/la1.mp3"></audio>
+            <audio id="sound6" src="./assets/sounds/piano/la1.mp3"></audio>
             <div class="piano__black">
 
             </div>
         </article>
-        <article class="piano__key--si" onclick="reproducirNota('sonido7')" id="tecla-m">
+        <article class="piano__key--si" onclick="reproduceNote('sound7')" id="key-m">
             <button class="piano__button">Si</button>
             <h1 class="piano__letter">m</h1>
-            <audio id="sonido7" src="./assets/sounds/piano/si1.mp3"></audio>
+            <audio id="sound7" src="./assets/sounds/piano/si1.mp3"></audio>
             <div class="piano__black__transparent">
 
             </div>

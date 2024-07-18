@@ -33,24 +33,24 @@ window.onload = function () {
  
   
   // FUNCIÓN PARA ELEGIR QUE PARTITURA MOSTRAR  //
-  function mostrarPartitura(partitura) {
-    let imagen = document.getElementById("partitura");
-    if (partitura.target.value === "2") {
+  function showSheetMusic(sheetmusic) {
+    let imagen = document.getElementById("sheetMusic");
+    if (sheetmusic.target.value === "2") {
       imagen.setAttribute("src", "../public/assets/images/partituras/cumpleaños feliz.PNG")
     }
-    if (partitura.target.value === "3") {
+    if (sheetmusic.target.value === "3") {
       imagen.setAttribute("src", "../public/assets/images/partituras/parti1.PNG")
     }
-    if (partitura.target.value === "4") {
+    if (sheetmusic.target.value === "4") {
       imagen.setAttribute("src", "../public/assets/images/partituras/parti2.PNG")
     }
-    if (partitura.target.value === "5") {
+    if (sheetmusic.target.value === "5") {
       imagen.setAttribute("src", "../public/assets/images/partituras/parti3.PNG")
     }
-    if (partitura.target.value === "6") {
+    if (sheetmusic.target.value === "6") {
       imagen.setAttribute("src", "../public/assets/images/partituras/parti4.PNG")
     }
-    if (partitura.target.value === "1") {
+    if (sheetmusic.target.value === "1") {
       imagen.setAttribute("src", "../public/assets/images/partituras/noche de paz.PNG")
     }
   }
@@ -58,47 +58,47 @@ window.onload = function () {
 
 //FUNCIÓN PARA SILENCIAR LAS NOTAS //
 function StopNotas(){
-    let sonido = document.getElementById("sonido");
-    let sonido2 = document.getElementById("sonido2");
-    let sonido3 = document.getElementById("sonido3");
-    let sonido4 = document.getElementById("sonido4");
-    let sonido5 = document.getElementById("sonido5");
-    let sonido6 = document.getElementById("sonido6");
-    let sonido7 = document.getElementById("sonido7");
-    sonido.pause();
-    sonido2.pause();
-    sonido3.pause();
-    sonido4.pause();
-    sonido5.pause();
-    sonido6.pause();
-    sonido7.pause();
+    let sound = document.getElementById("sound");
+    let sound2 = document.getElementById("sound2");
+    let sound3 = document.getElementById("sound3");
+    let sound4 = document.getElementById("sound4");
+    let sound5 = document.getElementById("sound5");
+    let sound6 = document.getElementById("sound6");
+    let sound7 = document.getElementById("sound7");
+    sound.pause();
+    sound2.pause();
+    sound3.pause();
+    sound4.pause();
+    sound5.pause();
+    sound6.pause();
+    sound7.pause();
   }
 
 
 // Arrays de teclas y notas
-const teclas = ['d', 'f', 'g', 'h','j','k','l','z','x','c','v','b','n','m'];
-const notas = ['../public/assets/sounds/piano/do1.mp3', '../public/assets/sounds/piano/re1.mp3', '../public/assets/sounds/piano/mi1.mp3', '../public/assets/sounds/piano/fa1.mp3','../public/assets/sounds/piano/sol1.mp3','../public/assets/sounds/piano/la1.mp3','../public/assets/sounds/piano/si1.mp3','../public/assets/sounds/piano/do1.mp3', '../public/assets/sounds/piano/re1.mp3', '../public/assets/sounds/piano/mi1.mp3', '../public/assets/sounds/piano/fa1.mp3','../public/assets/sounds/piano/sol1.mp3','../public/assets/sounds/piano/la1.mp3','../public/assets/sounds/piano/si1.mp3'];
-const notasBateria = ['./assets/sounds/batewria/bat1.mp3','bat2','bat3','bat4','bat5','bat6','bat7'];
-const notasFlauta = ['fla1','fla2','fla3','fla4','fla5','fla6','fla7'];
+const keys = ['d', 'f', 'g', 'h','j','k','l','z','x','c','v','b','n','m'];
+const notes = ['../public/assets/sounds/piano/do1.mp3', '../public/assets/sounds/piano/re1.mp3', '../public/assets/sounds/piano/mi1.mp3', '../public/assets/sounds/piano/fa1.mp3','../public/assets/sounds/piano/sol1.mp3','../public/assets/sounds/piano/la1.mp3','../public/assets/sounds/piano/si1.mp3','../public/assets/sounds/piano/do1.mp3', '../public/assets/sounds/piano/re1.mp3', '../public/assets/sounds/piano/mi1.mp3', '../public/assets/sounds/piano/fa1.mp3','../public/assets/sounds/piano/sol1.mp3','../public/assets/sounds/piano/la1.mp3','../public/assets/sounds/piano/si1.mp3'];
+const drumNotes = ['./assets/sounds/batewria/bat1.mp3','bat2','bat3','bat4','bat5','bat6','bat7'];
+const fluteNotes = ['fla1','fla2','fla3','fla4','fla5','fla6','fla7'];
 
 
 // Función para reproducir la nota
-function reproducirNota(nota) {
-    let audio = new Audio(nota);
+function reproduceNote(note) {
+    let audio = new Audio(note);
     audio.play();
 }
 
 
 // Event listener para 'keydown'
-document.addEventListener('keydown', function(pulsarTecla) {
-    let key = pulsarTecla.key; // La tecla presionada
+document.addEventListener('keydown', function(preesKey) {
+    let key = preesKey.key; // La tecla presionada
 
-    if (teclas.includes(key)) { // Verifica si la tecla está en el array 'teclas'
-        let indice = teclas.indexOf(key); // Obtiene el índice de la tecla
-        let nota = notas[indice]; // Obtiene la nota correspondiente
-        reproducirNota(nota); // Reproduce la nota
+    if (keys.includes(key)) { // Verifica si la tecla está en el array 'keys'
+        let index = keys.indexOf(key); // Obtiene el índice de la tecla
+        let note = notes[index]; // Obtiene la note correspondiente
+        reproduceNote(note); // Reproduce la note
         
-        let teclaElement = document.getElementById('tecla-' + key);
+        let teclaElement = document.getElementById('key-' + key);
         if (teclaElement) {
             teclaElement.classList.add('key-gray');
         }
@@ -107,15 +107,15 @@ document.addEventListener('keydown', function(pulsarTecla) {
 });
 
 // Event listener para 'keyup'
-document.addEventListener('keyup', function(soltarTecla) {
-    let key = soltarTecla.key; // La tecla presionada
+document.addEventListener('keyup', function(keyUp) {
+    let key = keyUp.key; // La tecla presionada
 
-    if (teclas.includes(key)) { // Verifica si la tecla está en el array 'teclas'
-        let indice = teclas.indexOf(key); // Obtiene el índice de la tecla
-        let nota = notas[indice]; // Obtiene la nota correspondiente
-        StopNotas(nota); // silencia la nota
+    if (keys.includes(key)) { // Verifica si la tecla está en el array 'teclas'
+        let index = keys.indexOf(key); // Obtiene el índice de la tecla
+        let note = notes[index]; // Obtiene la note correspondiente
+        StopNotas(note); // silencia la nota
         
-        let teclaElement = document.getElementById('tecla-' + key);
+        let teclaElement = document.getElementById('key-' + key);
         if (teclaElement) {
             teclaElement.classList.remove('key-gray');
         }
