@@ -11,6 +11,29 @@ luminousEffect.addEventListener('mousemove', (e) => {
     luminousEffect.style.background = `radial-gradient(circle at ${x}px ${y}px, transparent 0%, rgba(0, 0, 0, 0.9) ${sizeLight}px)`;
 });
 
+// Typing text effect
+const texts = document.querySelectorAll('.typingText');
+
+function startEffect() {
+    let delay = 0;
+    texts.forEach((text, i) => {
+        setTimeout(() => {
+            text.style.visibility = 'visible';
+            text.style.animation = `typingForward 3s steps(30, end)`;
+        }, delay);
+        delay += 2800;
+
+        setTimeout(() => {
+            text.style.animation = 'typingBackward 2s steps(30, end)'; // Reset animation
+        }, 13000);
+        setTimeout(() => {
+            text.style.visibility = 'hidden';
+        }, 15000);
+    });
+    setTimeout(startEffect, 16000);
+};
+startEffect();
+
 // Scrolling text effect
 const scrollingContainer = document.getElementById('scrollingContainer');
 const scrollingText = document.getElementById('scrollingText');

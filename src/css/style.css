@@ -101,6 +101,7 @@ nav {
 
 .heroText {
     margin: 0 10%;
+    width: fit-content;
 }
 
 .typingText {
@@ -119,7 +120,7 @@ nav {
     font-weight: bold;
 }
 
-/* @keyframes typing {
+@keyframes typingForward {
     from {
         width: 0;
         border-color: var(--text-primary-color);
@@ -127,7 +128,17 @@ nav {
     to {
         width: 100%;
     }
-} */
+}
+
+@keyframes typingBackward {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+        border-color: var(--text-primary-color);
+    }
+}
 
 .luminousEffect {
     height: 100%;
