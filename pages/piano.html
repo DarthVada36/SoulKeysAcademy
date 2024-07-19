@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +15,8 @@
         <div class="modal__content">
             <span class="modal__close">&times;</span>
             <p class="modal__text">Tips de nuestro amigo Bach</p>
-            <img class="modal__image" id="tipBach" src="../public/assets/images/Modal/bachTexto1.PNG" alt="Imagen de ejemplo">
+            <img class="modal__image" id="tipBach" src="../public/assets/images/Modal/bachTexto1.PNG"
+                alt="Imagen de ejemplo">
         </div>
     </div>
 
@@ -34,7 +34,7 @@
     <!-- CABECERA CON SELECTOR DE PARTITURAS -->
     <header class="header">
         <form class="header__form" action="" method="post">
-            <label class="header__label" for="miSelect">Selecciona una canción:</label>
+            <label class="header__label" for="miSelectSheetMusic">Selecciona una canción:</label>
             <select class="header__select" id="miSelect" name="opcionSeleccionada" onchange="showSheetMusic(event)">
                 <option class="header__option" value="1">Noche de paz</option>
                 <option class="header__option" value='2'>Cumpleaños feliz</option>
@@ -49,17 +49,30 @@
         </form>
     </header>
 
+    <!-- SELECTOR DE SONIDOS -->
+    <section class="soundSelector" ">
+        <form class="soundSelector__form" action="" method="post">
+            <label class="soundSelector__label" id="instrument-select" for="miSelect">Sonido:</label>
+            <select class="soundSelector__select" id="miSelectSound" name="selectedOption">
+                <option class="soundSelector__option" value="piano">Piano</option>
+                <option class="soundSelector__option" value='drums'>Bateria</option>
+                <option class="soundSelector__option" value="guitar">Guitarra</option>
+                <option class="soundSelector__option" value='flute'>Flauta</option>
+            </select>
+        </form>
+    </section>
+
     <main id="piano">
 
         <!-- 7 TECLAS DEL PIANO-->
-        <article class="piano__key--do"  id="key-d">
+        <article class="piano__key--do" id="key-d">
             <button class="piano__button">Do</button>
             <h1 class="piano__letter">D</h1>
             <audio id="sound" src="../public/assets/sounds/piano/do1.mp3"></audio>
             <div class="piano__black">
             </div>
         </article>
-        <article class="piano__key--re"  id="key-f">
+        <article class="piano__key--re" id="key-f">
             <button class="piano__button">Re</button>
             <h1 class="piano__letter">F</h1>
             <audio id="sound2" src="../public/assets/sounds/piano/re1.mp3"></audio>
