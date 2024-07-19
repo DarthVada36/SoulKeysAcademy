@@ -57,8 +57,7 @@ body {
 .piano__key--la:hover,
 .piano__key--si:hover {
     background-color: rgb(203, 203, 203);
-    /* PROBANDO A PONER DEDO AL TOCAR TECLA*/
-    cursor: url('./img/fondo.jpg'), auto;
+   
 }
 
 .key-gray {
@@ -188,6 +187,7 @@ body {
     border-radius: 5px;
     padding: 8px;
 }
+
 
 
 /*ESTO ES UNA CLASE PARA ESCONDER EN ESTE CASO IDS */

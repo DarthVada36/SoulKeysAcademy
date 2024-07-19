@@ -82,11 +82,29 @@ const drumNotes = ['./assets/sounds/batewria/bat1.mp3','bat2','bat3','bat4','bat
 const fluteNotes = ['fla1','fla2','fla3','fla4','fla5','fla6','fla7'];
 
 
+
 // Función para reproducir la nota
 function reproduceNote(note) {
     let audio = new Audio(note);
     audio.play();
 }
+
+
+document.addEventListener('click', function(clickMouse) {
+  let target = clickMouse.target; // El elemento clicado
+
+  // Verifica si el elemento clicado tiene un id que empieza con 'key-'
+  if (target.id && target.id.startsWith('key-')) {
+      let key = target.id.replace('key-', ''); // Obtiene la tecla del id del elemento
+
+      if (keys.includes(key)) { // Verifica si la tecla está en el array 'keys'
+          let index = keys.indexOf(key); // Obtiene el índice de la tecla
+          let note = notes[index]; // Obtiene la note correspondiente
+          reproduceNote(note); // Reproduce la note
+          
+      }
+  }
+});
 
 
 // Event listener para 'keydown'
@@ -106,6 +124,8 @@ document.addEventListener('keydown', function(preesKey) {
 
 });
 
+
+
 // Event listener para 'keyup'
 document.addEventListener('keyup', function(keyUp) {
     let key = keyUp.key; // La tecla presionada
@@ -122,3 +142,7 @@ document.addEventListener('keyup', function(keyUp) {
     } 
 
 });
+
+
+
+  
