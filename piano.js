@@ -79,9 +79,9 @@ function StopNotas() {
 // Arrays de teclas y notas
 const keys = ['d', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'];
 const notes = ['../public/assets/sounds/piano/do1.mp3', '../public/assets/sounds/piano/re1.mp3', '../public/assets/sounds/piano/mi1.mp3', '../public/assets/sounds/piano/fa1.mp3', '../public/assets/sounds/piano/sol1.mp3', '../public/assets/sounds/piano/la1.mp3', '../public/assets/sounds/piano/si1.mp3', '../public/assets/sounds/piano/do1.mp3', '../public/assets/sounds/piano/re1.mp3', '../public/assets/sounds/piano/mi1.mp3', '../public/assets/sounds/piano/fa1.mp3', '../public/assets/sounds/piano/sol1.mp3', '../public/assets/sounds/piano/la1.mp3', '../public/assets/sounds/piano/si1.mp3'];
-const drumNotes = ['../public/assets/sounds/bateria/bat1.mp3', 'bat2', 'bat3', 'bat4', 'bat5', 'bat6', 'bat7'];
-const guitarNOtes = ['','','']
-const fluteNotes = ['fla1', 'fla2', 'fla3', 'fla4', 'fla5', 'fla6', 'fla7'];
+const drumNotes = ['../public/assets/sounds/bateria/Batdo.mp3', '../public/assets/sounds/bateria/Batre.mp3', '../public/assets/sounds/bateria/Batmi.mp3', '../public/assets/sounds/bateria/Batfa.mp3', '../public/assets/sounds/bateria/Batsol.mp3', '../public/assets/sounds/bateria/Batla.mp3', '../public/assets/sounds/bateria/Batsi.mp3','../public/assets/sounds/bateria/Batplado.mp3', '../public/assets/sounds/bateria/Batplare.mp3', '../public/assets/sounds/bateria/Batplami.mp3', '../public/assets/sounds/bateria/Batplafa.mp3', '../public/assets/sounds/bateria/Batplasol.mp3', '../public/assets/sounds/bateria/Batplala.mp3', '../public/assets/sounds/bateria/Batplasi.mp3'];
+const guitarNotes = ['../public/assets/sounds/guitarra/Guido.mp3','../public/assets/sounds/guitarra/Guire.mp3','../public/assets/sounds/guitarra/Guimi.mp3','../public/assets/sounds/guitarra/Guifa.mp3','../public/assets/sounds/guitarra/Guisol.mp3','../public/assets/sounds/guitarra/Guila.mp3','../public/assets/sounds/guitarra/Guisi.mp3']
+const fluteNotes = ['../public/assets/sounds/panflute/Fludo.mp3', '../public/assets/sounds/panflute/Flure.mp3', '../public/assets/sounds/panflute/Flumi.mp3', '../public/assets/sounds/panflute/Flufa.mp3', '../public/assets/sounds/panflute/Flusol.mp3', '../public/assets/sounds/panflute/Flula.mp3', '../public/assets/sounds/panflute/Flusi.mp3'];
 
 
 // Función para reproducir la nota
@@ -138,7 +138,7 @@ document.addEventListener('keydown', function (preesKey) {
 
   if (keys.includes(key)) { // Verifica si la tecla está en el array 'keys'
     let index = keys.indexOf(key); // Obtiene el índice de la tecla
-    let note = notes[index]; // Obtiene la note correspondiente
+    let note = currentNotes[index]; // Obtiene la note correspondiente
     reproduceNote(note); // Reproduce la note
 
     let teclaElement = document.getElementById('key-' + key);
@@ -158,7 +158,7 @@ document.addEventListener('keyup', function (keyUp) {
 
   if (keys.includes(key)) { // Verifica si la tecla está en el array 'teclas'
     let index = keys.indexOf(key); // Obtiene el índice de la tecla
-    let note = notes[index]; // Obtiene la note correspondiente
+    let note = currentNotes[index]; // Obtiene la note correspondiente
     StopNotas(note); // silencia la nota
 
     let teclaElement = document.getElementById('key-' + key);
