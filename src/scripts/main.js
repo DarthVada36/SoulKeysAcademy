@@ -1,36 +1,52 @@
 // Luminous effect
-const luminousEffect = document.querySelector('.luminousEffect');
-const sizeLight = 400;
+// const luminousEffect = document.querySelector('.luminousEffect');
+// const sizeLight = 400;
 
-luminousEffect.style.background = `radial-gradient(circle at 22% 50%, transparent 0%, rgba(0, 0, 0, 0.9) ${sizeLight}px)`;
+// luminousEffect.style.background = `radial-gradient(circle at 22% 50%, transparent 0%, rgba(0, 0, 0, 0.9) ${sizeLight}px)`;
 
-luminousEffect.addEventListener('mousemove', (e) => {
-    const x = e.clientX;
-    const y = e.clientY;
-    luminousEffect.style.cursor = "none";
-    luminousEffect.style.background = `radial-gradient(circle at ${x}px ${y}px, transparent 0%, rgba(0, 0, 0, 0.9) ${sizeLight}px)`;
-});
+// luminousEffect.addEventListener('mousemove', (e) => {
+//     const x = e.clientX;
+//     const y = e.clientY;
+//     luminousEffect.style.cursor = "none";
+//     luminousEffect.style.background = `radial-gradient(circle at ${x}px ${y}px, transparent 0%, rgba(0, 0, 0, 0.9) ${sizeLight}px)`;
+// });
 
 // Typing text effect
 const texts = document.querySelectorAll('.typingText');
 
 function startEffect() {
     let delay = 0;
+
     texts.forEach((text, i) => {
         setTimeout(() => {
             text.style.visibility = 'visible';
-            text.style.animation = `typingForward 3s steps(30, end)`;
+            text.style.animation = 'typing 2s steps(20), blink .5s step-end infinite alternate';
         }, delay);
-        delay += 2800;
-
+        delay += 2000;
+        
         setTimeout(() => {
-            text.style.animation = 'typingBackward 2s steps(30, end)'; // Reset animation
-        }, 13000);
-        setTimeout(() => {
-            text.style.visibility = 'hidden';
-        }, 15000);
+            if (i == texts.length - 1) {
+                text.style.animation = 'blink .5s step-end infinite alternate'; // Dejar animación blink solo al último elemento
+            } else {
+                text.style.animation = 'none'; // Reset animation
+            }
+        }, delay);
     });
-    setTimeout(startEffect, 16000);
+    delay += 2000;
+
+    for (let i=texts.length - 1; i>=0; i--) {
+        setTimeout(() => {
+            texts[i].style.animation = 'typing 1s steps(20) reverse, blink .5s step-end infinite alternate'; // animación en reversa
+        }, delay);
+        delay += 1000;
+        
+        setTimeout(() => {
+            texts[i].style.visibility = 'hidden';
+            texts[i].style.animation = 'none';
+        }, delay);
+    };
+    delay += 1000;
+    setTimeout(startEffect, delay);
 };
 startEffect();
 
