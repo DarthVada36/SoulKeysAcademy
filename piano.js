@@ -115,6 +115,7 @@ document.getElementById('miSelectSound').addEventListener('change', function (ev
 });
 
 
+// FUNCIÓN PARA QUE SUENEN LAS NOTAS AL HACER CLICK CON EL MOUSE //
 document.addEventListener('click', function (clickMouse) {
   let target = clickMouse.target; // El elemento clicado
 
@@ -132,7 +133,7 @@ document.addEventListener('click', function (clickMouse) {
 });
 
 
-// Event listener para 'keydown'
+// FUNCIÓN PARA QUE SUENEN LAS NOTAS AL PRESIONAR LAS TECLAS Y SE PONGA GRIS LA QUE SE TOQUE
 document.addEventListener('keydown', function (preesKey) {
   let key = preesKey.key; // La tecla presionada
 
@@ -151,7 +152,7 @@ document.addEventListener('keydown', function (preesKey) {
 
 
 
-// Event listener para 'keyup'
+// FUNCIÓN PARA QUE DEJEN DE SONAR LAS NOTAS AL DEJAR DE PRESIONAR LAS TECLAS Y SE QUITE EL GRIS
 document.addEventListener('keyup', function (keyUp) {
   let key = keyUp.key; // La tecla presionada
 

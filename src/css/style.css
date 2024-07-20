@@ -97,11 +97,11 @@ nav {
     z-index: -1;
     height: 100%;
     width: 100%;
+    opacity: 0.3;
 }
 
 .heroText {
     margin: 0 10%;
-    width: fit-content;
 }
 
 .typingText {
@@ -112,32 +112,46 @@ nav {
     border-right: 3px solid transparent;
     overflow: hidden;
     white-space: nowrap;
+    text-shadow: 2px 2px black;
+    /* animation: typing 2s steps(20), blink .5s step-end 5 alternate; */
 }
 
 .typingText__bigText {
-    color: var(--text-secondary-color);
+    /* color: var(--text-secondary-color); */
+    color: #7A7BFF;
     font-size: var(--text-size-xl);
     font-weight: bold;
 }
 
-@keyframes typingForward {
-    from {
-        width: 0;
-        border-color: var(--text-primary-color);
-    }
-    to {
-        width: 100%;
-    }
+.typingText__text1 {
+    width: 13.5ch;
 }
 
-@keyframes typingBackward {
+.typingText__text2 {
+    width: 8.2ch;
+}
+
+.typingText__text3 {
+    width: 9.8ch;
+}
+
+.typingText__text4 {
+    width: 17.4ch;
+}
+
+@keyframes typing {
     from {
-        width: 100%;
-    }
-    to {
         width: 0;
-        border-color: var(--text-primary-color);
     }
+    /* to {
+        width: 100%;
+    } */
+}
+
+@keyframes blink {
+  50% {
+    border-color: var(--text-primary-color);
+  }
 }
 
 .luminousEffect {
