@@ -10,6 +10,7 @@
     --button-secondary-color: #BABEBF;
     --text-title: 'DM Serif Display', sans-serif;
     --text-paragraph: 'EB Garamond', sans-serif;
+    --text-size-xxl: 200px;
     --text-size-xl: 128px;
     --text-size-l: 64px;
     --text-size-m: 36px;
@@ -88,6 +89,7 @@ nav {
     width: 100%;
     margin: 0;
     justify-content: center;
+    overflow: hidden;
 }
 
 .container__hero img {
@@ -98,6 +100,30 @@ nav {
     height: 100%;
     width: 100%;
     opacity: 0.3;
+}
+
+.luminousEffect {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(40,40,45,0.2) 0%, rgba(102,103,171,0.2) 25%, rgba(98,97,126,0.2) 50%, rgba(186,190,191,0.2) 75%, rgba(237,241,255,0.2) 100%);
+    transform: scale(0);
+    animation: ripple-animation 1s linear;
+    transition: background 0.8s;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
 }
 
 .heroText {
@@ -119,7 +145,7 @@ nav {
 .typingText__bigText {
     /* color: var(--text-secondary-color); */
     color: #7A7BFF;
-    font-size: var(--text-size-xl);
+    font-size: var(--text-size-xxl);
     font-weight: bold;
 }
 
@@ -154,13 +180,6 @@ nav {
   }
 }
 
-.luminousEffect {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 
 /* about (intro) */
 .scrollingContainer {
