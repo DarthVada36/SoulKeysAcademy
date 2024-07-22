@@ -1,8 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: rgb(226, 197, 161);
-
+    background-color: #2A2B41;
 }
 
 #tipBach {
@@ -17,11 +16,14 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.header__label{
+    color: white;
+    font-family: 'DM Serif Display', sans-serif;
+}
 
 #sheetMusic {
     width: 350px;
-    height: 350px;
+    height: 290px;
     padding-top: 10px;
 }
 
@@ -31,6 +33,10 @@ body {
     margin-top: 15px;
 }
 
+.soundSelector__label{
+    color: white;
+    font-family: 'DM Serif Display', sans-serif;
+}
 
 #piano {
 
@@ -91,15 +97,15 @@ body {
 }
 
 .piano__letter {
-
     text-align: center;
     margin: 0;
     position: relative;
     top: 60px;
+    color: white;
 }
 
-.key:hover {
-    cursor: url("./img/DEDO.png"), auto;
+#key--do:hover {
+    cursor: url("/public/assets/images/dedo.PNG"), auto;
 }
 
 
@@ -155,9 +161,10 @@ body {
     text-align: center;
 }
 .modal__text {
-    font-size: 30px;
+    font-size: 26px;
     font-weight: bold;
     color: black;
+    font-family: 'DM Serif Display', sans-serif;
 }
 
 .modal__close {
@@ -175,16 +182,18 @@ body {
 }
 
 .keypressModal__message {
-    font-size: 30px;
+    font-size: 26px;
     font-weight: bold;
     color: black;
+    font-family: 'DM Serif Display', sans-serif;
 }
 
 .keypressModal__link {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: bold;
     color: gray;
     text-decoration: none;
+    font-family: 'DM Serif Display', sans-serif;
 }
 
 .keypressModal__linkSpace {
