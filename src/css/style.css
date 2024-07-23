@@ -162,21 +162,30 @@ footer {
 /* ..........FEATURE-CONTACT PAGE.......... */
 
 
-.container {
-    background-color: var(--button-cta-color);
-    padding: 70px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.container-contact {
+    display: flex;
+    margin: 10%;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
     border-radius: 8px;
     max-width: 400px;
     width: 100%;
+    background-color: var(--main-bg-color);
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 300%;
 }
+
 
 form {
     display: flex;
     flex-direction: column;
 }
 
-h3 {
+.title-h3 {
+    margin-left: 20px;
     margin-bottom: 20px;
 }
 
@@ -184,6 +193,8 @@ label {
     margin: 0px 0px 0px;
     margin-bottom: 5px;
     margin-left: 2px;
+    color: var(--text-secondary-color);
+    font-weight: bold;
 }
 
 input {
@@ -195,13 +206,14 @@ input {
 }
 
 input.error {
-    border-color: red;
+    border-color: rgb(119, 10, 10);
+    border-style: dashed;
 }
 
 button {
     padding: 10px;
-    background-color: #007BFF;
-    color: #fff;
+    background-color: var(--text-secondary-color);
+    color: var(--button-secondary-color);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -209,11 +221,11 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--main-bg-color);
 }
 
 .error-message {
-    color: red;
+    color: #4b4ee1;
     margin-top: 0;
     margin-bottom: 10px;
     font-size:small;
@@ -236,10 +248,9 @@ button:hover {
     align-items: center;
 }
 
-/* Estiliza el texto del placeholder */
 input::placeholder {
     color: #999;
-    font-style: italic;
+    font-family: var(--text-paragraph);
 }
 
 /* Responsivo */
