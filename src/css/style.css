@@ -152,7 +152,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 .work-in-progress__content {
@@ -164,9 +164,8 @@ h1 {
 }
 
 .game {
-    width: 100%;
-    max-width: 600px;
-    height: 200px;
+    width: 800px;
+    height: 250px;
     border: 1px solid #ccc;
     background-color: #fff;
     position: relative;
@@ -178,7 +177,7 @@ h1 {
     height: 50px;
     position: absolute;
     bottom: 0;
-    left: 50px;
+    left: 20px;
     transition: bottom 0.3s;
 }
 
@@ -195,17 +194,31 @@ h1 {
     position: absolute;
     bottom: 0;
     right: 0;
-    animation: moveObstacle 2s linear infinite;
+    animation: moveObstacle 3s linear infinite;
 }
 
 @keyframes moveObstacle {
     from {
         right: 0;
     }
-    to {
+     to {
         right: 100%;
     }
 }
+
+.work-in-progress__message-title {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.work-in-progress__message-text {
+    font-size: 1em;
+    color: #666666;
+}
+.work-in-progress-page {
+    margin: 20px 0;
+}
+
 /*ENDS WIP*/
 
 /* Footer */
