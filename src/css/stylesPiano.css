@@ -16,25 +16,26 @@ body {
     justify-content: center;
     align-items: center;
 }
-.header__label{
+
+.header__label {
     color: white;
     font-family: 'DM Serif Display', sans-serif;
 }
 
 #sheetMusic {
-    width: 350px;
-    height: 290px;
+    width: 290px;
+    height: 200px;
     padding-top: 10px;
     border-radius: 24px;
 }
 
-.soundSelector{
+.soundSelector {
     display: flex;
     justify-content: center;
     margin-top: 15px;
 }
 
-.soundSelector__label{
+.soundSelector__label {
     color: white;
     font-family: 'DM Serif Display', sans-serif;
 }
@@ -64,14 +65,8 @@ body {
     border: 1px solid gray;
     display: flex;
     flex-direction: column-reverse;
-    transition: background-color 0.3s; 
+    transition: background-color 0.3s;
 }
-
-
-
-
-
-
 
 
 .piano__key--do:hover,
@@ -81,14 +76,14 @@ body {
 .piano__key--sol:hover,
 .piano__key--la:hover,
 .piano__key--si:hover {
-    background-color: rgb(203, 203, 203); 
+    background-color: rgb(203, 203, 203);
 }
 
 .key-gray {
     background-color: rgb(188, 188, 186);
-    -webkit-box-shadow: inset 10px 9px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: inset 10px 9px 5px 0px rgba(0,0,0,0.75);
-box-shadow: inset 10px 9px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: inset 10px 9px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 10px 9px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 10px 9px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .piano__black {
@@ -119,7 +114,7 @@ box-shadow: inset 10px 9px 5px 0px rgba(0,0,0,0.75);
     color: white;
 }
 
-.color-gold{
+.color-gold {
     background-color: gold;
 }
 
@@ -164,6 +159,7 @@ box-shadow: inset 10px 9px 5px 0px rgba(0,0,0,0.75);
     height: 500px;
     text-align: center;
 }
+
 .modal__content2 {
     background-color: #6afc80;
     margin: auto;
@@ -175,6 +171,7 @@ box-shadow: inset 10px 9px 5px 0px rgba(0,0,0,0.75);
     height: 500px;
     text-align: center;
 }
+
 .modal__text {
     font-size: 26px;
     font-weight: bold;
@@ -218,25 +215,97 @@ box-shadow: inset 10px 9px 5px 0px rgba(0,0,0,0.75);
     padding: 8px;
 }
 
+.brandPiano{
+    display: none;
+    
+}
+
 
 
 /*ESTO ES UNA CLASE PARA ESCONDER EN ESTE CASO IDS */
-.hide{
+.hide {
     display: none;
 }
-.probando{
+
+.probando {
     width: 100%;
 }
 
 /* CAMBIOS PARA QUE SEA RESPONSIVE*/
 
 /* AQUÍ APLICAMOS LA CLASE .HIDE A LOS IDS D ELAS 7 TECLAS QUE QUEREMOS ECSONDER CUANDO SE REDUCE EL TAMAÑO DE LA PANTALLA*/
-@media (max-width:1100px){
-  
- 
+@media (max-width:1100px) {
+    .modal__content{
+        height: 400px;
+    }
+    #tipBach {
+        width: 320px;
+        height: 320px;
+    }
+
+    #key-z,
+    #key-x,
+    #key-c,
+    #key-v,
+    #key-b,
+    #key-n,
+    #key-m {
+        display: none;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #piano {
+        background-image: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin: 0;
+    }
+
+    #framePiano {
+        background-color: black;
+        width: 380px;
+        margin-top: 10px;
+        border: 1px solid gray;
+        border-radius: 6px 6px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .brandPiano{
+        display: flex;
+        justify-content: center;
+        
+    }
+    #brandPiano{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .piano__key--do{
+        border-radius: 6px 0px 0px 6px;
+    }
+    .piano__key--si{
+        border-radius: 0px 6px 6px 0px;
+    }
+    #sheetMusic{
+        width: 290px;
+        height: 150px;
+    }
 }
 
-
+@media (max-width:455px) {
+    #tipBach {
+        width: 320px;
+        height: 290px;
+    }
+}
 
 
 /* .piano_back_1{

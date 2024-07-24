@@ -36,7 +36,7 @@ for (let i = 0; i < spans.length; i++) {
 function showSheetMusic(sheetmusic) {   // Cuando el usuario selecciona un elemento del select el evento onchange del HTML activa esta función
   let image = document.getElementById("sheetMusic");  //Obtenemos el elemento del HTML que tiene el id sheetMusic y se almacena en image
   if (sheetmusic.target.value === "2") {    //Aquí decimos si la opción seleccionada en el select es la 2
-    image.setAttribute("src", "../public/assets/images/partituras/cumpleaños feliz.PNG")  //La imagen a mostrar va a ser la de la ruta especificada entre paréntesis, "src" hace referencia al atributo que queremos que cambie, "src" es la dirección d ela imágen a mostrar
+    image.setAttribute("src", "../public/assets/images/partituras/mañanitas.PNG")  //La imagen a mostrar va a ser la de la ruta especificada entre paréntesis, "src" hace referencia al atributo que queremos que cambie, "src" es la dirección d ela imágen a mostrar
   }
   if (sheetmusic.target.value === "3") {
     image.setAttribute("src", "../public/assets/images/partituras/parti1.PNG")
@@ -51,7 +51,7 @@ function showSheetMusic(sheetmusic) {   // Cuando el usuario selecciona un eleme
     image.setAttribute("src", "../public/assets/images/partituras/parti4.PNG")
   }
   if (sheetmusic.target.value === "1") {
-    image.setAttribute("src", "../public/assets/images/partituras/noche de paz.PNG")
+    image.setAttribute("src", "../public/assets/images/partituras/cumpleaños feliz.PNG")
   }
 }
 
