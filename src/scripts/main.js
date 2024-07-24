@@ -34,10 +34,8 @@ luminousEffect.addEventListener('mouseleave', (e) => {
 //     });
 // });
 
-// Typing text effect
-const texts = document.querySelectorAll('.typingText');
-
-function startEffect() {
+// Typing text effect: Efecto typing para varias líneas
+function typingEffectVariousLines(texts) {
     let delay = 0;
 
     texts.forEach((text, i) => {
@@ -69,9 +67,10 @@ function startEffect() {
         }, delay);
     };
     delay += 1000;
-    setTimeout(startEffect, delay);
+    setTimeout(() => typingEffectVariousLines(texts), delay);
 };
-startEffect();
+const heroText = document.querySelectorAll('.heroText');
+typingEffectVariousLines(heroText);
 
 // Scrolling text effect
 const scrollingContainer = document.getElementById('scrollingContainer');
@@ -91,17 +90,17 @@ scrollingContainer.appendChild(scrollingTextClone2);
 
 function setInitialPosition() {
     scrollingTextClone1.style.position = 'absolute';
-    scrollingTextClone1.style.left = `${scrollingText.offsetWidth}px`;
+    scrollingTextClone1.style.left = `${scrollingText.scrollWidth}px`;
     scrollingTextClone2.style.position = 'absolute';
-    scrollingTextClone2.style.left = `${scrollingText.offsetWidth + scrollingTextClone1.offsetWidth}px`;
+    scrollingTextClone2.style.left = `${scrollingText.scrollWidth + scrollingTextClone1.offsetWidth}px`;
 }
 
 function animate() {
     position += speed * direction;
-    if (position <= -scrollingText.offsetWidth) {
+    if (position <= -scrollingText.scrollWidth) {
         position = 0;
     } else if (position >= 0) {
-        position = -scrollingText.offsetWidth;
+        position = -scrollingText.scrollWidth;
     }
     scrollingContainer.style.transform = `translateX(${position}px)`;
     requestAnimationFrame(animate);

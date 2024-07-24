@@ -34,13 +34,13 @@ body {
     background-color: var(--main-bg-color);
     color: var(--text-primary-color);
     font-size: var(--text-size-xs);
-    max-width: 100vw;
-    /* overflow-x: hidden; */
+    /* max-width: 100vw; */
+    overflow-x: hidden;
 }
 
 /* Header // NavBar */
 header {
-    width: 100%;
+    max-width: 100%;
     height: var(--height-header);
     display: flex;
     align-items: center;
@@ -132,20 +132,20 @@ nav {
 
 /* Container general*/
 .container {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
-    position: relative;
+    /* position: relative; */
     margin: 5% 10%;
 }
 
 section {
     padding-top: var(--height-header);
-    width: 100%;
+    max-width: 100%;
 }
 
 /* Hero // Banner */
 .hero {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     padding: 0;
 }
@@ -155,7 +155,7 @@ section {
     flex-direction: column;
     position: relative;
     height: calc(100vh - var(--height-header)); /* altura de la pantalla menos lo que ocupa el navbar */
-    width: 100%;
+    max-width: 100%;
     margin: 0;
     justify-content: center;
     overflow: hidden;
@@ -195,11 +195,11 @@ section {
     }
 } */
 
-.heroText {
+.heroTexts {
     margin: 0 10%;
 }
 
-.typingText {
+.heroText {
     font-family: var(--text-title);
     font-size: var(--text-size-m);
     color: var(--text-primary-color);
@@ -210,25 +210,25 @@ section {
     text-shadow: 2px 2px black;
 }
 
-.typingText__bigText {
+.heroText__bigText {
     color: var(--text-secondary-color);
     font-size: var(--text-size-xxl);
     font-weight: bold;
 }
 
-.typingText__text1 {
+.heroText__text1 {
     width: 13.5ch;
 }
 
-.typingText__text2 {
+.heroText__text2 {
     width: 8.2ch;
 }
 
-.typingText__text3 {
+.heroText__text3 {
     width: 9.8ch;
 }
 
-.typingText__text4 {
+.heroText__text4 {
     width: 17.4ch;
 }
 
@@ -251,10 +251,11 @@ section {
 /* about (intro) */
 .scrollingContainer {
     height: 11rem;
-    position: relative;
+    /* position: relative; */
     /* margin: 30px; */
     white-space: nowrap;
     /* overflow: hidden; */
+    max-width: fit-content;
 }
 
 .scrollingText {
@@ -271,7 +272,10 @@ span {
 }
 
 .container__intro {
-    display: flex;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
     justify-content: space-between;
 }
 
@@ -287,12 +291,13 @@ span {
 
 .cards {
     min-width: 400px;
+    max-width: 100%;
     background-color: aliceblue;
 }
 
 /* Footer */
 footer {
-    width: 100vw;
+    max-width: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -309,6 +314,7 @@ footer div {
     justify-content: space-evenly;
     align-items: center;
     height: 90%;
+    max-width: 100%;
 }
 
 .footerLogo img {
