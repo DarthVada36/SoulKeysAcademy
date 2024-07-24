@@ -91,9 +91,9 @@ scrollingContainer.appendChild(scrollingTextClone2);
 
 function setInitialPosition() {
     scrollingTextClone1.style.position = 'absolute';
-    scrollingTextClone1.style.left = `${scrollingText.scrollWidth}px`;
+    scrollingTextClone1.style.left = `${scrollingText.offsetWidth}px`;
     scrollingTextClone2.style.position = 'absolute';
-    scrollingTextClone2.style.left = `${scrollingText.scrollWidth + scrollingTextClone1.scrollWidth}px`;
+    scrollingTextClone2.style.left = `${scrollingText.offsetWidth + scrollingTextClone1.offsetWidth}px`;
 }
 
 function animate() {
