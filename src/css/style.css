@@ -161,6 +161,7 @@ h1 {
 
 .work-in-progress__game {
     margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 .game {
@@ -177,7 +178,7 @@ h1 {
     height: 50px;
     position: absolute;
     bottom: 0;
-    left: 20px;
+    left: 50px;
     transition: bottom 0.3s;
 }
 
@@ -199,7 +200,7 @@ h1 {
 
 @keyframes moveObstacle {
     from {
-        right: -50px;
+        right: 0;
     }
      to {
         right: 100%;
