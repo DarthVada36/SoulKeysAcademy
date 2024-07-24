@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: #2A2B41;
+    background-color: #28282D;
 }
 
 #tipBach {
@@ -25,6 +25,7 @@ body {
     width: 350px;
     height: 290px;
     padding-top: 10px;
+    border-radius: 24px;
 }
 
 .soundSelector{
@@ -39,11 +40,15 @@ body {
 }
 
 #piano {
-
+    background-image: url(../../public/assets/images/piano-images/pianomarco.png);
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 20px;
+    background-size: 980px;
+    background-repeat: no-repeat;
+    padding: 70px 0;
+    background-position: calc(50% - 53px);
 }
 
 .piano__key--do,
@@ -59,7 +64,15 @@ body {
     border: 1px solid gray;
     display: flex;
     flex-direction: column-reverse;
+    transition: background-color 0.3s; 
 }
+
+
+
+
+
+
+
 
 .piano__key--do:hover,
 .piano__key--re:hover,
@@ -68,22 +81,24 @@ body {
 .piano__key--sol:hover,
 .piano__key--la:hover,
 .piano__key--si:hover {
-    background-color: rgb(203, 203, 203);
-   
+    background-color: rgb(203, 203, 203); 
 }
 
 .key-gray {
     background-color: rgb(188, 188, 186);
+    -webkit-box-shadow: inset 10px 9px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 10px 9px 5px 0px rgba(0,0,0,0.75);
+box-shadow: inset 10px 9px 5px 0px rgba(0,0,0,0.75);
 }
 
 .piano__black {
-
     width: 30px;
     height: 100px;
     background-color: black;
     margin-bottom: 40px;
     margin-left: 35px;
     position: relative;
+    background-image: url('../../public/assets/images/piano-images/Sostenidas/Sostenida-Suelta.png');
 }
 
 .piano__black__transparent {
@@ -104,8 +119,8 @@ body {
     color: white;
 }
 
-#key--do:hover {
-    cursor: url("/public/assets/images/dedo.PNG"), auto;
+.color-gold{
+    background-color: gold;
 }
 
 
@@ -209,12 +224,28 @@ body {
 .hide{
     display: none;
 }
+.probando{
+    width: 100%;
+}
 
 /* CAMBIOS PARA QUE SEA RESPONSIVE*/
 
 /* AQUÍ APLICAMOS LA CLASE .HIDE A LOS IDS D ELAS 7 TECLAS QUE QUEREMOS ECSONDER CUANDO SE REDUCE EL TAMAÑO DE LA PANTALLA*/
-@media (max-width:780px){
-    #key-z,#key-x,#key-c,#key-v,#key-b,#key-n,#key-m{
-        display: none;
-    }
+@media (max-width:1100px){
+  
+ 
 }
+
+
+
+
+/* .piano_back_1{
+    background-image: url('../../public/assets/images/piano-images/1Do-D/Do-D-Suelto.png');
+}
+
+.piano_back_2{
+    background-image: url('../../public/assets/images/piano-images/2Re-F/Re-F-suelto.png');
+}
+.piano_back_3{
+    background-image: url('../../public/assets/images/piano-images/7Si-L/Si-L-Suelto.png');
+} */
