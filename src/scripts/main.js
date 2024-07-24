@@ -1,15 +1,15 @@
-// Luminous effect
-// const luminousEffect = document.querySelector('.luminousEffect');
-// const sizeLight = 400;
+// Hero luminous effect
+const luminousEffect = document.querySelector('.luminousEffect');
+const sizeLight = 400;
 
 // luminousEffect.style.background = `radial-gradient(circle at 22% 50%, transparent 0%, rgba(0, 0, 0, 0.9) ${sizeLight}px)`;
 
-// luminousEffect.addEventListener('mousemove', (e) => {
-//     const x = e.clientX;
-//     const y = e.clientY;
-//     luminousEffect.style.cursor = "none";
-//     luminousEffect.style.background = `radial-gradient(circle at ${x}px ${y}px, transparent 0%, rgba(0, 0, 0, 0.9) ${sizeLight}px)`;
-// });
+luminousEffect.addEventListener('mousemove', (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+    luminousEffect.style.cursor = "none";
+    luminousEffect.style.background = `radial-gradient(circle at ${x}px ${y}px, transparent 0%, rgba(0, 0, 0, 0.9) ${sizeLight}px)`;
+});
 
 // Typing text effect
 const texts = document.querySelectorAll('.typingText');
