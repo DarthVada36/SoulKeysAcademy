@@ -9,29 +9,39 @@
 <body>
     <header>
         <div class="logo">
-            <a href="#"><img src="" alt="logo-SKA"></a>
+            <a href="#"><img src="./public/assets/images/Logotipo-academy-white-nav.svg" alt="Logo Soul Keys Academy"></a>
         </div>
         <nav>
+            <div class="pentagram">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <ul class="menu">
-                <li><a href="#about">Sobre nosotros</a></li>
-                <li><a href="#instruments">Instrumentos</a></li>
-                <li><a href="#">Partituras</a></li>
-                <li><a href="./pages/contact.html">Contacto</a></li>
+                
+                <li id="noteAbout"><img class="imgNote" src="./public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="#about">Nuestra Academia</a></li>
+                <li id="noteInstruments"><img class="imgNote" src="./public/assets/images/nota-musical-blanca.png" alt="nota musical"><a href="#instruments">Instrumentos</a></li>
+                <li id="noteScores"><img class="imgNote" src="./public/assets/images/nota-musical2-blanca.png" alt="nota musical"><a href="./pages/scores.html">&nbspPartituras</a></li>
+                <li id="noteContact"><img class="imgNote" src="./public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="./pages/contact.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="hero">
             <div class="container container__hero">
-                <img src="./public/assets/images/bg-hero.png" alt="background banner">
+                <img src="./public/assets/images/pexels-rdne-8198126.jpg" alt="background banner">
                 <div class="heroText">
-                    <p>
+                    <p class="typingText typingText__text1">
                         Somos la única
                     </p>
-                    <h1>
-                        ESCUELA <br>DE MÚSICA
-                    </h1>
-                    <p>
+                    <p class="typingText typingText__bigText typingText__text2">
+                        ESCUELA
+                    </p>
+                    <p class="typingText typingText__bigText typingText__text3">
+                        DE MÚSICA
+                    </p>
+                    <p class="typingText typingText__text4">
                         con alma y corazón
                     </p>
                 </div>
@@ -40,7 +50,7 @@
         </section>
         <section class="about" id="about">
             <div class="scrollingContainer" id="scrollingContainer">
-                <h2 class="scrollingText" id="scrollingText">| <span>SOUL KEYS</span> ACADEMY |</h2>
+                <h1 class="scrollingText" id="scrollingText">| <span>SOUL KEYS</span> ACADEMY |</h1>
             </div>
             <article class="intro">
                 <div class="container container__intro">
@@ -107,14 +117,26 @@
         </section>
     </main>
     <footer>
-        <div class="container container__footer">
-            <p>&copy; 2024 Soul Keys Academy. Todos los derechos reservados.</p>
-            <div class="rrss">
-                <img src="./public/assets/images/facebook-logo.png" alt="logo-facebook">
-                <img src="" alt="logo-Instagram">
-                <img src="./public/assets/images/linkedin-logo.png" alt="logo-LinkedIn">
+        <div>
+            <div class="footerLogo">
+                <img src="./public/assets/images/Logotipo-academy-black.svg" alt="Logo Soul Keys Academy">
             </div>
+            <ul class="footerMenu">
+                <p>Nuestra Academia</p>
+                <li><a href="#about">Acerca de nosotros</a></li>
+                <li><a href="./pages/aboutus.html">Nuestra historia</a></li>
+                <li><a href="#instruments">Instrumentos</a></li>
+                <li><a href="./pages/scores.html">Partituras</a></li>
+            </ul>
+            <ul class="footerContact">
+                <p>Conecta</p>
+                <li><a href="./pages/contact.html">Escríbenos</a></li>
+                <li><a href="https://github.com/DarthVada36/SoulKeysAcademy" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
         </div>
+        <p>&copy; 2024 Soul Keys Academy. All rights reserved. Privacy Policy.</p>
     </footer>
     <script src="./src/scripts/main.js"></script>
 </body>
