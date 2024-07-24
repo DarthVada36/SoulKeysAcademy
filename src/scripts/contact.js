@@ -1,3 +1,47 @@
+// Typing text effect: Efecto typing para varias líneas
+
+// const texts = document.querySelectorAll('.typingText');
+
+// function typingEffectVariousLines(texts) {
+//     let delay = 0;
+
+//     texts.forEach((text, i) => {
+//         setTimeout(() => {
+//             text.style.visibility = 'visible';
+//             text.style.animation = 'typing 2s steps(20), blink .5s step-end infinite alternate';
+//         }, delay);
+//         delay += 2000;
+        
+//         setTimeout(() => {
+//             if (i == texts.length - 1) {
+//                 text.style.animation = 'blink .5s step-end infinite alternate'; // Dejar animación blink solo al último elemento
+//             } else {
+//                 text.style.animation = 'none'; // Reset animation
+//             }
+//         }, delay);
+//     });
+//     delay += 2000;
+
+//     for (let i=texts.length - 1; i>=0; i--) {
+//         setTimeout(() => {
+//             texts[i].style.animation = 'typing 1s steps(20) reverse, blink .5s step-end infinite alternate'; // animación en reversa
+//         }, delay);
+//         delay += 1000;
+        
+//         setTimeout(() => {
+//             texts[i].style.visibility = 'hidden';
+//             texts[i].style.animation = 'none';
+//         }, delay);
+//     };
+//     delay += 1000;
+//     setTimeout(() => typingEffectVariousLines(texts), delay);
+// };
+// const heroText = document.querySelectorAll('.heroText');
+// typingEffectVariousLines(heroText);
+
+
+
+
 // FEATURE-CONTACT PAGE JS
 
 document.getElementById('form').addEventListener('submit', function(event) {
@@ -90,3 +134,35 @@ document.getElementById('form').addEventListener('submit', function(event) {
         // No additional messages necesary
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const instrumentSounds = {
+        piano: { sound: new Audio('../public/assets/sounds/piano.mp3'), count: 0 },
+        guitarra: { sound: new Audio('../public/assets/sounds/guitar.mp3'), count: 0 },
+        bateria: { sound: new Audio('../public/assets/sounds/drum.mp3'), count: 0 },
+        tuba: { sound: new Audio('../public/assets/sounds/tuba.mp3'), count: 0 },
+        otro: { sound: new Audio('../public/assets/sounds/other.mp3'), count: 0 }
+    };
+
+    const maxPlays = 3;
+
+    const checkboxes = document.querySelectorAll('input[name="instrument"]');
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                let soundObj = instrumentSounds[this.id];
+                if (soundObj.count < maxPlays) {
+                    let soundClone = soundObj.sound.cloneNode();
+                    soundObj.count++;
+                    soundClone.play();
+                    soundClone.addEventListener('ended', () => {
+                        soundObj.count--;
+                    });
+                }
+            }
+        });
+    });
+});
+

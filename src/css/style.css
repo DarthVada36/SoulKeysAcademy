@@ -359,23 +359,51 @@ footer div {
 
 /* ..........FEATURE-CONTACT PAGE.......... */
 
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .container-contact {
     display: flex;
     margin: 10%;
-    align-items: center;
     justify-content: center;
-    padding: 50px;
+    padding: 20px;
     border-radius: 8px;
-    max-width: 400px;
+    max-width: 1200px;
     width: 100%;
-    background-color: var(--main-bg-color);
+    box-sizing: border-box;
     background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: 300%;
 }
 
+.form-image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 700px; /* Limita el ancho total del contenedor */
+}
+
+#form {
+    flex: 2; /* El formulario ocupa 2 partes del espacio */
+    margin-right: 10px; /* Ajusta el espacio entre el formulario y la imagen */
+    max-width: 450px; /* Limita el ancho máximo del formulario */
+}
+
+.form-image {
+    flex: 1; /* La imagen ocupa 1 parte del espacio */
+    max-width: 340px; /* Limita el ancho máximo de la imagen */
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del contenedor */
+    opacity: 70%;
+    border-radius: 20px;
+}
 
 form {
     display: flex;
@@ -410,7 +438,7 @@ input.error {
 
 button {
     padding: 10px;
-    background-color: var(--text-secondary-color);
+    background-color: var(--button-cta-color);
     color: var(--button-secondary-color);
     border: none;
     border-radius: 30px;
@@ -419,7 +447,8 @@ button {
 }
 
 button:hover {
-    background-color: var(--main-bg-color);
+    color: var(--main-bg-color);
+    background-color: var(--button-secondary-color);
 }
 
 .error-message {
@@ -455,5 +484,22 @@ input::placeholder {
 @media (max-width: 600px) {
     .instrument-options {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        margin-top: 20px;
+        max-width: 100%; /* Permite que la imagen ocupe el ancho total del contenedor en pantallas pequeñas */
+    }
+
+    #form {
+        max-width: 100%; /* Permite que el formulario ocupe el ancho total del contenedor en pantallas pequeñas */
     }
 }
