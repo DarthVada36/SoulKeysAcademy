@@ -225,7 +225,7 @@ button:hover {
 }
 
 .error-message {
-    color: #4b4ee1;
+    color: var(--button-secondary-color);
     margin-top: 0;
     margin-bottom: 10px;
     font-size:small;
