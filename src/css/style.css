@@ -18,7 +18,7 @@
     --text-size-s: 24px;
     --text-size-xs: 20px;
     --height-header: 100px;
-    --height-pentagram: 60px;
+    --height-pentagram: 80px;
 }
 
 /* General Styles */
@@ -55,9 +55,18 @@ nav {
     position: relative;
 }
 
-.logo img {
-    height: var(--height-pentagram);
+.logo {
+    max-width: 100%;
+    height: 100px;
+    display: flex;
+    margin-top: 8px;
 }
+
+.open-menu,
+.close-menu{
+    display: none;
+}
+
 
 .pentagram {
     position: relative;
@@ -72,8 +81,10 @@ nav {
 
 .menu {
     position: absolute;
-    top: 0;
-    width: 100%;
+    top: 24px;
+    width: 95%;
+    /* display: flex;
+    justify-content: space-evenly; */
     font-size: var(--text-size-s);
     font-family: var(--text-title);
 }
@@ -126,6 +137,7 @@ nav {
     top: 40px; /* Ajustar la posición vertical en el navbar */
     left: 80%;
 }
+
 
 /* Container general*/
 .container {
@@ -246,9 +258,9 @@ section {
 }
 
 @keyframes blink {
-  50% {
+    50% {
     border-color: var(--text-primary-color);
-  }
+    }
 }
 
 
@@ -480,7 +492,8 @@ q {
 
 .cardInstruments:hover .instrumentName {
     color: var(--main-bg-color)
-  }
+}
+
 
 /* Footer */
 footer {
@@ -570,5 +583,292 @@ footer li:hover {
 
     .instrumentName {
         font-size: var(--text-size-s);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ..........FEATURE-CONTACT PAGE.......... */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.container-contact {
+    display: flex;
+    margin: 10%;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 300%;
+}
+
+.form-image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 700px; /* Limita el ancho total del contenedor */
+}
+
+#form {
+    flex: 2; /* El formulario ocupa 2 partes del espacio */
+    margin-right: 10px; /* Ajusta el espacio entre el formulario y la imagen */
+    max-width: 450px; /* Limita el ancho máximo del formulario */
+}
+
+.form-image {
+    flex: 1; /* La imagen ocupa 1 parte del espacio */
+    max-width: 340px; /* Limita el ancho máximo de la imagen */
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del contenedor */
+    opacity: 70%;
+    border-radius: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-h3 {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    margin: 0px 0px 0px;
+    margin-bottom: 5px;
+    margin-left: 2px;
+    color: var(--text-secondary-color);
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+input.error {
+    border-color: rgb(119, 10, 10);
+    border-style: dashed;
+}
+
+button {
+    padding: 10px;
+    background-color: var(--button-cta-color);
+    color: var(--button-secondary-color);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    color: var(--main-bg-color);
+    background-color: var(--button-secondary-color);
+}
+
+.error-message {
+    color: var(--button-secondary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size:small;
+}
+
+
+.instrument-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: left;
+    padding: 10px;
+    margin-top: 8px;
+    gap: 10px;
+}
+
+.instrument-options div {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input::placeholder {
+    color: #999;
+    font-family: var(--text-paragraph);
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .instrument-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+
+    /*START NAVBAR CONFIGURATION*/
+
+    .logo{
+        max-width: 70%;
+    }
+
+
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        top: 16px;
+        right: 0;
+        padding-left: 1rem;
+    }
+
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-top: 36px;
+        background-color:transparent;
+    }
+
+    .menu img{
+        display: none;
+    }
+
+    .pentagram{
+        display: none;
+    }
+
+
+
+    #noteAbout, #noteInstruments, #noteScores, #noteContact {
+        flex-direction:column;
+        right: auto;
+        top: auto;
+        position: static;
+        align-items: end;
+        padding-right: 80px;
+    }
+
+
+
+    .open-menu,
+    .close-menu{
+        display:flex;
+        border: 0;
+        top: 0;
+        font-size: 2.5rem;
+        background-color: transparent;
+        max-width: 80px;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+
+    button#Cerrar {
+        padding-left: 10px;
+        margin-top: 8px;
+        margin-right: 80px;
+    }
+    
+    /*END NAVBAR CONFIGURATION*/
+
+    img {
+        margin-top: 10px;
+        max-width: 82%; /* Permite que la imagen ocupe el ancho total del contenedor en pantallas pequeñas */
+    }
+
+    .form-image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #form {
+        max-width: 100%; /* Permite que el formulario ocupe el ancho total del contenedor en pantallas pequeñas */
     }
 }
