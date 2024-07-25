@@ -4,34 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/style.css">
+    <!--.....Box icons......-->
+    <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--....Remix icons.....-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
     <title>Soul Keys Academy</title>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="#"><img src="" alt="logo-SKA"></a>
-        </div>
-        <nav>
+        <a href="#"><img class="logo" src="../public/assets/images/Logotipo-academy-white-nav-notext.svg" alt="Logo Soul Keys Academy"></a>
+        <button class="open-menu" id="Abrir"><i class="ri-menu-line"></i></button> 
+        <nav class="nav" id="nav">
+            <button class="close-menu" id="Cerrar"><i class="ri-close-line"></i></button>
+            <div class="pentagram">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <ul class="menu">
-                <li><a href="#about">Sobre nosotros</a></li>
-                <li><a href="#instruments">Instrumentos</a></li>
-                <li><a href="#">Partituras</a></li>
-                <li><a href="./pages/contact.html">Contacto</a></li>
+                <li id="noteAbout"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="#about">Nuestra Academia</a></li>
+                <li id="noteInstruments"><img class="imgNote" src="../public/assets/images/nota-musical-blanca.png" alt="nota musical"><a href="#instruments">Instrumentos</a></li>
+                <li id="noteScores"><img class="imgNote" src="../public/assets/images/nota-musical2-blanca.png" alt="nota musical"><a href="./pages/scores.html">&nbspPartituras</a></li>
+                <li id="noteContact"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="./pages/contact.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="hero">
             <div class="container container__hero">
-                <img src="./public/assets/images/bg-hero.png" alt="background banner">
-                <div class="heroText">
-                    <p>
+                <img src="./public/assets/images/pexels-rdne-8198126.jpg" alt="background banner">
+                <div class="heroTexts">
+                    <p class="heroText heroText__text1 typingText">
                         Somos la única
                     </p>
-                    <h1>
-                        ESCUELA <br>DE MÚSICA
-                    </h1>
-                    <p>
+                    <p class="heroText heroText__bigText heroText__text2 typingText">
+                        ESCUELA
+                    </p>
+                    <p class="heroText heroText__bigText heroText__text3 typingText">
+                        DE MÚSICA
+                    </p>
+                    <p class="heroText heroText__text4 typingText">
                         con alma y corazón
                     </p>
                 </div>
@@ -40,81 +53,112 @@
         </section>
         <section class="about" id="about">
             <div class="scrollingContainer" id="scrollingContainer">
-                <h2 class="scrollingText" id="scrollingText">| <span>SOUL KEYS</span> ACADEMY |</h2>
+                <h1 class="scrollingText" id="scrollingText">| <span>SOUL KEYS</span> ACADEMY |</h1>
             </div>
-            <article class="intro">
-                <div class="container container__intro">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur. Mi pharetra id bibendum turpis sit ac posuere. Enim ut egestas vel at accumsan arcu.
-                    </p>
-                    <p>
-                        “Lorem Ipsum dolor sit amet”
-                    </p>
-                    <p>
-                        Ut dignissim vestibulum gravida nibh cras et vel sapien. Laoreet lacinia leo ut sit mi tincidunt ac vitae. Vitae eget adipiscing enim gravida dapibus proin faucibus elit quis. 
-                    </p>
-                </div>
-            </article>
-            <article class="commitment">
-                <div class="container">
-                    <h3><span>Entregamos el alma</span> <br>en cada clase</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur. Mi pharetra id bibendum turpis sit ac posuere. Enim ut egestas vel at accumsan arcu. 
-                    </p>
-                    <div class="testimonial">
-                        <img src="./public/assets/images/nota-musical.png" alt="nota musical">
-                        <blockquote>
-                            La mejor academia de música de toda la historia, si músicos cómo Freddie Mercury o Beethoven pudieran verlo, seguro hubieran estudiado aquí.
-                        </blockquote>
-                        <p>
-                            [ RS en Español CEO — Jason Allen ]
+            <div class="container container__intro">
+                <article class="intro">
+                    <div class="title">
+                        <p class="titleIntro titleIntro__text1 typingText">
+                            <span>Entregamos el alma</span>
+                        </p> 
+                        <p class="titleIntro titleIntro__text2 typingText">
+                            en cada clase
                         </p>
-                        <img src="./public/assets/images/Rolling_Stone_Logo.png" alt="logo RollingStone">
-                        <img src="./public/assets/images/stars-5.png" alt="">
                     </div>
-                </div>
-            </article>
-            <article class="achivements">
-                <div class="container">
-                    <h4>Nuestro éxito es <span>el brillo</span> de <br>nuestros alumnos</h4>
-                    <p>
-                        Cursus cursus id turpis ac purus consequat. Vestibulum phasellus dui dis vel massa. Dui lacus nunc massa non tellus. Fermentum eros felis sit lorem vitae ullamcorper. At lorem odio tempus nunc nulla adipiscing enim. A orci bibendum quam blandit. Gravida imperdiet tellus ac arcu.
+                    <p class="textIntro">
+                        En <b>Soul Keys Academy</b>, te invitamos a explorar la música con alma. Nuestra innovadora plataforma virtual te permite tocar instrumentos virtuales y practicar una amplia variedad de partituras, ofreciendo una experiencia musical única y accesible para todos los niveles.
                     </p>
-                    <p>
-                        Excelencia Académica
+                    <p class="textIntro">
+                        <span><q>Descubre la llave de tu alma musical</q></span>
+                    </p class="textIntro">
+                    <p class="textIntro">
+                        Con instructores apasionados y recursos de vanguardia, estamos dedicados a ayudarte a descubrir y desarrollar tu talento musical desde cualquier lugar del mundo. Únete a nuestra comunidad y deja que la música sea la clave para abrir nuevas puertas en tu vida.
                     </p>
-                    <div class="gallery">
-                        <img src="./public/assets/images/freddie-mercury-71848_1280-3.png" alt="persona tocando un piano">
-                        <img src="./public/assets/images/freddie-mercury-71848_1280-1.png" alt="Freddy Mercury cantando">
-                        <img src="./public/assets/images/freddie-mercury-71848_1280-2.png" alt="integrante de banda de Freddy Mercury">
+                    <div>
+                        <blockquote class="citeRS">
+                            <div class="quoteRS">
+                                <img src="./public/assets/images/nota-musical.png" alt="nota musical">
+                                <q>La mejor academia de música de toda la historia, si músicos cómo Freddie Mercury o Beethoven pudieran verlo, seguro hubieran estudiado aquí.</q>
+                            </div>
+                            <p>
+                                [ RS en Español CEO — Jason Allen ]
+                            </p>
+                            <img src="./public/assets/images/Rolling_Stone_Logo.png" alt="logo RollingStone">
+                            <img src="./public/assets/images/stars-5.png" alt="5 estrellas">
+                        </blockquote>
                     </div>
+                </article>
+                <div class="cards" id="cards">
+                    <img class="cardIntro cardIntro__cardLeft" id="cardLeft" src="./public/assets/images/AboutUsleft.svg" alt="tarjeta nuestra academia">
+                    <a class="cardIntro__cardMid" href="./pages/aboutus.html"><img class="cardIntro" id="cardMid" src="./public/assets/images/AboutUsmid.svg" alt="tarjeta nuestra academia"></a>
+                    <img class="cardIntro cardIntro__cardRight" id="cardRight" src="./public/assets/images/AboutUsright.svg" alt="tarjeta nuestra academia">
                 </div>
-            </article>
+            </div>
         </section>
         <section class="instruments" id="instruments">
             <div class="container">
-                <div class="card">
-                    <div class="instrument">
-                        <img src="" alt="icono de piano">
+                <div class="title">
+                    <p class="titleInstruments titleInstruments__text1 typingText">
+                        Practica con
+                    </p> 
+                    <p class="titleInstruments titleInstruments__text2 typingText">
+                        <span>Instrumentos</span>
+                    </p>
+                </div>
+                <div class="cardsInstrumentsContainer">
+                    <div class="cardInstruments">
+                        <a href="./pages/piano.html">
+                            <div class="instrument instrument__piano">
+                            </div>
+                            <p class="instrumentName">Piano</p>
+                        </a>
                     </div>
-                    <div class="description">
-                        <h4>Piano</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </p>
+                    <div class="cardInstruments">
+                        <a href="./pages/wip.html">
+                            <div class="instrument instrument__guitar">
+                            </div>
+                            <p class="instrumentName">Guitarra</p>
+                        </a>
+                    </div>
+                    <div class="cardInstruments">
+                        <a href="./pages/wip.html">
+                            <div class="instrument instrument__drums">
+                            </div>
+                            <p class="instrumentName">Batería</p>
+                        </a>
+                    </div>
+                    <div class="cardInstruments">
+                        <a href="./pages/wip.html">
+                            <div class="instrument instrument__tuba">
+                            </div>
+                            <p class="instrumentName">Tuba</p>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <div class="container container__footer">
-            <p>&copy; 2024 Soul Keys Academy. Todos los derechos reservados.</p>
-            <div class="rrss">
-                <img src="./public/assets/images/facebook-logo.png" alt="logo-facebook">
-                <img src="" alt="logo-Instagram">
-                <img src="./public/assets/images/linkedin-logo.png" alt="logo-LinkedIn">
+        <div>
+            <div class="footerLogo">
+                <img src="./public/assets/images/Logotipo-academy-black.svg" alt="Logo Soul Keys Academy">
             </div>
+            <ul class="footerMenu">
+                <p>Nuestra Academia</p>
+                <li><a href="#about">Acerca de nosotros</a></li>
+                <li><a href="./pages/aboutus.html">Nuestra historia</a></li>
+                <li><a href="#instruments">Instrumentos</a></li>
+                <li><a href="./pages/scores.html">Partituras</a></li>
+            </ul>
+            <ul class="footerContact">
+                <p>Conecta</p>
+                <li><a href="./pages/contact.html">Escríbenos</a></li>
+                <li><a href="https://github.com/DarthVada36/SoulKeysAcademy" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
         </div>
+        <p>&copy; 2024 Soul Keys Academy. All rights reserved. Privacy Policy.</p>
     </footer>
     <script src="./src/scripts/main.js"></script>
 </body>
