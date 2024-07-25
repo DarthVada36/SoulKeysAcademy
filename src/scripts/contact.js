@@ -1,3 +1,18 @@
+//NAV BAR JS
+const nav = document.querySelector("#nav");
+const Abrir = document.querySelector("#Abrir");
+const Cerrar = document.querySelector("#Cerrar");
+
+Abrir.addEventListener("click", () => {
+    nav.classList.add("visible");
+})
+
+Cerrar.addEventListener("click", () => {
+    nav.classList.remove("visible");
+})
+
+
+
 // Typing text effect: Efecto typing para varias líneas
 
 // const texts = document.querySelectorAll('.typingText');

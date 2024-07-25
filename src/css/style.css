@@ -18,7 +18,7 @@
     --text-size-s: 24px;
     --text-size-xs: 16px;
     --height-header: 100px;
-    --height-pentagram: 60px;
+    --height-pentagram: 80px;
 }
 
 /* General Styles */
@@ -55,13 +55,18 @@ nav {
     position: relative;
 }
 
-/* .logo {
-    width: 100px;
-} */
-
-.logo img {
-    height: var(--height-pentagram);
+.logo {
+    max-width: 100%;
+    height: 100px;
+    display: flex;
+    margin-top: 8px;
 }
+
+.open-menu,
+.close-menu{
+    display: none;
+}
+
 
 .pentagram {
     position: relative;
@@ -76,8 +81,8 @@ nav {
 
 .menu {
     position: absolute;
-    top: 0;
-    width: 100%;
+    top: 24px;
+    width: 95%;
     /* display: flex;
     justify-content: space-evenly; */
     font-size: var(--text-size-s);
@@ -133,6 +138,7 @@ nav {
     top: 40px; /* Ajustar la posición vertical en el navbar */
     left: 80%;
 }
+
 
 /* Container general*/
 .container {
@@ -247,9 +253,9 @@ section {
 }
 
 @keyframes blink {
-  50% {
+    50% {
     border-color: var(--text-primary-color);
-  }
+    }
 }
 
 
@@ -480,7 +486,7 @@ input::placeholder {
     font-family: var(--text-paragraph);
 }
 
-/* Responsivo */
+/* Media Queries */
 @media (max-width: 600px) {
     .instrument-options {
         grid-template-columns: 1fr;
@@ -488,15 +494,73 @@ input::placeholder {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+
+    /*START NAVBAR CONFIGURATION*/
+
+
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        top: 16px;
+        right: 0;
+        padding-left: 2rem;
+    }
+
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-top: 58px;
+        background-color:#28282dde;
+    }
+
+    .menu img{
+        display: none;
+    }
+
+
+
+    #noteAbout, #noteInstruments, #noteScores, #noteContact {
+        flex-direction:column;
+        right: auto;
+        top: auto;
+        position: static;
+        align-items: center;
+        padding-right: 72px;
+    }
+
+    .pentagram{
+        display: none;
+    }
+
+    .open-menu,
+    .close-menu{
+        display:block;
+        border: 0;
+        font-size: 3rem;
+        background-color: transparent;
+        max-width: 80px;
+        cursor: pointer;
+    }
+    
+    /*END NAVBAR CONFIGURATION*/
+
+    img {
+        margin-top: 10px;
+        max-width: 82%; /* Permite que la imagen ocupe el ancho total del contenedor en pantallas pequeñas */
+    }
+
     .form-image-container {
         flex-direction: column;
         align-items: center;
-    }
-
-    img {
-        margin-top: 20px;
-        max-width: 100%; /* Permite que la imagen ocupe el ancho total del contenedor en pantallas pequeñas */
     }
 
     #form {
