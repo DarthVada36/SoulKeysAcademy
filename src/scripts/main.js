@@ -75,6 +75,9 @@ typingEffectVariousLines(heroText);
 // Título de la intro
 const titleIntro = document.querySelectorAll('.titleIntro');
 typingEffectVariousLines(titleIntro);
+// Título de sección de instrumentos (home)
+const titleInstruments = document.querySelectorAll('.titleInstruments');
+typingEffectVariousLines(titleInstruments);
 
 // Scrolling text effect
 // Obtener los elementos del DOM
