@@ -115,21 +115,29 @@ document.getElementById('miSelectSound').addEventListener('change', function (ch
 
 
 // FUNCIÓN PARA QUE SUENEN LAS NOTAS AL HACER CLICK CON EL MOUSE //
-document.addEventListener('click', function (clickMouse) {
-  let target = clickMouse.target; // El elemento clicado
-  
+document.addEventListener('mousedown', function (event) {
+  let target = event.target; // El elemento clicado
+
   // Verifica si el elemento clicado tiene un id que empieza con 'key-'
   if (target.id && target.id.startsWith('key-')) {
     let key = target.id.replace('key-', ''); // Obtiene la tecla del id del elemento
 
     if (keys.includes(key)) { // Verifica si la tecla está en el array 'keys'
       let index = keys.indexOf(key); // Obtiene el índice de la tecla
-      let note = currentNotes[index]; // Obtiene la note de la posición correspondiente
-      reproduceNote(note); // Reproduce la note
-      target.classList.add('key-gray'); //Añadimos la clase key-gray para que se ponga gris la tecla y al pulsarla haga el efecto de ser pulsada
-
+      let note = currentNotes[index]; // Obtiene la nota de la posición correspondiente
+      reproduceNote(note); // Reproduce la nota
+      target.classList.add('key-gray'); // Añadimos la clase key-gray para que se ponga gris la tecla y al pulsarla haga el efecto de ser pulsada
     }
   }
+});
+
+// FUNCIÓN PARA REMOVER LA CLASE KEY-GRAY AL DEJAR DE HACER CLICK CON EL MOUSE //
+document.addEventListener('mouseup', function (event) {
+  let keysElements = document.querySelectorAll('[id^="key-"]');
+  
+  keysElements.forEach((keyElement) => {
+    keyElement.classList.remove('key-gray'); // Removemos la clase key-gray de todas las teclas
+  });
 });
 
 
