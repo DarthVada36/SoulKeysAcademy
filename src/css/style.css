@@ -498,6 +498,10 @@ input::placeholder {
 
     /*START NAVBAR CONFIGURATION*/
 
+    .logo{
+        max-width: 70%;
+    }
+
 
     .nav{
         opacity: 0;
@@ -508,7 +512,7 @@ input::placeholder {
         position: absolute;
         top: 16px;
         right: 0;
-        padding-left: 2rem;
+        padding-left: 1rem;
     }
 
     .nav.visible{
@@ -518,11 +522,15 @@ input::placeholder {
 
     .menu {
         flex-direction: column;
-        margin-top: 58px;
-        background-color:#28282dde;
+        margin-top: 36px;
+        background-color:transparent;
     }
 
     .menu img{
+        display: none;
+    }
+
+    .pentagram{
         display: none;
     }
 
@@ -533,22 +541,28 @@ input::placeholder {
         right: auto;
         top: auto;
         position: static;
-        align-items: center;
-        padding-right: 72px;
+        align-items: end;
+        padding-right: 80px;
     }
 
-    .pentagram{
-        display: none;
-    }
+
 
     .open-menu,
     .close-menu{
-        display:block;
+        display:flex;
         border: 0;
-        font-size: 3rem;
+        top: 0;
+        font-size: 2.5rem;
         background-color: transparent;
         max-width: 80px;
         cursor: pointer;
+        margin-right: 30px;
+    }
+
+    button#Cerrar {
+        padding-left: 10px;
+        margin-top: 8px;
+        margin-right: 80px;
     }
     
     /*END NAVBAR CONFIGURATION*/
