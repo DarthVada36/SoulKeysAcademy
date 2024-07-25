@@ -490,7 +490,8 @@ q {
 
 .cardInstruments:hover .instrumentName {
     color: var(--main-bg-color)
-  }
+}
+
 
 /* Footer */
 footer {
@@ -508,8 +509,37 @@ footer {
 
 footer div {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90%;
+    max-width: 100%;
 }
+
+.footerLogo img {
+    height: 100%;
+}
+
+footer ul p {
+    font-weight: bold;
+}
+
+footer li {
+    list-style: none;
+    font-size: var(--text-size-xs);
+}
+
+footer a {
+    text-decoration-line: none;
+    color: var(--main-bg-color);
+}
+
+footer li:hover {
+    text-decoration-line: underline;
+}
+
+
+
+
 
 
 
