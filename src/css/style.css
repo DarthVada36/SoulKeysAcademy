@@ -221,7 +221,7 @@ section {
 
 .heroText__bigText {
     color: var(--text-secondary-color);
-    font-size: var(--text-size-xxl);
+    font-size: var(--text-size-xl);
     font-weight: bold;
 }
 
