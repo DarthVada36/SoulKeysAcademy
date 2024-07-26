@@ -365,8 +365,8 @@ span {
     font-size: var(--text-size-s);
     color: var(--text-secondary-color);
 }
-/*
-@media (max-width: 1200px) {
+
+@media (max-width: 1000px) {
     .header__menu {
         font-size: var(--text-size-m);
     }
@@ -384,7 +384,7 @@ span {
     }
 }
 
-/*@media (max-width: 768px) {
+@media (max-width: 768px) {
     .header {
         flex-direction: column;
         height: auto;
@@ -442,7 +442,7 @@ span {
     .work-in-progress__game {
         width: 100%;
     }
-}*/
+}
 
 /*ENDS WIP*/
 
