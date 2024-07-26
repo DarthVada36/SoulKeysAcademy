@@ -809,7 +809,7 @@ input::placeholder {
     
     /*END NAVBAR CONFIGURATION*/
 
-    img {
+    .form-image {
         margin-top: 10px;
         max-width: 82%; /* Permite que la imagen ocupe el ancho total del contenedor en pantallas pequeñas */
     }
