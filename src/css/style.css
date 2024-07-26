@@ -328,7 +328,7 @@ span {
     transition: bottom 0.3s;
 }
 
-.game__note img {
+.game__note-img {
     width: 90%;
     height: 90%;
     object-fit: contain;
