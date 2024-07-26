@@ -67,7 +67,6 @@ nav {
     display: none;
 }
 
-
 .pentagram {
     position: relative;
     height: var(--height-pentagram);
@@ -82,7 +81,7 @@ nav {
 .menu {
     position: absolute;
     top: 24px;
-    width: 95%;
+    width: 100%;
     /* display: flex;
     justify-content: space-evenly; */
     font-size: var(--text-size-s);
@@ -152,6 +151,7 @@ section {
     max-width: 100%;
 }
 
+/* ..........FEATURE-HOME PAGE.......... */
 /* Hero // Banner */
 .hero {
     max-width: 100%;
@@ -162,9 +162,7 @@ section {
 .container__hero {
     display: flex;
     flex-direction: column;
-    position: relative;
     height: calc(100vh - var(--height-header)); /* altura de la pantalla menos lo que ocupa el navbar */
-    max-width: 100%;
     margin: 0;
     justify-content: center;
     overflow: hidden;
@@ -221,7 +219,7 @@ section {
 
 .heroText__bigText {
     color: var(--text-secondary-color);
-    font-size: var(--text-size-xxl);
+    font-size: var(--text-size-xl);
     font-weight: bold;
 }
 
@@ -604,6 +602,86 @@ footer li:hover {
 
 
 
+.titleInstruments__text2 {
+    width: 12.2ch;
+}
+
+.cardsInstrumentsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 60px 0 120px 0;
+}
+
+.cardInstruments {
+    height: 200px;
+    width: 200px;
+    background-color: var(--text-primary-color);
+    border-radius: 40px;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cardInstruments a {
+    text-decoration: none;
+}
+
+.instrument {
+    height: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.instrument__piano {
+    background-image: url('../../public/assets/images/piano.svg');
+}
+
+.instrument__guitar {
+    background-image: url('../../public/assets/images/guitarra-clasica.svg'); 
+}
+
+.instrument__drums {
+    background-image: url('../../public/assets/images/bateria.svg');
+}
+
+.instrument__tuba {
+    background-image: url('../../public/assets/images/tuba.svg');
+}
+
+.instrumentName {
+    font-family: var(--text-title);
+    font-size: var(--text-size-m);
+    color: var(--text-secondary-color);
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Efecto hover sobre las tarjetas */
+.cardInstruments:hover {
+    transform: scale(1.1);
+}
+
+.cardInstruments:hover .instrument__piano {
+    background-image: url('../../public/assets/images/piano_color.svg');  
+}
+
+.cardInstruments:hover .instrument__guitar {
+    background-image: url('../../public/assets/images/guitarra-clasica_color.svg');
+}
+
+.cardInstruments:hover .instrument__drums {
+    background-image: url('../../public/assets/images/bateria_color.svg');  
+}
+
+.cardInstruments:hover .instrument__tuba {
+    background-image: url('../../public/assets/images/tuba_color.svg');
+}
+
+.cardInstruments:hover .instrumentName {
+    color: var(--main-bg-color)
+}
 
 /* ..........FEATURE-CONTACT PAGE.......... */
 
@@ -612,7 +690,6 @@ footer li:hover {
     flex-direction: column;
     align-items: center;
 }
-
 
 .container-contact {
     display: flex;
@@ -706,7 +783,6 @@ button:hover {
     font-size:small;
 }
 
-
 .instrument-options {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -720,4 +796,206 @@ button:hover {
     display: flex;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
+    align-items: center;
+}
+
+input::placeholder {
+    color: #999;
+    font-family: var(--text-paragraph);
+}
+
+/* FOOTER */
+footer {
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--text-primary-color);
+    height: 300px;
+    padding: 20px;
+    font-size: var(--text-size-s);
+    color: var(--main-bg-color);
+}
+
+footer div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90%;
+    max-width: 100%;
+}
+
+.footerLogo img {
+    width: 80%;
+    height: 100%;
+}
+
+footer ul p {
+    font-weight: bold;
+}
+
+footer li {
+    list-style: none;
+    font-size: var(--text-size-xs);
+}
+
+footer a {
+    text-decoration-line: none;
+    color: var(--main-bg-color);
+}
+
+footer li:hover {
+    text-decoration-line: underline;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .instrument-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive adjustments */
+@media (768px <= width < 950px) {
+    .heroText__bigText {
+        font-size: var(--text-size-xl);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /*START NAVBAR CONFIGURATION*/
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo{
+        max-width: 70%;
+    }
+
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        top: 16px;
+        right: 0;
+        padding-left: 1rem;
+    }
+
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-top: 36px;
+        background-color:transparent;
+    }
+
+    .menu img{
+        display: none;
+    }
+
+    .pentagram{
+        display: none;
+    }
+
+    #noteAbout, #noteInstruments, #noteScores, #noteContact {
+        flex-direction:column;
+        right: auto;
+        top: auto;
+        position: static;
+        align-items: end;
+        padding-right: 40px;
+    }
+
+    .open-menu,
+    .close-menu{
+        display:flex;
+        border: 0;
+        top: 0;
+        font-size: 2.5rem;
+        background-color: transparent;
+        max-width: 80px;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+
+    button#Cerrar {
+        padding-left: 10px;
+        margin-top: 8px;
+        margin-right: 38px;
+    }
+    
+    /*END NAVBAR CONFIGURATION*/
+
+    /*START HOME CONFIGURATION*/
+    .scrollingContainer {
+        height: 100px;
+    }
+
+    .scrollingText {
+        font-size: var(--text-size-l);
+    }
+
+    .heroText {
+        font-size: var(--text-size-s);
+    }
+
+    .heroText__bigText {
+        font-size: var(--text-size-l);
+    }
+
+    .cards {
+        height: 350px;
+        width: auto;
+    }
+
+    .cardIntro {
+    height: 250px;
+    }
+
+    .titleInstruments {
+        font-size: var(--text-size-m);
+    }
+
+    .cardInstruments {
+        height: 150px;
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .instrumentName {
+        font-size: var(--text-size-s);
+    }
+
+    /*END HOME CONFIGURATION*/
+
+    /*START CONTACT CONFIGURATION*/
+
+    .form-image {
+        margin-top: 10px;
+        max-width: 82%; /* Permite que la imagen ocupe el ancho total del contenedor en pantallas pequeñas */
+    }
+
+    .form-image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #form {
+        max-width: 100%; /* Permite que el formulario ocupe el ancho total del contenedor en pantallas pequeñas */
+    }
+    /*END CONTACT CONFIGURATION*/
+
+    /*FOOTER CONFIGURATION*/
+    footer {
+        font-size: var(--text-size-xs);
+    }
 }
