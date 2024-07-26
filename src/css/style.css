@@ -784,6 +784,10 @@ footer li:hover {
         font-size: var(--text-size-s);
     }
 
+    /*END HOME CONFIGURATION*/
+
+    /*START CONTACT CONFIGURATION*/
+
     .form-image {
         margin-top: 10px;
         max-width: 82%; /* Permite que la imagen ocupe el ancho total del contenedor en pantallas pequeñas */
@@ -797,6 +801,7 @@ footer li:hover {
     #form {
         max-width: 100%; /* Permite que el formulario ocupe el ancho total del contenedor en pantallas pequeñas */
     }
+    /*END CONTACT CONFIGURATION*/
 
     /*FOOTER CONFIGURATION*/
     footer {
