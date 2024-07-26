@@ -12,9 +12,8 @@
 </head>
 <body>
     <header>
-            <a href="#"><img class="logo" src="../public/assets/images/Logotipo-academy-white-nav-notext.svg" alt="Logo Soul Keys Academy"></a>
-            <button class="open-menu" id="Abrir"><i class="ri-menu-line"></i></button>
-            
+        <a href="./index.html#"><img class="logo" src="../public/assets/images/Logotipo-academy-white-nav-notext.svg" alt="Logo Soul Keys Academy"></a>
+        <button class="open-menu" id="Abrir"><i class="ri-menu-line"></i></button>    
         <nav class="nav" id="nav">
             <button class="close-menu" id="Cerrar"><i class="ri-close-line"></i></button>
             <div class="pentagram">
@@ -24,18 +23,22 @@
                 <div></div>
             </div>
             <ul class="menu">
-                <li id="noteAbout"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="#about">Nuestra Academia</a></li>
-                <li id="noteInstruments"><img class="imgNote" src="../public/assets/images/nota-musical-blanca.png" alt="nota musical"><a href="#instruments">Instrumentos</a></li>
-                <li id="noteScores"><img class="imgNote" src="../public/assets/images/nota-musical2-blanca.png" alt="nota musical"><a href="./pages/scores.html">&nbspPartituras</a></li>
-                <li id="noteContact"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="./pages/contact.html">Contacto</a></li>
+                <li id="noteAbout"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="../index.html#about">Nuestra Academia</a></li>
+                <li id="noteInstruments"><img class="imgNote" src="../public/assets/images/nota-musical-blanca.png" alt="nota musical"><a href="../index.html#instruments">Instrumentos</a></li>
+                <li id="noteScores"><img class="imgNote" src="../public/assets/images/nota-musical2-blanca.png" alt="nota musical"><a href="../pages/scores.html">&nbspPartituras</a></li>
+                <li id="noteContact"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="../pages/contact.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="contact">
-            <div class="container-contact1">
-                <p>Tu nuevo camino comienza hoy...</p>
-                <p>Atrévete, estás a un paso</p>
+            <div class="container-contact1 title">
+                <p class="titleInstruments titleInstruments__text1 typingText">
+                    Tu nuevo camino comienza hoy...
+                </p>
+                <p class="titleInstruments titleInstruments__text2 typingText">
+                    Atrévete, estás a un paso
+                </p>
             </div>
             <div class="container-contact">
                 <div class="form-image-container">
@@ -120,6 +123,7 @@
         </div>
         <p>&copy; 2024 Soul Keys Academy. All rights reserved. Privacy Policy.</p>
     </footer>
-    <script src="../src/scripts/contact.js"></script>
+    <script type="module" src="../src/scripts/main.js"></script>
+    <script type="module" src="../src/scripts/contact.js"></script>
 </body>
 </html>

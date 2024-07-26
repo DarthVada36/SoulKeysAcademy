@@ -789,13 +789,14 @@ footer li:hover {
     /*START CONTACT CONFIGURATION*/
 
     .form-image {
-        margin-top: 10px;
-        max-width: 82%; /* Permite que la imagen ocupe el ancho total del contenedor en pantallas pequeñas */
+        margin-top: 30px;
+        max-width: 62%; /* Permite que la imagen ocupe el ancho total del contenedor en pantallas pequeñas */
     }
 
     .form-image-container {
         flex-direction: column;
         align-items: center;
+        max-width: 80%;
     }
 
     #form {

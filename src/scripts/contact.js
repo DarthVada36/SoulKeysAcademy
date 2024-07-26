@@ -12,6 +12,15 @@ Cerrar.addEventListener("click", () => {
 })
 
 
+// contact.js
+//import { burgerMenu, typingEffectVariousLines } from './main.js';
+
+// Burger menu
+//burgerMenu();
+
+// Typing effect
+//typingEffectVariousLines();
+
 
 // FEATURE-CONTACT PAGE JS
 
