@@ -869,6 +869,10 @@ footer li:hover {
         width: 320px;
         height: 320px;
     }
+    .soundSelector{
+        margin-top: 6%;
+    }
+    
 
     /* Esto hace que se oculten las 7 últimas teclas */
     #key-z,
@@ -887,6 +891,8 @@ footer li:hover {
         justify-content: center;
         align-items: center;
     }
+
+
 
     /* ESTILOS PIANO RESPONSIVE */
     #piano {
