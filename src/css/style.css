@@ -420,6 +420,7 @@ q {
 .cardsInstrumentsContainer {
     display: flex;
     justify-content: space-evenly;
+    gap: 20px;
     flex-wrap: wrap;
     margin: 60px 0 120px 0;
 }
@@ -441,6 +442,7 @@ q {
     height: 70%;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 }
 
 .instrument__piano {
@@ -535,6 +537,53 @@ footer a {
 
 footer li:hover {
     text-decoration-line: underline;
+}
+
+@media (768px <= width < 950px) {
+    .heroText__bigText {
+        font-size: var(--text-size-xl);
+    }
+}
+
+@media (width < 768px) {
+    .scrollingContainer {
+        height: 100px;
+    }
+
+    .scrollingText {
+        font-size: var(--text-size-l);
+    }
+
+    .heroText {
+        font-size: var(--text-size-s);
+    }
+
+    .heroText__bigText {
+        font-size: var(--text-size-l);
+    }
+
+    .cards {
+        height: 350px;
+        width: auto;
+    }
+
+    .cardIntro {
+    height: 250px;
+    }
+
+    .titleInstruments {
+        font-size: var(--text-size-m);
+    }
+
+    .cardInstruments {
+        height: 150px;
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .instrumentName {
+        font-size: var(--text-size-s);
+    }
 }
 
 

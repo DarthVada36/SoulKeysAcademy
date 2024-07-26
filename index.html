@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/style.css">
+    <!--.....Box icons......-->
+    <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--....Remix icons.....-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
     <title>Soul Keys Academy</title>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="#"><img src="./public/assets/images/Logotipo-academy-white-nav.svg" alt="Logo Soul Keys Academy"></a>
-        </div>
-        <nav>
+        <a href="#"><img class="logo" src="../public/assets/images/Logotipo-academy-white-nav-notext.svg" alt="Logo Soul Keys Academy"></a>
+        <button class="open-menu" id="Abrir"><i class="ri-menu-line"></i></button> 
+        <nav class="nav" id="nav">
+            <button class="close-menu" id="Cerrar"><i class="ri-close-line"></i></button>
             <div class="pentagram">
                 <div></div>
                 <div></div>
@@ -19,10 +23,10 @@
                 <div></div>
             </div>
             <ul class="menu">
-                <li id="noteAbout"><img class="imgNote" src="./public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="#about">Nuestra Academia</a></li>
-                <li id="noteInstruments"><img class="imgNote" src="./public/assets/images/nota-musical-blanca.png" alt="nota musical"><a href="#instruments">Instrumentos</a></li>
-                <li id="noteScores"><img class="imgNote" src="./public/assets/images/nota-musical2-blanca.png" alt="nota musical"><a href="./pages/scores.html">&nbspPartituras</a></li>
-                <li id="noteContact"><img class="imgNote" src="./public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="./pages/contact.html">Contacto</a></li>
+                <li id="noteAbout"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="#about">Nuestra Academia</a></li>
+                <li id="noteInstruments"><img class="imgNote" src="../public/assets/images/nota-musical-blanca.png" alt="nota musical"><a href="#instruments">Instrumentos</a></li>
+                <li id="noteScores"><img class="imgNote" src="../public/assets/images/nota-musical2-blanca.png" alt="nota musical"><a href="./pages/scores.html">&nbspPartituras</a></li>
+                <li id="noteContact"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="./pages/contact.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
