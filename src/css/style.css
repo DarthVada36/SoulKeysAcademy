@@ -287,6 +287,8 @@ span {
     color: var(--text-secondary-color);
 }
 
+
+
 /*BEGIN WIP*/
 
 .work-in-progress {
@@ -294,7 +296,10 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding: 2%;
+    width: 100%;
+    height: 100%;
 }
 
 .work-in-progress__content {
@@ -302,13 +307,14 @@ span {
 }
 
 .work-in-progress__game {
-    margin-bottom: 2%;
-    margin-left: 2%;
+    width: 800px;
+    margin-bottom: 1%;
+    margin-left: 1%;
 }
 
 .game {
-    width: 80%;
-    height: 25vh;
+    width: 100%;
+    height: 40vh;
     border: 1px solid #ccc;
     background-color: #fff;
     position: relative;
@@ -316,8 +322,8 @@ span {
 }
 
 .game__note {
-    width: 5%;
-    height: 5%;
+    width: 10%;
+    height: 20%;
     position: absolute;
     bottom: 0;
     left: 5%;
@@ -325,14 +331,14 @@ span {
 }
 
 .game__note img {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     object-fit: contain;
 }
 
 .game__obstacle {
-    width: 3.5%;
-    height: 4.5%;
+    width: 4.5%;
+    height: 7.5%;
     background-color: grey;
     position: absolute;
     bottom: 0;
@@ -359,6 +365,84 @@ span {
     font-size: var(--text-size-s);
     color: var(--text-secondary-color);
 }
+/*
+@media (max-width: 1200px) {
+    .header__menu {
+        font-size: var(--text-size-m);
+    }
+
+    .hero__title {
+        font-size: var(--text-size-l);
+    }
+
+    .hero__text-paragraph {
+        font-size: var(--text-size-s);
+    }
+
+    .work-in-progress__game {
+        width: 90%;
+    }
+}
+
+/*@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .header__logo {
+        width: 80px;
+    }
+
+    .header__menu {
+        flex-direction: column;
+        align-items: center;
+        font-size: var(--text-size-s);
+    }
+
+    .header__menu-link {
+        padding: 10px 0;
+    }
+
+    .container {
+        margin: 5% 5%;
+    }
+
+    .hero__title {
+        font-size: var(--text-size-m);
+    }
+
+    .hero__text-paragraph {
+        font-size: var(--text-size-xs);
+    }
+
+    .work-in-progress__game {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__logo {
+        width: 60px;
+    }
+
+    .header__menu-link {
+        font-size: var(--text-size-xs);
+    }
+
+    .hero__title {
+        font-size: var(--text-size-s);
+    }
+
+    .hero__text-paragraph {
+        font-size: var(--text-size-xs);
+    }
+
+    .work-in-progress__game {
+        width: 100%;
+    }
+}*/
 
 /*ENDS WIP*/
 
