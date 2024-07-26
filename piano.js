@@ -10,25 +10,25 @@ window.onload = function () {
   }
 
 }
-// CONTADOR DE PULSACIONES DE TECLAS y MODAL PARA OFRECER PLANES
-let keyPressCount = 0;
-document.addEventListener('keypress', function () {
-  keyPressCount++;
-  if (keyPressCount === 60) {
-    keypressModal = document.getElementById("keypressModal");
-    keypressModal.style.display = "flex";
-    keyPressCount = 0; // Reiniciar el contador después del alert
-  }
-});
+// // CONTADOR DE PULSACIONES DE TECLAS y MODAL PARA OFRECER PLANES
+// let keyPressCount = 0;
+// document.addEventListener('keypress', function () {
+//   keyPressCount++;
+//   if (keyPressCount === 60) {
+//     keypressModal = document.getElementById("keypressModal");
+//     keypressModal.style.display = "flex";
+//     keyPressCount = 0; // Reiniciar el contador después del alert
+//   }
+// });
 
-// FUNCIÓN PARA HACER CLICK EN LA 'X' Y CERRAR EL MODAL
-let spans = document.getElementsByClassName("modal__close");
+// // FUNCIÓN PARA HACER CLICK EN LA 'X' Y CERRAR EL MODAL
+// let spans = document.getElementsByClassName("modal__close");
 
-for (let i = 0; i < spans.length; i++) {
-  spans[i].onclick = function () {
-    keypressModal.style.display = "none";
-  }
-}
+// for (let i = 0; i < spans.length; i++) {
+//   spans[i].onclick = function () {
+//     keypressModal.style.display = "none";
+//   }
+// }
 
 
 
@@ -77,11 +77,11 @@ function StopNotas() {
 
 
 // ARRAYS QUE CONTIENEN TECLAS Y NOTAS
-const keys = ['d', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm','q','w','e','r','t','y','u','i','o','p'];
-const notes = ['../public/assets/sounds/piano/do1.mp3', '../public/assets/sounds/piano/re1.mp3', '../public/assets/sounds/piano/mi1.mp3', '../public/assets/sounds/piano/fa1.mp3', '../public/assets/sounds/piano/sol1.mp3', '../public/assets/sounds/piano/la1.mp3', '../public/assets/sounds/piano/si1.mp3', '../public/assets/sounds/piano/do1.mp3', '../public/assets/sounds/piano/re1.mp3', '../public/assets/sounds/piano/mi1.mp3', '../public/assets/sounds/piano/fa1.mp3', '../public/assets/sounds/piano/sol1.mp3', '../public/assets/sounds/piano/la1.mp3', '../public/assets/sounds/piano/si1.mp3','../public/assets/sounds/piano/dore.mp3','../public/assets/sounds/piano/remi.mp3','../public/assets/sounds/piano/fasol.mp3','../public/assets/sounds/piano/solla.mp3','../public/assets/sounds/piano/sido.mp3','../public/assets/sounds/piano/dore1.mp3','../public/assets/sounds/piano/remi1.mp3','../public/assets/sounds/piano/fasol1.mp3','../public/assets/sounds/piano/solla1.mp3','../public/assets/sounds/piano/lasi1.mp3'];
-const drumNotes = ['../public/assets/sounds/bateria/Batdo.mp3', '../public/assets/sounds/bateria/Batre.mp3', '../public/assets/sounds/bateria/Batmi.mp3', '../public/assets/sounds/bateria/Batfa.mp3', '../public/assets/sounds/bateria/Batsol.mp3', '../public/assets/sounds/bateria/Batla.mp3', '../public/assets/sounds/bateria/Batsi.mp3','../public/assets/sounds/bateria/Batplado.mp3', '../public/assets/sounds/bateria/Batplare.mp3', '../public/assets/sounds/bateria/Batplami.mp3', '../public/assets/sounds/bateria/Batplafa.mp3', '../public/assets/sounds/bateria/Batplasol.mp3', '../public/assets/sounds/bateria/Batplala.mp3', '../public/assets/sounds/bateria/Batplasi.mp3'];
-const guitarNotes = ['../public/assets/sounds/guitarra/Guido.mp3','../public/assets/sounds/guitarra/Guire.mp3','../public/assets/sounds/guitarra/Guimi.mp3','../public/assets/sounds/guitarra/Guifa.mp3','../public/assets/sounds/guitarra/Guisol.mp3','../public/assets/sounds/guitarra/Guila.mp3','../public/assets/sounds/guitarra/Guisi.mp3']
-const fluteNotes = ['../public/assets/sounds/panflute/Fludo.mp3', '../public/assets/sounds/panflute/Flure.mp3', '../public/assets/sounds/panflute/Flumi.mp3', '../public/assets/sounds/panflute/Flufa.mp3', '../public/assets/sounds/panflute/Flusol.mp3', '../public/assets/sounds/panflute/Flula.mp3', '../public/assets/sounds/panflute/Flusi.mp3'];
+const keys = ['d', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm','q','w','e','r','t','y','u','i','o','p','ñ'];
+const notes = ['../public/assets/sounds/piano/do1.mp3', '../public/assets/sounds/piano/re1.mp3', '../public/assets/sounds/piano/mi1.mp3', '../public/assets/sounds/piano/fa1.mp3', '../public/assets/sounds/piano/sol1.mp3', '../public/assets/sounds/piano/la1.mp3', '../public/assets/sounds/piano/si1.mp3', '../public/assets/sounds/piano/do1.mp3', '../public/assets/sounds/piano/re1.mp3', '../public/assets/sounds/piano/mi1.mp3', '../public/assets/sounds/piano/fa1.mp3', '../public/assets/sounds/piano/sol1.mp3', '../public/assets/sounds/piano/la1.mp3', '../public/assets/sounds/piano/si1.mp3','../public/assets/sounds/piano/dore.mp3','../public/assets/sounds/piano/remi.mp3','../public/assets/sounds/piano/fasol.mp3','../public/assets/sounds/piano/solla.mp3','../public/assets/sounds/piano/sido.mp3','../public/assets/sounds/piano/dore1.mp3','../public/assets/sounds/piano/remi1.mp3','../public/assets/sounds/piano/fasol1.mp3','../public/assets/sounds/piano/solla1.mp3','../public/assets/sounds/piano/lasi1.mp3','../public/assets/sounds/piano/applause.mp3'];
+const drumNotes = ['../public/assets/sounds/bateria/Batdo.mp3', '../public/assets/sounds/bateria/Batre.mp3', '../public/assets/sounds/bateria/Batmi.mp3', '../public/assets/sounds/bateria/Batfa.mp3', '../public/assets/sounds/bateria/Batsol.mp3', '../public/assets/sounds/bateria/Batla.mp3', '../public/assets/sounds/bateria/Batsi.mp3','../public/assets/sounds/bateria/Batplado.mp3', '../public/assets/sounds/bateria/Batplare.mp3', '../public/assets/sounds/bateria/Batplami.mp3', '../public/assets/sounds/bateria/Batplafa.mp3', '../public/assets/sounds/bateria/Batplasol.mp3', '../public/assets/sounds/bateria/Batplala.mp3', '../public/assets/sounds/bateria/Batplasi.mp3','../public/assets/sounds/bateria/applause.mp3'];
+const guitarNotes = ['../public/assets/sounds/guitarra/Guido.mp3','../public/assets/sounds/guitarra/Guire.mp3','../public/assets/sounds/guitarra/Guimi.mp3','../public/assets/sounds/guitarra/Guifa.mp3','../public/assets/sounds/guitarra/Guisol.mp3','../public/assets/sounds/guitarra/Guila.mp3','../public/assets/sounds/guitarra/Guisi.mp3','../public/assets/sounds/guitarra/Guido.mp3','../public/assets/sounds/guitarra/Guire.mp3','../public/assets/sounds/guitarra/Guimi.mp3','../public/assets/sounds/guitarra/Guifa.mp3','../public/assets/sounds/guitarra/Guisol.mp3','../public/assets/sounds/guitarra/Guila.mp3','../public/assets/sounds/guitarra/Guisi.mp3','../public/assets/sounds/guitarra/applause.mp3']
+const fluteNotes = ['../public/assets/sounds/panflute/Fludo.mp3', '../public/assets/sounds/panflute/Flure.mp3', '../public/assets/sounds/panflute/Flumi.mp3', '../public/assets/sounds/panflute/Flufa.mp3', '../public/assets/sounds/panflute/Flusol.mp3', '../public/assets/sounds/panflute/Flula.mp3', '../public/assets/sounds/panflute/Flusi.mp3','../public/assets/sounds/panflute/Fludo.mp3', '../public/assets/sounds/panflute/Flure.mp3', '../public/assets/sounds/panflute/Flumi.mp3', '../public/assets/sounds/panflute/Flufa.mp3', '../public/assets/sounds/panflute/Flusol.mp3', '../public/assets/sounds/panflute/Flula.mp3', '../public/assets/sounds/panflute/Flusi.mp3','../public/assets/sounds/panflute/applause.mp3'];
 
 
 // FUNCIÓN PARA REPRODUCIR LA NOTA
@@ -103,7 +103,8 @@ document.getElementById('miSelectSound').addEventListener('change', function (ch
       currentNotes = drumNotes;
       break;
     case 'guitar':
-      currentNotes = drumNotes;
+      currentNotes = guitarNotes;
+      break;
     case 'flute':
       currentNotes = fluteNotes;
       break;

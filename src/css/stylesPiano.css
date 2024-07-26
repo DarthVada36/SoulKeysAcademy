@@ -21,12 +21,13 @@
     --height-pentagram: 80px;
 }
 
+/* ESTILOS BODY */
+
 body {
     display: flex;
     flex-direction: column;
     background-color: #28282D;
 }
-
 
 
 #tipBach {
@@ -36,7 +37,7 @@ body {
     margin-top: 10px;
 }
 
-
+/* SELECTOR DE SONIDOS */
 .soundSelector {
     display: flex;
     justify-content: center;
@@ -48,8 +49,10 @@ body {
     font-family: 'DM Serif Display', sans-serif;
 }
 
+/* PIANO */
 #framePiano{
     padding-top: 0;
+    margin-bottom: 30px;
 }
 
 #piano {
@@ -79,7 +82,6 @@ body {
     flex-direction: column-reverse;
     transition: background-color 0.3s;
 }
-
 
 .piano__key--do:hover,
 .piano__key--re:hover,
@@ -122,8 +124,10 @@ body {
     text-align: center;
     margin: 0;
     position: relative;
-    top: 60px;
+    top: 90px;
     color: white;
+    font-size: 14px;
+    font-family: 'EB Garamond', sans-serif;
 }
 
 .color-gold {
@@ -133,7 +137,7 @@ body {
 
 
 
-/*PROBANDO MODAL INICIAL Y MODAL PARA OFRECER PLANES*/
+/*ESTILOS MODAL INICIAL Y POR SI ACASO MODAL PARA OFRECER PLANES*/
 
 .modal {
     display: none;
@@ -234,7 +238,6 @@ body {
 }
 
 
-
 /*ESTO ES UNA CLASE PARA ESCONDER EN ESTE CASO IDS */
 .hide {
     display: none;
@@ -248,6 +251,7 @@ body {
 
 /* AQUÍ APLICAMOS LA CLASE .HIDE A LOS IDS D ELAS 7 TECLAS QUE QUEREMOS ECSONDER CUANDO SE REDUCE EL TAMAÑO DE LA PANTALLA*/
 @media (max-width:1100px) {
+    /* Estilos para el modal */
     .modal__content{
         height: 400px;
     }
@@ -256,6 +260,7 @@ body {
         height: 320px;
     }
 
+    /* Esto hace que se oculten las 7 últimas teclas */
     #key-z,
     #key-x,
     #key-c,
@@ -265,6 +270,7 @@ body {
     #key-m {
         display: none;
     }
+
     body{
         display: flex;
         flex-direction: column;
@@ -272,6 +278,7 @@ body {
         align-items: center;
     }
 
+    /* ESTILOS PIANO RESPONSIVE */
     #piano {
         background-image: none;
         padding-top: 5px;
@@ -314,9 +321,10 @@ body {
     }
 }
 
+/* ESTILOS PARA ADAPATAR EL MODAL A POCOS PIXELES */
 @media (max-width:455px) {
     #tipBach {
-        width: 320px;
+        width: 300px;
         height: 290px;
     }
 }
