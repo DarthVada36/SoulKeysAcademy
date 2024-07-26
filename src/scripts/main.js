@@ -16,7 +16,7 @@ export function burgerMenu() {
 };
 
 // Typing text effect: Efecto typing para varias líneas
-function typingEffectVariousLines(texts) {
+export function typingEffectVariousLines(texts) {
     let delay = 0;
 
     texts.forEach((text, i) => {
@@ -50,4 +50,3 @@ function typingEffectVariousLines(texts) {
     delay += 1000;
     setTimeout(() => typingEffectVariousLines(texts), delay);
 };
-export { typingEffectVariousLines };
