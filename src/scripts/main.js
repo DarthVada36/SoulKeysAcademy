@@ -7,7 +7,7 @@ const sizeLight = 400;
 luminousEffect.addEventListener('mousemove', (e) => {
     const x = e.clientX;
     const y = e.clientY;
-    // luminousEffect.style.cursor = "none";
+    luminousEffect.style.cursor = "none";
     luminousEffect.style.background = `radial-gradient(circle at ${x}px ${y}px, transparent 0%, rgba(0, 0, 0, 0.9) ${sizeLight}px)`;
 });
 

@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+/* Variables */
+:root {
+    --main-bg-color: #28282D;
+    --text-primary-color: #EDF1FF;
+    --text-secondary-color: #9FA0FF;
+    --button-cta-color: #6667AB;
+    --button-secondary-color: #BABEBF;
+    --pentagram-color: #babebf66;
+    --text-title: 'DM Serif Display', sans-serif;
+    --text-paragraph: 'EB Garamond', sans-serif;
+    --text-size-xxl: 160px;
+    --text-size-xl: 128px;
+    --text-size-l: 64px;
+    --text-size-m: 36px;
+    --text-size-s: 24px;
+    --text-size-xs: 20px;
+    --height-header: 100px;
+    --height-pentagram: 80px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #28282D;
+}
+
+
+
+#tipBach {
+    width: 350px;
+    height: 400px;
+    border-radius: 2%;
+    margin-top: 10px;
+}
+
+
+.soundSelector {
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+}
+
+.soundSelector__label {
+    color: white;
+    font-family: 'DM Serif Display', sans-serif;
+}
+
+#framePiano{
+    padding-top: 0;
+}
+
+#piano {
+    background-image: url(../../public/assets/images/piano-images/pianomarco.png);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    background-size: 980px;
+    background-repeat: no-repeat;
+    padding: 70px 0;
+    background-position: calc(50% - 53px);
+}
+
+.piano__key--do,
+.piano__key--re,
+.piano__key--mi,
+.piano__key--fa,
+.piano__key--sol,
+.piano__key--la,
+.piano__key--si {
+    width: 50px;
+    height: 170px;
+    background-color: white;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column-reverse;
+    transition: background-color 0.3s;
+}
+
+
+.piano__key--do:hover,
+.piano__key--re:hover,
+.piano__key--mi:hover,
+.piano__key--fa:hover,
+.piano__key--sol:hover,
+.piano__key--la:hover,
+.piano__key--si:hover {
+    background-color: rgb(203, 203, 203);
+}
+
+.key-gray {
+    background-color: rgb(188, 188, 186);
+    -webkit-box-shadow: inset 10px 9px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 10px 9px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 10px 9px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.piano__black {
+    width: 30px;
+    height: 100px;
+    background-color: black;
+    margin-bottom: 40px;
+    margin-left: 35px;
+    position: relative;
+    background-image: url('../../public/assets/images/piano-images/Sostenidas/Sostenida-Suelta.png');
+}
+
+.piano__black__transparent {
+    width: 30px;
+    height: 100px;
+    background-color: transparent;
+    margin-bottom: 40px;
+    margin-left: 30px;
+    position: relative;
+
+}
+
+.piano__letter {
+    text-align: center;
+    margin: 0;
+    position: relative;
+    top: 60px;
+    color: white;
+}
+
+.color-gold {
+    background-color: gold;
+}
+
+
+
+
+/*PROBANDO MODAL INICIAL Y MODAL PARA OFRECER PLANES*/
+
+.modal {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    /* Mantenerlo en la misma posición */
+    z-index: 1000;
+    /* Encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Ancho completo */
+    height: 100%;
+    /* Alto completo */
+    overflow: auto;
+    /* Habilitar scroll si es necesario */
+    background-color: rgb(0, 0, 0);
+    /* Color de fondo */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Color de fondo con transparencia */
+    justify-content: center;
+    /* Centrar horizontalmente */
+    align-items: center;
+    /* Centrar verticalmente */
+}
+
+
+.modal__content {
+    background-color: #9FA0FF;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 2%;
+    width: 80%;
+    max-width: 400px;
+    height: 500px;
+    text-align: center;
+}
+/* MODAL PARA MÁXIMO DE TECLAS POR SI ACASO*/
+/* .modal__content2 {
+    background-color: #6afc80;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 2%;
+    width: 80%;
+    max-width: 400px;
+    height: 500px;
+    text-align: center;
+} */
+
+.modal__text {
+    font-size: 26px;
+    font-weight: bold;
+    color: black;
+    font-family: 'DM Serif Display', sans-serif;
+}
+
+.modal__close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal__close:hover,
+.modal__close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.keypressModal__message {
+    font-size: 26px;
+    font-weight: bold;
+    color: black;
+    font-family: 'DM Serif Display', sans-serif;
+}
+
+.keypressModal__link {
+    font-size: 30px;
+    font-weight: bold;
+    color: gray;
+    text-decoration: none;
+    font-family: 'DM Serif Display', sans-serif;
+}
+
+.keypressModal__linkSpace {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.brandPiano{
+    display: none;
+    
+}
+
+
+
+/*ESTO ES UNA CLASE PARA ESCONDER EN ESTE CASO IDS */
+.hide {
+    display: none;
+}
+
+.probando {
+    width: 100%;
+}
+
+/* CAMBIOS PARA QUE SEA RESPONSIVE*/
+
+/* AQUÍ APLICAMOS LA CLASE .HIDE A LOS IDS D ELAS 7 TECLAS QUE QUEREMOS ECSONDER CUANDO SE REDUCE EL TAMAÑO DE LA PANTALLA*/
+@media (max-width:1100px) {
+    .modal__content{
+        height: 400px;
+    }
+    #tipBach {
+        width: 320px;
+        height: 320px;
+    }
+
+    #key-z,
+    #key-x,
+    #key-c,
+    #key-v,
+    #key-b,
+    #key-n,
+    #key-m {
+        display: none;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #piano {
+        background-image: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin: 0;
+    }
+
+    #framePiano {
+        background-color: black;
+        width: 380px;
+        margin-top: 10px;
+        border: 1px solid gray;
+        border-radius: 6px 6px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brandPiano{
+        display: flex;
+        justify-content: center;
+        
+    }
+    #brandPiano{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .piano__key--do{
+        border-radius: 6px 0px 0px 6px;
+    }
+    .piano__key--si{
+        border-radius: 0px 6px 6px 0px;
+    }
+    #sheetMusic{
+        width: 290px;
+        height: 150px;
+    }
+}
+
+@media (max-width:455px) {
+    #tipBach {
+        width: 320px;
+        height: 290px;
+    }
+}
+
+
+/* .piano_back_1{
+    background-image: url('../../public/assets/images/piano-images/1Do-D/Do-D-Suelto.png');
+}
+
+.piano_back_2{
+    background-image: url('../../public/assets/images/piano-images/2Re-F/Re-F-suelto.png');
+}
+.piano_back_3{
+    background-image: url('../../public/assets/images/piano-images/7Si-L/Si-L-Suelto.png');
+} */
