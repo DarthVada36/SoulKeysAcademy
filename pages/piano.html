@@ -5,10 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/css/stylesPiano.css">
+    <link rel="stylesheet" href="../src/css/style.css">
     <title>Document</title>
 </head>
 
 <body>
+    <header>
+        <a href="#"><img class="logo" src="../public/assets/images/Logotipo-academy-white-nav-notext.svg" alt="Logo Soul Keys Academy"></a>
+        <button class="open-menu" id="Abrir"><i class="ri-menu-line"></i></button> 
+        <nav class="nav" id="nav">
+            <button class="close-menu" id="Cerrar"><i class="ri-close-line"></i></button>
+            <div class="pentagram">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="menu">
+                <li id="noteAbout"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="#about">Nuestra Academia</a></li>
+                <li id="noteInstruments"><img class="imgNote" src="../public/assets/images/nota-musical-blanca.png" alt="nota musical"><a href="#instruments">Instrumentos</a></li>
+                <li id="noteScores"><img class="imgNote" src="../public/assets/images/nota-musical2-blanca.png" alt="nota musical"><a href="./pages/scores.html">&nbspPartituras</a></li>
+                <li id="noteContact"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="./pages/contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- MODAL TIPS -->
     <div id="myModal" class="modal">
@@ -30,24 +50,6 @@
                     APRENDIZAJE</a></div>
         </div>
     </div> -->
-
-    <!-- CABECERA CON SELECTOR DE PARTITURAS -->
-    <header class="header">
-        <form class="header__form" action="" method="post">
-            <label class="header__label" for="miSelectSheetMusic">Elige una canción:</label>
-            <select class="header__select" id="miSelect" name="opcionSeleccionada" onchange="showSheetMusic(event)">
-                <option class="header__option" value="1">Mañanitas</option>
-                <option class="header__option" value='2'>Cumpleaños feliz</option>
-                <option class="header__option" value="3">All you need is love</option>
-                <option class="header__option" value='4'>Yesterday</option>
-                <option class="header__option" value="5">Hello</option>
-                <option class="header__option" value='6'>Bohemian Rapshody</option>
-            </select>
-            <br>
-            <img id="sheetMusic" class="header__image" src="../public/assets/images/partituras/cumpleaños feliz.PNG"
-                alt="sheetmusic">
-        </form>
-    </header>
 
     <!-- SELECTOR DE SONIDOS -->
     <section class="soundSelector" ">
@@ -184,6 +186,29 @@
         </article>
     </section>
     </main>
+
+    <footer>
+        <div>
+            <div class="footerLogo">
+                <img src="../public/assets/images/Logotipo-academy-black.svg" alt="Logo Soul Keys Academy">
+            </div>
+            <ul class="footerMenu">
+                <p>Nuestra Academia</p>
+                <li><a href="#about">Acerca de nosotros</a></li>
+                <li><a href="./pages/aboutus.html">Nuestra historia</a></li>
+                <li><a href="#instruments">Instrumentos</a></li>
+                <li><a href="./pages/scores.html">Partituras</a></li>
+            </ul>
+            <ul class="footerContact">
+                <p>Conecta</p>
+                <li><a href="./pages/contact.html">Escríbenos</a></li>
+                <li><a href="https://github.com/DarthVada36/SoulKeysAcademy" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2024 Soul Keys Academy. All rights reserved. Privacy Policy.</p>
+    </footer>
 
 
     <script src="../piano.js"></script>
