@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../src/css/austyle.css">
-
-</head>
-<body>
-<!-- Start Header -->
-    <header>
-
-    </header>
-    <section id="aboutus_main">
-        <div class="container container__aboutus_main">
-            <div class="aboutus_main_image">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../src/css/austyle.css">
+        <!--.....Box icons......-->
+        <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <!--....Remix icons.....-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+        <title>Soul Keys Academy</title>
+    </head>
+    <body>
+        <header>
+            <a href="#"><img class="logo" src="../public/assets/images/Logotipo-academy-white-nav-notext.svg" alt="Logo Soul Keys Academy"></a>
+            <button class="open-menu" id="Abrir"><i class="ri-menu-line"></i></button> 
+            <nav class="nav" id="nav">
+                <button class="close-menu" id="Cerrar"><i class="ri-close-line"></i></button>
+                <div class="pentagram">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="menu">
+                    <li id="noteAbout"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="#about">Nuestra Academia</a></li>
+                    <li id="noteInstruments"><img class="imgNote" src="../public/assets/images/nota-musical-blanca.png" alt="nota musical"><a href="#instruments">Instrumentos</a></li>
+                    <li id="noteScores"><img class="imgNote" src="../public/assets/images/nota-musical2-blanca.png" alt="nota musical"><a href="./pages/scores.html">&nbspPartituras</a></li>
+                    <li id="noteContact"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="./pages/contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+    <section id="aboutushero">
+        <div class="containeraboutushero">
+            <div class="aboutusimagecontainer">
                 <img src="public\assets\images\future-aboutus-images\About us velvet chair rock.png" alt="">
             </div>
             
-            <div class="au_main_text">
+            <div class="aboutusmaintext">
                 <div class="typingEffect"></div>
-                <div class="aboutus_main_text">
-                    <h2>¡Hola! Somos<br>Soul Key Academy</h2>
+                <div class="aboutustitle">
+                    <h2>¡Hola! Somos<br><span class="color-corporate">Soul Key Academy</span></h2>
                 </div>
-                <div class="aboutus_main_content">
+
+                <div class="aboutuscontainer">
                     <p>Somos un equipo apasionado y lleno de gratitud, compuesto por cinco personas creativas: Anca, Lorena, Mónica, Vada y Juan. Aunque estamos dispersos en diferentes lugares, compartimos una misión común: ofrecer una experiencia educativa musical digital que nuestros estudiantes amen y utilicen para alcanzar sus sueños musicales.</p><br>
                     <span>Sigue leyendo para conocer más sobre la historia de Soul Key Academy y conocer a nuestro maravilloso equipo.</span>
                 </div>                
@@ -33,18 +52,22 @@
     </section>
 <!-- End Header -->
 
-    <!-- Start Story -->
-    <section id="our story"> 
-        <div class="container">
-            <h3>Nuestra historia</h3>
+<!-- Start Story -->
+    <section id="our-story"> 
+        <div class="aboutuscontainer">
+            <div class="ourstorytitle">
+                <h3>Nuestra historia</h3>
+            </div>
 
-            <p>DigitalSound Academy nació de la pasión compartida por la música y la educación digital. Fundada por cinco entusiastas en busca de revolucionar la manera en que se aprende música, comenzamos nuestro viaje en 2017. Desde nuestros primeros cursos en línea hasta la creación de una plataforma completa de aprendizaje, hemos crecido y evolucionado constantemente.Lo que comenzó como un pequeño proyecto de amigos apasionados, rápidamente ganó tracción gracias a nuestra dedicación y el apoyo de nuestros primeros estudiantes. Hoy en día, DigitalSound Academy es una referencia en la educación musical online, ofreciendo una amplia variedad de cursos para músicos de todos los niveles.<br>A lo largo de los años, hemos mantenido nuestra esencia: ser un equipo cercano, accesible y comprometido con la excelencia educativa. Y aunque estamos dispersos geográficamente, nuestra conexión a través de la música y la educación digital nos mantiene más unidos que nunca.</p>
+            <div class="aboutusstorytext">
+                <p>Soul Key Academy nació de la pasión compartida por la música y la educación digital. Fundada por cinco entusiastas en busca de revolucionar la manera en que se aprende música, comenzamos nuestro viaje en 2017. Desde nuestros primeros cursos en línea hasta la creación de una plataforma completa de aprendizaje, hemos crecido y evolucionado constantemente.Lo que comenzó como un pequeño proyecto de amigos apasionados, rápidamente ganó tracción gracias a nuestra dedicación Soul Key Academy es una referencia en la educación musical online, ofreciendo una amplia variedad de cursos para músicos de todos los niveles.<br>A lo largo de los años, hemos mantenido nuestra esencia: ser un equipo cercano, accesible y comprometido con la excelencia educativa. Y aunque estamos dispersos geográficamente, nuestra conexión a través de la música y la educación digital nos mantiene más unidos que nunca.</p>
+            </div>
         </div>
     </section>
     <!-- End Story -->
 
     <!-- Start Transparency -->
-    <section id="intro values">
+    <section id="intro-values">
         <div>
             <h3>Somos una Academia Transparente</h3>
 
@@ -70,7 +93,7 @@
             <div>
                 <h3>Nuestros valores</h3>
         
-                <p>Desde el inicio de DigitalSound Academy, hemos estado guiados por principios fundamentales que reflejan nuestra visión y misión. Estos valores no solo definen quiénes somos como equipo, sino también cómo interactuamos con nuestros estudiantes y con el mundo que nos rodea.</p>
+                <p>Desde el inicio de Soul Key Academy, hemos estado guiados por principios fundamentales que reflejan nuestra visión y misión. Estos valores no solo definen quiénes somos como equipo, sino también cómo interactuamos con nuestros estudiantes y con el mundo que nos rodea.</p>
             </div>
         
                 <!-- Values-Transparency -->
@@ -107,7 +130,7 @@
                     <br>Celebrando los logros colectivos en lugar de los individuales.
                     <br>Enfocándonos en el éxito del equipo y de nuestros estudiantes antes que en el reconocimiento personal.
                     <br>Mostrar Gratitud
-                    <br>Este valor está profundamente arraigado en nuestra cultura. <br>Mostramos gratitud regularmente hacia los demás, hacia la tecnología que hace posible esta academia y hacia las muchas bendiciones que DigitalSound Academy aporta a nuestras vidas.</p>
+                    <br>Este valor está profundamente arraigado en nuestra cultura. <br>Mostramos gratitud regularmente hacia los demás, hacia la tecnología que hace posible esta academia y hacia las muchas bendiciones que Soul Key Academy aporta a nuestras vidas.</p>
                 </div>
                 
                 <!-- Values-Gratefulnes -->
@@ -118,7 +141,7 @@
                     <br>Agradeciendo a nuestros estudiantes por su confianza y compromiso.
                     <br>Celebrando los hitos y logros, grandes y pequeños, como comunidad.
                     <br>Elegir el Optimismo
-                    <br>Elegir el optimismo es fundamental para la cultura amable y alegre de DigitalSound Academy. El optimismo nos ayuda a mirar al futuro con positividad, mientras afrontamos conversaciones y decisiones difíciles en beneficio de la salud y el futuro de la academia.</p>
+                    <br>Elegir el optimismo es fundamental para la cultura amable y alegre de Soul Key Academy. El optimismo nos ayuda a mirar al futuro con positividad, mientras afrontamos conversaciones y decisiones difíciles en beneficio de la salud y el futuro de la academia.</p>
                 </div>
             
                 <!-- Value-Optimism -->
@@ -144,7 +167,7 @@
         
             <!-- Ending Values -->
             <div>
-                <h4>Estos valores son los pilares que sustentan cada acción y decisión en DigitalSound Academy. Nos esforzamos por vivir estos principios cada día, creando un entorno de aprendizaje y trabajo que inspire, motive y transforme.</h4>
+                <h4>Estos valores son los pilares que sustentan cada acción y decisión en Soul Key Academy. Nos esforzamos por vivir estos principios cada día, creando un entorno de aprendizaje y trabajo que inspire, motive y transforme.</h4>
             </div>
         </div>
     </section>
@@ -172,7 +195,7 @@
         <div class="cardlore">
             <img class="image" src="src\images\Card background Lorena.png" draggable="false" alt="">
             <div class="box">
-                <img src="src\images\Avatar face LORENA.png" alt="">
+                <img src="public\assets\images\avatar-LORENA.png" alt="">
                 <div class="content">
                     <h3>Lorena Acosta</h3>
                     <h4>FullStack Senior Dev/Profesora de Batería</h4>
@@ -180,7 +203,7 @@
 
                     <p>Géneros favoritos: Pop, Baladas & Rock.</p>
 
-                    <div class="socials">
+                    <div class="card__socials">
                         <a href=" añadir aquí link git Lore  "><img src="src\images\logotipo-de-github 1.png" alt=""></a>
                         <a href=" añadir aquí link Facebook Lore "><img src="src\images\facebook 1.png" alt=""></a>
                         <a href=" añadir aquí link Linkedin Lore "><img src="src\images\linkedin-box-fill 2.png" alt=""></a>
@@ -194,7 +217,7 @@
         <div class="cardanca">
             <img class="image" src="src\images\Card background Anca.png" draggable="false" alt="">
             <div class="box">
-                <img src="src\images\Avatar face ANCA 1.png" alt="">
+                <img src="public\assets\images\avatar-ANCA.png" alt="">
                 <div class="content">
                     <h3>Anca Bacria</h3>
                     <h4>FX Senior Dev/Profesora de Saxofón</h4>
@@ -202,7 +225,7 @@
 
                     <p>Bandas favoritas: MO, Jessie Ware, Rudimental.</p>
 
-                    <div class="socials">
+                    <div class="card__socials">
                         <a href=" añadir aquí link git Anca  "><img src="src\images\logotipo-de-github 1.png" alt=""></a>
                         <a href=" añadir aquí link Facebook Anca "><img src="src\images\facebook 1.png" alt=""></a>
                         <a href=" añadir aquí link Linkedin Anca "><img src="src\images\linkedin-box-fill 2.png" alt=""></a>
@@ -215,7 +238,7 @@
         <div class="cardjuan">
             <img class="image" src="src\images\Card background Juan.png" draggable="false" alt="">
             <div class="box">
-                <img src="src\images\Avatar face JUAN.png" alt="">
+                <img src="public\assets\images\avatar-JUAN.png" alt="">
                 <div class="content">
                     <h3>Juan Vázquez</h3>
                     <h4>Product Manager/Profesor de Batería</h4>
@@ -223,7 +246,7 @@
 
                     <p>Bandas favoritas: Iron Maiden, Judas Priest, Scorpions y Luis Miguel.</p>
 
-                    <div class="socials">
+                    <div class="card__socials">
                         <a href=" añadir aquí link git Juan  "><img src="src\images\logotipo-de-github 1.png" alt=""></a>
                         <a href=" añadir aquí link Facebook Juan "><img src="src\images\facebook 1.png" alt=""></a>
                         <a href=" añadir aquí link Linkedin Juan "><img src="src\images\linkedin-box-fill 2.png" alt=""></a>
@@ -234,7 +257,7 @@
         </div>
 
         <div class="cardmoni">
-            <img class="image" src="src\images\Card background Monica.png" draggable="false" alt="">
+            <img class="image" src="public\assets\images\avatar-MONICA.png" draggable="false" alt="">
             <div class="box">
                 <img src="src\images\Avatar face MONICA.png" alt="">
                 <div class="content">
@@ -243,7 +266,7 @@
                     <p>Desarrolladora backend experta, dominando JavaScript con precisión. Además es nuestra profesora de violín que encuentra su melodía perfecta entre las cuerdas y el código. ¡Para ella, tanto los algoritmos como las armonías requieren maestría y un toque de arte!</p><br><br>
 
                     <p>Bandas favoritas: Green Day, Korn, Helloween y Épica.</p>
-                    <div class="socials">
+                    <div class="card__socials">
                         <a href=" añadir aquí link git Mónica  "><img src="src\images\logotipo-de-github 1.png" alt=""></a>
                         <a href=" añadir aquí link Facebook Mónica "><img src="src\images\facebook 1.png" alt=""></a>
                         <a href=" añadir aquí link Linkedin Mónica "><img src="src\images\linkedin-box-fill 2.png" alt=""></a>
@@ -254,7 +277,7 @@
         </div>
 
         <div class="cardvada">
-            <img class="image" src="src\images\Card background Vada.png" draggable="false" alt="">
+            <img class="image" src="public\assets\images\avatar-VADA.png" draggable="false" alt="">
             <div class="box">
                 <img src="src\images\Avatar face VADA 1.png" alt="">
                 <div class="content">
@@ -263,7 +286,7 @@
                     <p>Scrum Master y diseñadora UIX, dirige equipos y crea experiencias de usuario tan fluidas como una melodía bien afinada. Profesora de canto que encuentra la armonía perfecta entre el diseño, la música y la programación.</p><br><br>
 
                     <p>Bandas favoritas: Gojira, Deftones, Aurora, Rammstein y Heilung.</p>
-                    <div class="socials">
+                    <div class="card__socials">
                         <a href=" añadir aquí link git Vada  "><img src="src\images\logotipo-de-github 1.png" alt=""></a>
                         <a href=" añadir aquí link Facebook Vada "><img src="src\images\facebook 1.png" alt=""></a>
                         <a href=" añadir aquí link Linkedin Vada "><img src="src\images\linkedin-box-fill 2.png" alt=""></a>
@@ -280,7 +303,28 @@
     <div>
         <h3>Gracias por pasarte por aquí 👋</h3>
     </div>
-
-
+    <footer>
+        <div>
+            <div class="footerLogo">
+                <img src="../public/assets/images/Logotipo-academy-black.svg" alt="Logo Soul Keys Academy">
+            </div>
+            <ul class="footerMenu">
+                <p>Nuestra Academia</p>
+                <li><a href="#about">Acerca de nosotros</a></li>
+                <li><a href="./pages/aboutus.html">Nuestra historia</a></li>
+                <li><a href="#instruments">Instrumentos</a></li>
+                <li><a href="./pages/scores.html">Partituras</a></li>
+            </ul>
+            <ul class="footerContact">
+                <p>Conecta</p>
+                <li><a href="./pages/contact.html">Escríbenos</a></li>
+                <li><a href="https://github.com/DarthVada36/SoulKeysAcademy" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2024 Soul Keys Academy. All rights reserved. Privacy Policy.</p>
+    </footer>
+    <script src="./src/scripts/main.js"></script>
 </body>
 </html>
