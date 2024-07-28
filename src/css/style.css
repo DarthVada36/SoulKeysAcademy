@@ -848,14 +848,14 @@ footer li:hover {
 }
 
 .game__note-img {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 
 .game__obstacle {
-    width: 4.5%;
-    height: 7.5%;
+    width: 5.5%;
+    height: 15%;
     background-color: grey;
     position: absolute;
     bottom: 0;
