@@ -585,57 +585,23 @@ footer li:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ESTILOS FEATURE-PIANO PAGE */
 
-.pianoBody {
+.title__piano {
     display: flex;
-    flex-direction: column;
-    background-color: #28282D;
+    height: fit-content;
+    gap: 8px;
+    margin-bottom: 0;
+    margin-top: 20px;
 }
 
+.title__piano p {
+    font-size: calc(var(--text-size-l) - 14px);
+}
+
+.pianoTitle {
+    font-size: calc(var(--text-size-l) - 20px);
+}
 
 #tipBach {
     width: 350px;
@@ -648,7 +614,8 @@ footer li:hover {
 .soundSelector {
     display: flex;
     justify-content: center;
-    margin-top: 3px;
+    margin-top: 5%;
+    padding: 0;
 }
 
 .soundSelector__label {
@@ -659,44 +626,43 @@ footer li:hover {
 /* PIANO */
 #framePiano{
     padding-top: 0;
-    margin-bottom: 30px;
+    margin: 30px 5%;
+    /* width: 100%; */
 }
 
 #piano {
-    background-image: url(../../public/assets/images/piano-images/pianomarco.png);
+    /* background-image: url(../../public/assets/images/piano-images/pianomarco.png); */
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 20px;
-    background-size: 980px;
-    background-repeat: no-repeat;
-    padding: 70px 0;
-    background-position: calc(50% - 53px);
+    /* margin: 20px; */
+    /* background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat; */
+    /* padding: 70px 0; */
+    /* background-position: calc(50% - 53px); */
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
-.piano__key--do,
-.piano__key--re,
-.piano__key--mi,
-.piano__key--fa,
-.piano__key--sol,
-.piano__key--la,
-.piano__key--si {
-    width: 50px;
-    height: 170px;
+.pianoCase {
+    width: 100%;
+}
+
+.piano__key {
+    top: 25.2%;
+    height: 48%;
     background-color: white;
     border: 1px solid gray;
     display: flex;
     flex-direction: column-reverse;
     transition: background-color 0.3s;
+    position: absolute;
+    z-index: 1;
 }
 
-.piano__key--do:hover,
-.piano__key--re:hover,
-.piano__key--mi:hover,
-.piano__key--fa:hover,
-.piano__key--sol:hover,
-.piano__key--la:hover,
-.piano__key--si:hover {
+.piano__key:hover {
     background-color: rgb(203, 203, 203);
 }
 
@@ -708,12 +674,12 @@ footer li:hover {
 }
 
 .piano__black {
-    width: 30px;
-    height: 100px;
+    height: 35%;
     background-color: black;
-    margin-bottom: 40px;
-    margin-left: 35px;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
     background-image: url('../../public/assets/images/piano-images/Sostenidas/Sostenida-Suelta.png');
 }
 
@@ -727,22 +693,24 @@ footer li:hover {
 
 }
 
+.piano__button {
+    font-family: var(--text-paragraph);
+    font-size: 14px;
+}
+
 .piano__letter {
     text-align: center;
     margin: 0;
     position: relative;
     top: 90px;
     color: white;
-    font-size: 14px;
-    font-family: 'EB Garamond', sans-serif;
+    font-size: 16px;
+    font-family: var(--text-title)
 }
 
 .color-gold {
     background-color: gold;
 }
-
-
-
 
 /*ESTILOS MODAL INICIAL Y POR SI ACASO MODAL PARA OFRECER PLANES*/
 
@@ -857,9 +825,9 @@ footer li:hover {
 /* CAMBIOS PARA QUE SEA RESPONSIVE*/
 
 /* AQUÍ APLICAMOS LA CLASE .HIDE A LOS IDS D ELAS 7 TECLAS QUE QUEREMOS ECSONDER CUANDO SE REDUCE EL TAMAÑO DE LA PANTALLA*/
-@media (max-width:1100px) {
+/* @media (max-width:1100px) { */
     /* Estilos para el modal */
-    .modal__content{
+    /* .modal__content{
         height: 400px;
     }
     #tipBach {
@@ -868,11 +836,11 @@ footer li:hover {
     }
     .soundSelector{
         margin-top: 6%;
-    }
+    } */
     
 
     /* Esto hace que se oculten las 7 últimas teclas */
-    #key-z,
+    /* #key-z,
     #key-x,
     #key-c,
     #key-v,
@@ -880,26 +848,26 @@ footer li:hover {
     #key-n,
     #key-m {
         display: none;
-    }
+    } */
 
-    body{
+    /* body{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
+    } */
 
 
 
     /* ESTILOS PIANO RESPONSIVE */
-    #piano {
+    /* #piano {
         background-image: none;
         padding-top: 5px;
         padding-bottom: 5px;
         margin: 0;
-    }
+    } */
 
-    #framePiano {
+    /* #framePiano {
         background-color: black;
         width: 380px;
         margin-top: 10px;
@@ -931,6 +899,45 @@ footer li:hover {
     #sheetMusic{
         width: 290px;
         height: 150px;
+    }
+} */
+
+/* Rotar el piano para dispositivos móviles y tablets */
+@media (orientation: portrait) {
+    #piano, .soundSelector, .title__piano {
+        display: none;
+    }
+
+    #framePiano {
+        height: calc(100vh - 350px - var(--height-header));
+    }
+
+    .pianoBody::after {
+        content: "Por favor, gira tu dispositivo para usar el piano.";
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        font-size: 18px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1000;
+        text-align: center;
+    }
+}
+
+@media (orientation: landscape) {
+    #framePiano {
+        display: flex;
+    }
+
+    .pianoBody::after {
+        display: none;
+    }
+
+    .soundSelector {
+        margin: 0;
     }
 }
 
@@ -1267,6 +1274,12 @@ footer li:hover {
     }
 
     /*END HOME CONFIGURATION*/
+
+    /*START PIANO CONFIGURATION*/
+    .pianoBody .title {
+        display: none;
+    }
+    /*END PIANO CONFIGURATION*/
 
     /*START CONTACT CONFIGURATION*/
     .container-contact1 .titleInstruments__text1 {
