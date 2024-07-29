@@ -250,9 +250,6 @@ section {
     from {
         width: 0;
     }
-    /* to {
-        width: 100%;
-    } */
 }
 
 @keyframes blink {
@@ -983,6 +980,23 @@ footer li:hover {
     background-size: 300%;
 }
 
+.container-contact1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 9fr)); /* Ajusta el ancho mínimo y máximo */
+    column-gap: 50px;
+    justify-items: center;
+    align-items: center;
+    margin: 9% 10% 0 10%;
+}
+
+.container-contact1 .titleInstruments__text1 {
+    width: 720px;
+}
+
+.container-contact1 .titleInstruments__text2 {
+    width: 440px;
+}
+
 .form-image-container {
     display: flex;
     flex-direction: row;
@@ -1034,7 +1048,7 @@ input {
 }
 
 input.error {
-    border-color: rgb(119, 10, 10);
+    border-color: rgb(228, 101, 101);
     border-style: dashed;
 }
 
@@ -1054,7 +1068,7 @@ button:hover {
 }
 
 .error-message {
-    color: var(--button-secondary-color);
+    color: rgb(255, 119, 119);
     margin-top: 0;
     margin-bottom: 10px;
     font-size:small;
@@ -1255,15 +1269,23 @@ footer li:hover {
     /*END HOME CONFIGURATION*/
 
     /*START CONTACT CONFIGURATION*/
+    .container-contact1 .titleInstruments__text1 {
+        max-width: 420px;
+    }
+    
+    .container-contact1 .titleInstruments__text2 {
+        max-width: 250px;
+    }
 
     .form-image {
-        margin-top: 10px;
-        max-width: 82%; /* Permite que la imagen ocupe el ancho total del contenedor en pantallas pequeñas */
+        margin-top: 30px;
+        max-width: 62%; /* Permite que la imagen ocupe el ancho total del contenedor en pantallas pequeñas */
     }
 
     .form-image-container {
         flex-direction: column;
         align-items: center;
+        max-width: 80%;
     }
 
     #form {
