@@ -489,7 +489,7 @@ q {
     color: var(--main-bg-color)
 }
 
-/* ..........FEATURE-CONTACT PAGE.......... */
+/* .......... START FEATURE-CONTACT PAGE.......... */
 
 .contact {
     display: flex;
@@ -626,6 +626,31 @@ input::placeholder {
     color: #999;
     font-family: var(--text-paragraph);
 }
+
+/* .......... END FEATURE-CONTACT PAGE.......... */
+
+/* .......... START FEATURE-CONTACT SCORES.......... */
+.container-s{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.container-s .title-scores{
+    font-size: 3.5rem;
+    color: #28282D;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.scores-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+/* .......... END FEATURE-CONTACT SCORES.......... */
 
 /* FOOTER */
 footer {
