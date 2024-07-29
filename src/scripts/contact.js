@@ -1,25 +1,26 @@
-//NAV BAR JS
-const nav = document.querySelector("#nav");
-const Abrir = document.querySelector("#Abrir");
-const Cerrar = document.querySelector("#Cerrar");
+// //NAV BAR JS
+// const nav = document.querySelector("#nav");
+// const Abrir = document.querySelector("#Abrir");
+// const Cerrar = document.querySelector("#Cerrar");
 
-Abrir.addEventListener("click", () => {
-    nav.classList.add("visible");
-})
+// Abrir.addEventListener("click", () => {
+//     nav.classList.add("visible");
+// })
 
-Cerrar.addEventListener("click", () => {
-    nav.classList.remove("visible");
-})
+// Cerrar.addEventListener("click", () => {
+//     nav.classList.remove("visible");
+// })
 
 
-// contact.js
-//import { burgerMenu, typingEffectVariousLines } from './main.js';
+//contact.js
+import { burgerMenu, typingEffectVariousLines } from './main.js';
 
-// Burger menu
-//burgerMenu();
+//Burger menu
+burgerMenu();
 
-// Typing effect
-//typingEffectVariousLines();
+//Typing effect
+const typing = document.querySelectorAll('.titleInstruments');
+typingEffectVariousLines(typing);
 
 
 // FEATURE-CONTACT PAGE JS
