@@ -1,4 +1,8 @@
 // BEGIN JS - WIP
+import {burgerMenu} from './main.js';
+
+// Burger menu
+burgerMenu();
 
 //Selecciona el elemento con el id note, que es la figura dentro del juego donde se realizará la acción de salto.
 document.addEventListener('DOMContentLoaded', () => { //no espera a que cargue toda la página
