@@ -34,8 +34,7 @@ body {
     background-color: var(--main-bg-color);
     color: var(--text-primary-color);
     font-size: var(--text-size-xs);
-    /* max-width: 100vw; */
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 /* Header // NavBar */
@@ -185,22 +184,6 @@ section {
     top: 0;
     left: 0;
 }
-
-/* .ripple {
-    position: absolute;
-    border-radius: 50%;
-    background: linear-gradient(90deg, rgba(40,40,45,0.2) 0%, rgba(102,103,171,0.2) 25%, rgba(98,97,126,0.2) 50%, rgba(186,190,191,0.2) 75%, rgba(237,241,255,0.2) 100%);
-    transform: scale(0);
-    animation: ripple-animation 1s linear;
-    transition: background 0.8s;
-}
-
-@keyframes ripple-animation {
-    to {
-        transform: scale(3);
-        opacity: 0;
-    }
-} */
 
 .heroTexts {
     margin: 0 10%;
@@ -489,102 +472,6 @@ q {
     color: var(--main-bg-color)
 }
 
-
-/* Footer */
-footer {
-    max-width: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: var(--text-primary-color);
-    height: 300px;
-    padding: 20px;
-    font-size: var(--text-size-s);
-    color: var(--main-bg-color);
-}
-
-footer div {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 90%;
-    max-width: 100%;
-}
-
-.footerLogo img {
-    height: 100%;
-}
-
-footer ul p {
-    font-weight: bold;
-}
-
-footer li {
-    list-style: none;
-    font-size: var(--text-size-xs);
-}
-
-footer a {
-    text-decoration-line: none;
-    color: var(--main-bg-color);
-}
-
-footer li:hover {
-    text-decoration-line: underline;
-}
-
-@media (768px <= width < 950px) {
-    .heroText__bigText {
-        font-size: var(--text-size-xl);
-    }
-}
-
-@media (width < 768px) {
-    .scrollingContainer {
-        height: 100px;
-    }
-
-    .scrollingText {
-        font-size: var(--text-size-l);
-    }
-
-    .heroText {
-        font-size: var(--text-size-s);
-    }
-
-    .heroText__bigText {
-        font-size: var(--text-size-l);
-    }
-
-    .cards {
-        height: 350px;
-        width: auto;
-    }
-
-    .cardIntro {
-    height: 250px;
-    }
-
-    .titleInstruments {
-        font-size: var(--text-size-m);
-    }
-
-    .cardInstruments {
-        height: 150px;
-        width: 150px;
-        margin-bottom: 10px;
-    }
-
-    .instrumentName {
-        font-size: var(--text-size-s);
-    }
-}
-
-
-
-
-
 /* ESTILOS FEATURE-PIANO PAGE */
 
 .title__piano {
@@ -627,20 +514,12 @@ footer li:hover {
 #framePiano{
     padding-top: 0;
     margin: 30px 5%;
-    /* width: 100%; */
 }
 
 #piano {
-    /* background-image: url(../../public/assets/images/piano-images/pianomarco.png); */
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* margin: 20px; */
-    /* background-size: 90%;
-    background-position: center;
-    background-repeat: no-repeat; */
-    /* padding: 70px 0; */
-    /* background-position: calc(50% - 53px); */
     width: 100%;
     height: 100%;
     position: relative;
@@ -652,7 +531,7 @@ footer li:hover {
 
 .piano__key {
     top: 25.2%;
-    height: 48%;
+    height: 60%;
     background-color: white;
     border: 1px solid gray;
     display: flex;
@@ -674,7 +553,7 @@ footer li:hover {
 }
 
 .piano__black {
-    height: 35%;
+    height: 40%;
     background-color: black;
     position: absolute;
     top: 0;
@@ -696,6 +575,7 @@ footer li:hover {
 .piano__button {
     font-family: var(--text-paragraph);
     font-size: 14px;
+    padding: 5px;
 }
 
 .piano__letter {
@@ -708,12 +588,49 @@ footer li:hover {
     font-family: var(--text-title)
 }
 
+.piano__letter__black__container {
+    display: flex;
+    position: absolute;
+    top: 13%;
+    color: white;
+    font-size: 16px;
+    font-family: var(--text-title);
+    
+}
+
+.twoKeys {
+    width: 7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.threeKeys {
+    width: 12%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.twoKeys__1 {
+    left: 21%;
+}
+
+.twoKeys__2 {
+    left: 59%;
+}
+
+.threeKeys__1 {
+    left: 38%;
+}
+
+.threeKeys__2 {
+    left: 75%;
+}
+
 .color-gold {
     background-color: gold;
 }
 
 /*ESTILOS MODAL INICIAL Y POR SI ACASO MODAL PARA OFRECER PLANES*/
-
 .modal {
     display: none;
     /* Oculto por defecto */
@@ -738,7 +655,6 @@ footer li:hover {
     align-items: center;
     /* Centrar verticalmente */
 }
-
 
 .modal__content {
     background-color: #9FA0FF;
@@ -812,7 +728,6 @@ footer li:hover {
     
 }
 
-
 /*ESTO ES UNA CLASE PARA ESCONDER EN ESTE CASO IDS */
 .hide {
     display: none;
@@ -821,148 +736,6 @@ footer li:hover {
 .probando {
     width: 100%;
 }
-
-/* CAMBIOS PARA QUE SEA RESPONSIVE*/
-
-/* AQUÍ APLICAMOS LA CLASE .HIDE A LOS IDS D ELAS 7 TECLAS QUE QUEREMOS ECSONDER CUANDO SE REDUCE EL TAMAÑO DE LA PANTALLA*/
-/* @media (max-width:1100px) { */
-    /* Estilos para el modal */
-    /* .modal__content{
-        height: 400px;
-    }
-    #tipBach {
-        width: 320px;
-        height: 320px;
-    }
-    .soundSelector{
-        margin-top: 6%;
-    } */
-    
-
-    /* Esto hace que se oculten las 7 últimas teclas */
-    /* #key-z,
-    #key-x,
-    #key-c,
-    #key-v,
-    #key-b,
-    #key-n,
-    #key-m {
-        display: none;
-    } */
-
-    /* body{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    } */
-
-
-
-    /* ESTILOS PIANO RESPONSIVE */
-    /* #piano {
-        background-image: none;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin: 0;
-    } */
-
-    /* #framePiano {
-        background-color: black;
-        width: 380px;
-        margin-top: 10px;
-        border: 1px solid gray;
-        border-radius: 6px 6px 0px 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .brandPiano{
-        display: flex;
-        justify-content: center;
-        
-    }
-    #brandPiano{
-        display: flex;
-        justify-content: center;
-        padding: 0;
-    }
-
-    .piano__key--do{
-        border-radius: 6px 0px 0px 6px;
-    }
-    .piano__key--si{
-        border-radius: 0px 6px 6px 0px;
-    }
-    #sheetMusic{
-        width: 290px;
-        height: 150px;
-    }
-} */
-
-/* Rotar el piano para dispositivos móviles y tablets */
-@media (orientation: portrait) {
-    #piano, .soundSelector, .title__piano {
-        display: none;
-    }
-
-    #framePiano {
-        height: calc(100vh - 350px - var(--height-header));
-    }
-
-    .pianoBody::after {
-        content: "Por favor, gira tu dispositivo para usar el piano.";
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -100%);
-        font-size: 18px;
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 20px;
-        border-radius: 10px;
-        z-index: 1000;
-        text-align: center;
-    }
-}
-
-@media (orientation: landscape) {
-    #framePiano {
-        display: flex;
-    }
-
-    .pianoBody::after {
-        display: none;
-    }
-
-    .soundSelector {
-        margin: 0;
-    }
-}
-
-/* ESTILOS PARA ADAPATAR EL MODAL A POCOS PIXELES */
-@media (max-width:455px) {
-    #tipBach {
-        width: 300px;
-        height: 290px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ..........FEATURE-CONTACT PAGE.......... */
 
@@ -1102,7 +875,7 @@ input::placeholder {
     font-family: var(--text-paragraph);
 }
 
-/* FOOTER */
+/* Footer */
 footer {
     max-width: 100%;
     margin: 0;
@@ -1147,14 +920,7 @@ footer li:hover {
     text-decoration-line: underline;
 }
 
-/* Media Queries */
-@media (max-width: 600px) {
-    .instrument-options {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Responsive adjustments */
+/* RESPONSIVE DESIGN */
 @media (768px <= width < 950px) {
     .heroText__bigText {
         font-size: var(--text-size-xl);
@@ -1279,6 +1045,10 @@ footer li:hover {
     .pianoBody .title {
         display: none;
     }
+
+    .piano__button {
+        padding: 0;
+    }
     /*END PIANO CONFIGURATION*/
 
     /*START CONTACT CONFIGURATION*/
@@ -1309,5 +1079,58 @@ footer li:hover {
     /*FOOTER CONFIGURATION*/
     footer {
         font-size: var(--text-size-xs);
+    }
+}
+
+@media (max-width: 600px) {
+    .instrument-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Rotar el piano para dispositivos móviles y tablets */
+@media (orientation: portrait) {
+    #piano, .soundSelector, .title__piano {
+        display: none;
+    }
+
+    #framePiano {
+        height: calc(100vh - 350px - var(--height-header));
+    }
+
+    .pianoBody::after {
+        content: "Por favor, gira tu dispositivo para usar el piano.";
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        font-size: 18px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1000;
+        text-align: center;
+    }
+}
+
+@media (orientation: landscape) {
+    #framePiano {
+        display: flex;
+    }
+
+    .pianoBody::after {
+        display: none;
+    }
+
+    .soundSelector {
+        margin: 0;
+    }
+}
+
+/* ESTILOS PARA ADAPATAR EL MODAL A POCOS PIXELES */
+@media (max-width:455px) {
+    #tipBach {
+        width: 300px;
+        height: 290px;
     }
 }
