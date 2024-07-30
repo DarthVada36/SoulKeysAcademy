@@ -1,3 +1,12 @@
+import { burgerMenu, typingEffectVariousLines } from './main.js';
+
+// Función BurgerMenu del Navbar
+burgerMenu();
+
+// Título
+const titleInstruments = document.querySelectorAll('.titleInstruments');
+typingEffectVariousLines(titleInstruments);
+
 // FUNCIÓN PARA MOSTRAR EL MODAL CON TIP CUANDO SE CARGAR LA PÁGINA
 window.onload = function () {
   let modal = document.getElementById("myModal");
@@ -182,4 +191,12 @@ document.addEventListener('keyup', function (keyUp) {
 });
 
 
-
+// UBICAR LAS TECLAS EN EL CASE DEL PIANO
+const pianoKeys = document.querySelectorAll('.piano__key');
+let positionX = 20;
+let keyWidth = 5.1;
+pianoKeys.forEach((key) => {
+  key.style.width = `${keyWidth}%`;
+  key.style.left = `${positionX}%`;
+  positionX += keyWidth;
+})

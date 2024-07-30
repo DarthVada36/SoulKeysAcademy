@@ -4,15 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/css/stylesPiano.css">
+
     <link rel="stylesheet" href="../src/css/style.css">
-    <title>Document</title>
+
+    <!--.....Box icons......-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--....Remix icons.....-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Piano</title>
 </head>
 
-<body>
+<body class="pianoBody">
     <header>
-        <a href="#"><img class="logo" src="../public/assets/images/Logotipo-academy-white-nav-notext.svg" alt="Logo Soul Keys Academy"></a>
-        <button class="open-menu" id="Abrir"><i class="ri-menu-line"></i></button> 
+        <a href="../index.html#"><img class="logo" src="../public/assets/images/Logotipo-academy-white-nav-notext.svg"
+                alt="Logo Soul Keys Academy"></a>
+        <button class="open-menu" id="Abrir"><i class="ri-menu-line"></i></button>
         <nav class="nav" id="nav">
             <button class="close-menu" id="Cerrar"><i class="ri-close-line"></i></button>
             <div class="pentagram">
@@ -22,10 +28,14 @@
                 <div></div>
             </div>
             <ul class="menu">
-                <li id="noteAbout"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="#about">Nuestra Academia</a></li>
-                <li id="noteInstruments"><img class="imgNote" src="../public/assets/images/nota-musical-blanca.png" alt="nota musical"><a href="#instruments">Instrumentos</a></li>
-                <li id="noteScores"><img class="imgNote" src="../public/assets/images/nota-musical2-blanca.png" alt="nota musical"><a href="./pages/scores.html">&nbspPartituras</a></li>
-                <li id="noteContact"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="./pages/contact.html">Contacto</a></li>
+                <li id="noteAbout"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png"
+                        alt="nota musical"><a href="../index.html#about">Nuestra Academia</a></li>
+                <li id="noteInstruments"><img class="imgNote" src="../public/assets/images/nota-musical-blanca.png"
+                        alt="nota musical"><a href="../index.html#instruments">Instrumentos</a></li>
+                <li id="noteScores"><img class="imgNote" src="../public/assets/images/nota-musical2-blanca.png"
+                        alt="nota musical"><a href="./scores.html">&nbspPartituras</a></li>
+                <li id="noteContact"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png"
+                        alt="nota musical"><a href="./contact.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -39,153 +49,159 @@
                 alt="Imagen de ejemplo">
         </div>
     </div>
-
-    <!-- MODAL HAS ALCANZADO EL LÍMITE DE NOTAS -->
-    <!-- <div id="keypressModal" class="modal">
-        <div class="modal__content2">
-            <span class="modal__close">&times;</span>
-            <p class="keypressModal__message">¡WOW! Parece que estas partituras son sencillas para ti, estás preparada
-                para subir el nivel y escoger uno de nuestros planes para seguir con partituras más complejas</p>
-            <div class="keypressModal__linkSpace"><a class="keypressModal__link" href="../pages/planes.html">IR A PLANES DE
-                    APRENDIZAJE</a></div>
-        </div>
-    </div> -->
+<!-- TÍTULO -->
+ <div class="container">
+     <div class="title title__piano">
+         <p class="titleInstruments titleInstruments__text1 typingText">
+             Practica con
+         </p> 
+         <p class="titleInstruments titleInstruments__text2 typingText">
+             <span>Instrumentos</span>
+         </p>
+     </div>
+     <p class="title titleInstruments pianoTitle">
+         <span>Piano</span>
+     </p>
+ </div>
 
     <!-- SELECTOR DE SONIDOS -->
     <section class="soundSelector" ">
-        <form class="soundSelector__form" action="" method="post">
-            <label class="soundSelector__label" id="instrument-select" for="miSelect">Sonido:</label>
-            <select class="soundSelector__select" id="miSelectSound" name="selectedOption">
-                <option class="soundSelector__option" value="piano">Piano</option>
-                <option class="soundSelector__option" value='drums'>Bateria</option>
-                <option class="soundSelector__option" value="guitar">Guitarra</option>
-                <option class="soundSelector__option" value='flute'>Flauta</option>
-            </select>
+        <form class=" soundSelector__form" action="" method="post">
+        <label class="soundSelector__label" id="instrument-select" for="miSelect">Sonido:</label>
+        <select class="soundSelector__select" id="miSelectSound" name="selectedOption">
+            <option class="soundSelector__option" value="piano">Piano</option>
+            <option class="soundSelector__option" value='drums'>Bateria</option>
+            <option class="soundSelector__option" value="guitar">Guitarra</option>
+            <option class="soundSelector__option" value='flute'>Flauta</option>
+        </select>
         </form>
     </section>
 
     <section id="framePiano">
-        <div class="brandPiano"><h1 id="brandPiano" style="color: white;"> SoulKeysAcademy</h1> </div>
+        <div class="brandPiano">
+            <h1 id="brandPiano" style="color: white;"> SoulKeysAcademy</h1>
+        </div>
 
-    <main id="piano">
+        <main id="piano">
+            <img class="pianoCase" src="../public/assets/images/piano-images/pianomarco.png" alt="">
+            <!-- 7 TECLAS DEL PIANO-->
+            <article class="piano__key piano__key--do" id="key-d">
+                <button class="piano__button" id="button-d">Do</button>
+                <h1 class="piano__letter">D</h1>
+                <audio id="sound" src="../public/assets/sounds/piano/do1.mp3"></audio>
+                <div class="piano__black" id="key-q">
+                </div>
+            </article>
+            <article class="piano__key piano__key--re" id="key-f">
+                <button class="piano__button">Re</button>
+                <h1 class="piano__letter">F</h1>
+                <audio id="sound2" src="../public/assets/sounds/piano/re1.mp3"></audio>
+                <div class="piano__black" id="key-w">
 
-        <!-- 7 TECLAS DEL PIANO-->
-        <article class="piano__key--do" id="key-d">
-            <button class="piano__button" id="button-d">Do</button>
-            <h1 class="piano__letter">D</h1>
-            <audio id="sound" src="../public/assets/sounds/piano/do1.mp3"></audio>
-            <div class="piano__black" id="key-q">
-            </div>
-        </article>
-        <article class="piano__key--re" id="key-f">
-            <button class="piano__button">Re</button>
-            <h1 class="piano__letter">F</h1>
-            <audio id="sound2" src="../public/assets/sounds/piano/re1.mp3"></audio>
-            <div class="piano__black" id="key-w">
+                </div>
+            </article>
+            <article class="piano__key piano__key--mi" id="key-g">
+                <button class="piano__button">Mi</button>
+                <h1 class="piano__letter">G</h1>
+                <audio id="sound3" src="../public/assets/sounds/piano/mi1.mp3"></audio>
+                <div class="piano__black__transparent">
 
-            </div>
-        </article>
-        <article class="piano__key--mi" id="key-g">
-            <button class="piano__button">Mi</button>
-            <h1 class="piano__letter">G</h1>
-            <audio id="sound3" src="../public/assets/sounds/piano/mi1.mp3"></audio>
-            <div class="piano__black__transparent">
+                </div>
+            </article>
+            <article class="piano__key piano__key--fa" id="key-h">
+                <button class="piano__button">Fa</button>
+                <h1 class="piano__letter">H</h1>
+                <audio id="sound4" src="../public/assets/sounds/piano/fa1.mp3"></audio>
+                <div class="piano__black" id="key-e">
 
-            </div>
-        </article>
-        <article class="piano__key--fa" id="key-h">
-            <button class="piano__button">Fa</button>
-            <h1 class="piano__letter">H</h1>
-            <audio id="sound4" src="../public/assets/sounds/piano/fa1.mp3"></audio>
-            <div class="piano__black" id="key-e">
+                </div>
+            </article>
+            <article class="piano__key piano__key--sol" id="key-j">
+                <button class="piano__button">Sol</button>
+                <h1 class="piano__letter">J</h1>
+                <audio id="sound5" src="../public/assets/sounds/piano/sol1.mp3"></audio>
+                <div class="piano__black" id="key-r">
 
-            </div>
-        </article>
-        <article class="piano__key--sol" id="key-j">
-            <button class="piano__button">Sol</button>
-            <h1 class="piano__letter">J</h1>
-            <audio id="sound5" src="../public/assets/sounds/piano/sol1.mp3"></audio>
-            <div class="piano__black" id="key-r">
+                </div>
+            </article>
+            <article class="piano__key piano__key--la" id="key-k">
+                <button class="piano__button">La</button>
+                <h1 class="piano__letter">k</h1>
+                <audio id="sound6" src="../public/assets/sounds/piano/la1.mp3"></audio>
+                <div class="piano__black" id="key-t">
 
-            </div>
-        </article>
-        <article class="piano__key--la" id="key-k">
-            <button class="piano__button">La</button>
-            <h1 class="piano__letter">k</h1>
-            <audio id="sound6" src="../public/assets/sounds/piano/la1.mp3"></audio>
-            <div class="piano__black" id="key-t">
+                </div>
+            </article>
+            <article class="piano__key piano__key--si" id="key-l">
+                <button class="piano__button">Si</button>
+                <h1 class="piano__letter">l</h1>
+                <audio id="sound7" src="../public/assets/sounds/piano/si1.mp3"></audio>
+                <div class="piano__black__transparent">
 
-            </div>
-        </article>
-        <article class="piano__key--si" id="key-l">
-            <button class="piano__button">Si</button>
-            <h1 class="piano__letter">l</h1>
-            <audio id="sound7" src="../public/assets/sounds/piano/si1.mp3"></audio>
-            <div class="piano__black__transparent">
-
-            </div>
-        </article>
+                </div>
+            </article>
 
 
-        <!-- OTRAS 7 TECLAS -->
+            <!-- OTRAS 7 TECLAS -->
 
-        <article class="piano__key--do" id="key-z">
-            <button class="piano__button">Do</button>
-            <h1 class="piano__letter">Z</h1>
-            <audio id="sound" src="./assets/sounds/piano/do1.mp3"></audio>
-            <div class="piano__black" id="key-y">
-            </div>
-        </article>
-        <article class="piano__key--re" id="key-x">
-            <button class="piano__button">Re</button>
-            <h1 class="piano__letter">X</h1>
-            <audio id="sound2" src="./assets/sounds/piano/re1.mp3"></audio>
-            <div class="piano__black" id="key-u">
+            <article class="piano__key piano__key--do" id="key-z">
+                <button class="piano__button">Do</button>
+                <h1 class="piano__letter">Z</h1>
+                <audio id="sound" src="..public/assets/sounds/piano/do1.mp3"></audio>
+                <div class="piano__black" id="key-y">
+                </div>
+            </article>
+            <article class="piano__key piano__key--re" id="key-x">
+                <button class="piano__button">Re</button>
+                <h1 class="piano__letter">X</h1>
+                <audio id="sound2" src="..pubic/assets/sounds/piano/re1.mp3"></audio>
+                <div class="piano__black" id="key-u">
 
-            </div>
-        </article>
-        <article class="piano__key--mi" id="key-c">
-            <button class="piano__button">Mi</button>
-            <h1 class="piano__letter">C</h1>
-            <audio id="sound3" src="./assets/sounds/piano/mi1.mp3"></audio>
-            <div class="piano__black__transparent">
+                </div>
+            </article>
+            <article class="piano__key piano__key--mi" id="key-c">
+                <button class="piano__button">Mi</button>
+                <h1 class="piano__letter">C</h1>
+                <audio id="sound3" src="..public/assets/sounds/piano/mi1.mp3"></audio>
+                <div class="piano__black__transparent">
 
-            </div>
-        </article>
-        <article class="piano__key--fa" id="key-v">
-            <button class="piano__button">Fa</button>
-            <h1 class="piano__letter">V</h1>
-            <audio id="sound4" src="./assets/sounds/piano/fa1.mp3"></audio>
-            <div class="piano__black" id="key-i">
+                </div>
+            </article>
+            <article class="piano__key piano__key--fa" id="key-v">
+                <button class="piano__button">Fa</button>
+                <h1 class="piano__letter">V</h1>
+                <audio id="sound4" src="..public/assets/sounds/piano/fa1.mp3"></audio>
+                <div class="piano__black" id="key-i">
 
-            </div>
-        </article>
-        <article class="piano__key--sol" id="key-b">
-            <button class="piano__button">Sol</button>
-            <h1 class="piano__letter">B</h1>
-            <audio id="sound5" src="./assets/sounds/piano/sol1.mp3"></audio>
-            <div class="piano__black" id="key-o">
+                </div>
+            </article>
+            <article class="piano__key piano__key--sol" id="key-b">
+                <button class="piano__button">Sol</button>
+                <h1 class="piano__letter">B</h1>
+                <audio id="sound5" src="..public/assets/sounds/piano/sol1.mp3"></audio>
+                <div class="piano__black" id="key-o">
 
-            </div>
-        </article>
-        <article class="piano__key--la" id="key-n">
-            <button class="piano__button">La</button>
-            <h1 class="piano__letter">N</h1>
-            <audio id="sound6" src="./assets/sounds/piano/la1.mp3"></audio>
-            <div class="piano__black" id="key-p">
+                </div>
+            </article>
+            <article class="piano__key piano__key--la" id="key-n">
+                <button class="piano__button">La</button>
+                <h1 class="piano__letter">N</h1>
+                <audio id="sound6" src="..public/assets/sounds/piano/la1.mp3"></audio>
+                <div class="piano__black" id="key-p">
 
-            </div>
-        </article>
-        <article class="piano__key--si" id="key-m">
-            <button class="piano__button">Si</button>
-            <h1 class="piano__letter">M</h1>
-            <audio id="sound7" src="./assets/sounds/piano/si1.mp3"></audio>
-            <div class="piano__black__transparent">
+                </div>
+            </article>
+            <article class="piano__key piano__key--si" id="key-m">
+                <button class="piano__button">Si</button>
+                <h1 class="piano__letter">M</h1>
+                <audio id="sound7" src="..public/assets/sounds/piano/si1.mp3"></audio>
+                <div class="piano__black__transparent">
 
-            </div>
-        </article>
+                </div>
+            </article>
+        </main>
     </section>
-    </main>
+    
 
     <footer>
         <div>
@@ -194,15 +210,16 @@
             </div>
             <ul class="footerMenu">
                 <p>Nuestra Academia</p>
-                <li><a href="#about">Acerca de nosotros</a></li>
-                <li><a href="./pages/aboutus.html">Nuestra historia</a></li>
-                <li><a href="#instruments">Instrumentos</a></li>
-                <li><a href="./pages/scores.html">Partituras</a></li>
+                <li><a href="../index.html#about">Acerca de nosotros</a></li>
+                <li><a href="./aboutus.html">Nuestra historia</a></li>
+                <li><a href="../index.html#instruments">Instrumentos</a></li>
+                <li><a href="./scores.html">Partituras</a></li>
             </ul>
             <ul class="footerContact">
                 <p>Conecta</p>
-                <li><a href="./pages/contact.html">Escríbenos</a></li>
-                <li><a href="https://github.com/DarthVada36/SoulKeysAcademy" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="./contact.html">Escríbenos</a></li>
+                <li><a href="https://github.com/DarthVada36/SoulKeysAcademy" target="_blank"
+                        rel="noopener noreferrer">GitHub</a></li>
                 <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                 <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             </ul>
@@ -210,8 +227,8 @@
         <p>&copy; 2024 Soul Keys Academy. All rights reserved. Privacy Policy.</p>
     </footer>
 
-
-    <script src="../piano.js"></script>
+    <script type="module" src="../src/scripts/main.js"></script>
+    <script type="module" src="../src/scripts/piano.js"></script>
 
 </body>
 
