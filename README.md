@@ -150,7 +150,7 @@ Este proyecto fue desarrollado por un gran equipo de estudiantes durante el boot
 - [Juan Vázquez](https://github.com/juanvprada)
 - [Lorena Acosta](https://github.com/LorelizDev)
 - [Mónica Serna](https://github.com/monicaSernaS)
-- [Vada León](https://github.com/DarthVada36)
+- [Vada Velázquez](https://github.com/DarthVada36)
 
 ## Contacto
 
