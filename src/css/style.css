@@ -629,7 +629,7 @@ input::placeholder {
 
 /* .......... END FEATURE-CONTACT PAGE.......... */
 
-/* .......... START FEATURE-CONTACT SCORES.......... */
+/* .......... START FEATURE-SCORES.......... */
 .container-s{
     max-width: 1200px;
     margin: 0 auto;
@@ -644,10 +644,19 @@ input::placeholder {
     text-align: center;
 }
 
-.scores-container{
+.container-s .scores-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 2rem;
+}
+
+.container-s .scores-container .score{
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+.container-s .scores-container .score:hover{
+    transform: scale(1.1);
 }
 
 /* .......... END FEATURE-CONTACT SCORES.......... */
