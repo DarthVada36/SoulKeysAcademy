@@ -10,11 +10,11 @@
     <!--....Remix icons.....-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
         <!--....Score js.....-->
-    <script src="../src/scripts/scores.js" defer></script>
+
 </head>
 <body>
     <header>
-        <a href="#"><img class="logo" src="../public/assets/images/Logotipo-academy-white-nav-notext.svg" alt="Logo Soul Keys Academy"></a>
+        <a href="../index.html"><img class="logo" src="../public/assets/images/Logotipo-academy-white-nav-notext.svg" alt="Logo Soul Keys Academy"></a>
         <button class="open-menu" id="Abrir"><i class="ri-menu-line"></i></button>
         
     <nav class="nav" id="nav">
@@ -26,19 +26,23 @@
             <div></div>
         </div>
         <ul class="menu">
-            <li id="noteAbout"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="#about">Nuestra Academia</a></li>
-            <li id="noteInstruments"><img class="imgNote" src="../public/assets/images/nota-musical-blanca.png" alt="nota musical"><a href="#instruments">Instrumentos</a></li>
-            <li id="noteScores"><img class="imgNote" src="../public/assets/images/nota-musical2-blanca.png" alt="nota musical"><a href="./pages/scores.html">&nbspPartituras</a></li>
-            <li id="noteContact"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="./pages/contact.html">Contacto</a></li>
+            <li id="noteAbout"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="../pages/aboutus.html">Nuestra Academia</a></li>
+            <li id="noteInstruments"><img class="imgNote" src="../public/assets/images/nota-musical-blanca.png" alt="nota musical"><a href="../pages/piano.html">Instrumentos</a></li>
+            <li id="noteScores"><img class="imgNote" src="../public/assets/images/nota-musical2-blanca.png" alt="nota musical"><a href="#">&nbspPartituras</a></li>
+            <li id="noteContact"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="../pages/contact.html">Contacto</a></li>
         </ul>
     </nav>
 </header>
     <main>
         <section>
             <div class="container-s">
-                <div class="title-scores">
-                    <p>Partituras</p>
-                    <p>Todos los niveles/edades</p>
+                <div class="title-scores title">
+                    <p class="titleInstruments titleScores__text1 typingText">
+                        <span>Partituras</span>
+                    </p>
+                    <p class="titleInstruments titleScores__text2 typingText">
+                        Todos los niveles
+                    </p>
                 </div>
                 <div class="scores-container">
                     <div class="score" data-name="s-1">
@@ -109,10 +113,10 @@
             </div>
             <ul class="footerMenu">
                 <p>Nuestra Academia</p>
-                <li><a href="#about">Acerca de nosotros</a></li>
-                <li><a href="./pages/aboutus.html">Nuestra historia</a></li>
-                <li><a href="#instruments">Instrumentos</a></li>
-                <li><a href="./pages/scores.html">Partituras</a></li>
+                <li><a href="../pages/aboutus.html">Acerca de nosotros</a></li>
+                <li><a href="../pages/aboutus.html">Nuestra historia</a></li>
+                <li><a href="../pages/planes.html">Instrumentos</a></li>
+                <li><a href="#">Partituras</a></li>
             </ul>
             <ul class="footerContact">
                 <p>Conecta</p>
@@ -124,5 +128,7 @@
         </div>
     <p>&copy; 2024 Soul Keys Academy. All rights reserved. Privacy Policy.</p>
     </footer>
+    <script type="module" src="../src/scripts/scores.js" defer></script>
+    <script type="module" src="../src/scripts/main.js"></script>
 </body>
 </html>

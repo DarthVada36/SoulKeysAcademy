@@ -878,33 +878,56 @@ input::placeholder {
 /* .......... END FEATURE-CONTACT PAGE.......... */
 
 /* .......... START FEATURE-SCORES.......... */
+
+.title-scores {
+    font-size: var(--text-size-l);
+}
+
+.titleScores__text1 {
+    width: 11.5ch;
+}
+
+.titleScores__text2 {
+    width: 18ch;
+}
+
 .container-s{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: 0;
+    padding: 2rem 3rem;
 }
 
 .container-s .title-scores{
-    font-size: 3.5rem;
-    color: #28282D;
-    margin-bottom: 3rem;
+    font-size: .5rem;
+    color:#BABEBF;
+    margin-bottom: 10rem;
     text-transform: uppercase;
     text-align: center;
 }
 
+.scores-container{
+    justify-items: center;
+    align-items: center;
+}
+
+.scores-container img {
+    max-width: 80%; /* Ajusta el ancho de las imágenes al 100% del contenedor padre */
+}
+
 .container-s .scores-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
 }
 
 .container-s .scores-container .score{
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     cursor: pointer;
 }
 
 .container-s .scores-container .score:hover{
     transform: scale(1.1);
+    transition: .4s;
 }
 
 .scores-preview{
@@ -921,7 +944,7 @@ input::placeholder {
 
 .scores-preview .preview-s{
     display: none;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
     background: transparent;
     position: relative;
@@ -931,22 +954,24 @@ input::placeholder {
 
 .scores-preview .preview-s.active{
     display: inline-block;
+    margin-top: 10%;
 }
 
 .scores-preview .preview-s img{
-    height: 85rem;
+    height: 55rem;
 }
 
 .scores-preview .preview-s .ri-close-fill{
     position: absolute;
-    top: 2rem; right: -22rem;
+    top: 1.5rem; right: 1.5rem;
     cursor: pointer;
     color: #28282D;
-    font-size: 4rem;
+    font-size: 2rem;
 }
 
 .scores-preview .preview-s .ri-close-fill:hover{
-    transform:scale(1.3);
+    transform:scale(1.2);
+    color: #6667AB;
 }
 /* .......... END FEATURE-CONTACT SCORES.......... */
 
@@ -1117,9 +1142,39 @@ footer li:hover {
     /*END HOME CONFIGURATION*/
 
     /*START SCORES CONFIGURATION*/
-    .scores-preview .preview-s img{
-        height: 45rem;
+    .scores-container img,
+    .scores-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
     }
+
+    .scores-container {
+        grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
+        gap: 1rem;
+    }
+
+    .scores-preview img {
+        width: 100%;
+        height: auto;
+    }
+
+    .scores-preview .preview-s {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .scores-preview .preview-s img {
+        height: auto;
+    }
+
+    .scores-preview .preview-s .ri-close-fill {
+        top: 1rem; 
+        right: 1rem;
+        font-size: 2rem;
+    }
+
 
     /*END SCORES CONFIGURATION*/
     /*START PIANO CONFIGURATION*/

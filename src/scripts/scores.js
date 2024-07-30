@@ -1,14 +1,14 @@
-//contact.js
+// contact.js
 import { burgerMenu, typingEffectVariousLines } from './main.js';
 
-//Burger menu
+// Burger menu
 burgerMenu();
 
-//Typing effect
+// Typing effect
 const typing = document.querySelectorAll('.titleInstruments');
 typingEffectVariousLines(typing);
 
-//SCORES JS
+// SCORES JS
 let previewContainer = document.querySelector('.scores-preview');
 let previewBox = previewContainer.querySelectorAll('.preview-s');
 
@@ -31,3 +31,4 @@ previewBox.forEach(close => {
         previewContainer.style.display = 'none';
     };
 });
+
