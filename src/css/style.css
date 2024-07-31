@@ -473,7 +473,7 @@ q {
 }
 
 
-/*BEGIN WIP*/
+/*BEGIN WIP STYLES*/
 
 .work-in-progress {
     flex-grow: 1;
@@ -543,6 +543,8 @@ q {
     color: var(--text-secondary-color);
     margin-left: 20%;
 }
+/* ENDING WIP STYLES*/
+
 /* ESTILOS FEATURE-PIANO PAGE */
 
 .title__piano {
@@ -1212,6 +1214,65 @@ footer li:hover {
 
     /*END HOME CONFIGURATION*/
 
+    /* WIP - Responsive adjustments 768*/
+        @media (max-width: 768px) {
+    .work-in-progress {
+        padding: 5%;
+    }
+
+    .work-in-progress__game {
+        width: 100%;
+        margin-bottom: 2%;
+        margin-left: 0;
+    }
+
+    .game {
+        height: 30vh;
+    }
+
+    .game__note {
+        width: 15%;
+        height: 15%;
+        left: 10%;
+    }
+
+    .game__obstacle {
+        width: 7%;
+        height: 10%;
+    }
+
+    .work-in-progress__message-title {
+        font-size: var(--text-size-s);
+        text-align: center;
+    }
+
+    .work-in-progress__message-text {
+        font-size: var(--text-size-xs);
+        margin-left: 0;
+        text-align: center;
+    }
+    }
+    /*ends WIP responsive adj 768*/
+
+    /*WIP responsive adj 480*/
+    
+    @media (max-width: 480px) {
+    .work-in-progress__game {
+        margin-bottom: 3%;
+    }
+
+    .game {
+        height: 20vh;
+    }
+
+    .game__note {
+        width: 25%;
+        height: 25%;
+        left: 5%;
+    } 
+    }
+    /*ENDS WIP responsive adj 480*/
+ 
     /*START SCORES CONFIGURATION*/
     .scores-container img,
     .scores-preview img {
@@ -1289,28 +1350,6 @@ footer li:hover {
     }
 }
 
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .work-in-progress__message-title {
-        font-size: 28px;
-    }
-
-    .work-in-progress__message-text {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-   .work-in-progress__message-title {
-        font-size: 24px;
-    }
-
-    .work-in-progress__message-text {
-        font-size: 14px;
-    }
-}
-/*ENDS WIP*/
 @media (max-width: 600px) {
     .instrument-options {
         grid-template-columns: 1fr;
