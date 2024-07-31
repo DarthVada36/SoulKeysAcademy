@@ -612,18 +612,27 @@ q {
 
 .twoKeys__1 {
     left: 22.5%;
+    z-index: 2;
+    top: 27%;
 }
 
 .twoKeys__2 {
     left: 60%;
+    z-index: 2;
+    top: 27%;
 }
 
 .threeKeys__1 {
     left: 38.8%;
+    top: 27%;
+    position: absolute;
+    z-index: 2;
 }
 
 .threeKeys__2 {
     left: 76.5%;
+    z-index: 2;
+    top: 27%;
 }
 
 .color-gold {
