@@ -884,24 +884,25 @@ input::placeholder {
 }
 
 .titleScores__text1 {
-    width: 11.5ch;
+    width: 9.9ch;
 }
 
 .titleScores__text2 {
-    width: 18ch;
+    width: 14.9ch;
 }
 
 .container-s{
-    max-width: 1000px;
+    max-width: 100%;
     margin: 0;
-    padding: 2rem 3rem;
+    padding: 30px;
+    justify-items: center;
 }
 
 .container-s .title-scores{
-    font-size: .5rem;
+    font-size: .6rem;
     color:#BABEBF;
-    margin-bottom: 10rem;
-    text-transform: uppercase;
+    margin-bottom: 6rem;
+    margin-left: 36px;
     text-align: center;
 }
 
@@ -911,7 +912,7 @@ input::placeholder {
 }
 
 .scores-container img {
-    max-width: 80%; /* Ajusta el ancho de las imágenes al 100% del contenedor padre */
+    max-width: 100%; /* Ajusta el ancho de las imágenes al 100% del contenedor padre */
 }
 
 .container-s .scores-container{
@@ -921,7 +922,7 @@ input::placeholder {
 }
 
 .container-s .scores-container .score{
-    padding: 1rem 1rem;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
     cursor: pointer;
 }
 
@@ -944,26 +945,26 @@ input::placeholder {
 
 .scores-preview .preview-s{
     display: none;
-    padding: 1rem;
+    padding: 7rem;
     text-align: center;
     background: transparent;
     position: relative;
-    margin: 2rem;
+    margin: 1rem;
     width: 40rem;
 }
 
 .scores-preview .preview-s.active{
     display: inline-block;
-    margin-top: 10%;
+    margin-top: 0%;
 }
 
 .scores-preview .preview-s img{
-    height: 55rem;
+    height: 30rem;
 }
 
 .scores-preview .preview-s .ri-close-fill{
     position: absolute;
-    top: 1.5rem; right: 1.5rem;
+    top: 7.5rem; right: 10rem;
     cursor: pointer;
     color: #28282D;
     font-size: 2rem;
@@ -1167,11 +1168,12 @@ footer li:hover {
 
     .scores-preview .preview-s img {
         height: auto;
+        margin-top: 76px;
     }
 
     .scores-preview .preview-s .ri-close-fill {
-        top: 1rem; 
-        right: 1rem;
+        top: 6rem; 
+        right: 1.5rem;
         font-size: 2rem;
     }
 
