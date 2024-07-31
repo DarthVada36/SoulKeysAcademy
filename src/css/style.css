@@ -884,7 +884,107 @@ input::placeholder {
     font-family: var(--text-paragraph);
 }
 
-/* Footer */
+/* .......... END FEATURE-CONTACT PAGE.......... */
+
+/* .......... START FEATURE-SCORES.......... */
+
+.title-scores {
+    font-size: var(--text-size-l);
+}
+
+.titleScores__text1 {
+    width: 11.5ch;
+}
+
+.titleScores__text2 {
+    width: 18ch;
+}
+
+.container-s{
+    max-width: 1000px;
+    margin: 0;
+    padding: 2rem 3rem;
+}
+
+.container-s .title-scores{
+    font-size: .5rem;
+    color:#BABEBF;
+    margin-bottom: 10rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.scores-container{
+    justify-items: center;
+    align-items: center;
+}
+
+.scores-container img {
+    max-width: 80%; /* Ajusta el ancho de las imágenes al 100% del contenedor padre */
+}
+
+.container-s .scores-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
+}
+
+.container-s .scores-container .score{
+    padding: 1rem 1rem;
+    cursor: pointer;
+}
+
+.container-s .scores-container .score:hover{
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+.scores-preview{
+    position: fixed;
+    top:0; left:0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.scores-preview .preview-s{
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    background: transparent;
+    position: relative;
+    margin: 2rem;
+    width: 40rem;
+}
+
+.scores-preview .preview-s.active{
+    display: inline-block;
+    margin-top: 10%;
+}
+
+.scores-preview .preview-s img{
+    height: 55rem;
+}
+
+.scores-preview .preview-s .ri-close-fill{
+    position: absolute;
+    top: 1.5rem; right: 1.5rem;
+    cursor: pointer;
+    color: #28282D;
+    font-size: 2rem;
+}
+
+.scores-preview .preview-s .ri-close-fill:hover{
+    transform:scale(1.2);
+    color: #6667AB;
+}
+/* .......... END FEATURE-CONTACT SCORES.......... */
+
+/* FOOTER */
 footer {
     max-width: 100%;
     margin: 0;
@@ -1050,6 +1150,42 @@ footer li:hover {
 
     /*END HOME CONFIGURATION*/
 
+    /*START SCORES CONFIGURATION*/
+    .scores-container img,
+    .scores-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    }
+
+    .scores-container {
+        grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
+        gap: 1rem;
+    }
+
+    .scores-preview img {
+        width: 100%;
+        height: auto;
+    }
+
+    .scores-preview .preview-s {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .scores-preview .preview-s img {
+        height: auto;
+    }
+
+    .scores-preview .preview-s .ri-close-fill {
+        top: 1rem; 
+        right: 1rem;
+        font-size: 2rem;
+    }
+
+
+    /*END SCORES CONFIGURATION*/
     /*START PIANO CONFIGURATION*/
     .pianoBody .title {
         display: none;
