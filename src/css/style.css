@@ -538,7 +538,6 @@ q {
     flex-direction: column-reverse;
     transition: background-color 0.3s;
     position: absolute;
-    z-index: 1;
 }
 
 .piano__key:hover {
@@ -547,9 +546,9 @@ q {
 
 .key-gray {
     background-color: rgb(188, 188, 186);
-    -webkit-box-shadow: inset 10px 9px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: inset 10px 9px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: inset 10px 9px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: inset 10px 9px 5px 0px rgba(94, 91, 94, 1);
+    -moz-box-shadow: inset 10px 9px 5px 0px rgba(94, 91, 94, 1);
+    box-shadow: inset 10px 9px 5px 0px rgba(94, 91, 94, 1);
 }
 
 .piano__black {
@@ -557,9 +556,10 @@ q {
     background-color: black;
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 100%;
+    left: 65%;
+    width: 71%;
     background-image: url('../../public/assets/images/piano-images/Sostenidas/Sostenida-Suelta.png');
+    z-index: 1;
 }
 
 .piano__black__transparent {
@@ -582,7 +582,7 @@ q {
     text-align: center;
     margin: 0;
     position: relative;
-    top: 90px;
+    top: 80px;
     color: white;
     font-size: 16px;
     font-family: var(--text-title)
@@ -611,19 +611,28 @@ q {
 }
 
 .twoKeys__1 {
-    left: 21%;
+    left: 22.5%;
+    z-index: 2;
+    top: 27%;
 }
 
 .twoKeys__2 {
-    left: 59%;
+    left: 60%;
+    z-index: 2;
+    top: 27%;
 }
 
 .threeKeys__1 {
-    left: 38%;
+    left: 38.8%;
+    top: 27%;
+    position: absolute;
+    z-index: 2;
 }
 
 .threeKeys__2 {
-    left: 75%;
+    left: 76.5%;
+    z-index: 2;
+    top: 27%;
 }
 
 .color-gold {
