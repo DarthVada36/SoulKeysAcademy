@@ -250,8 +250,8 @@ ul{list-style: none;}
   margin-top: 0;
 }
 
-#intro-values p{
-}
+/* #intro-values p{
+} */
 
 #metrics .aboutuscarta{
   background-position: center center;
@@ -335,9 +335,9 @@ https://stackoverflow.com/questions/61640202/css-typewriter-animation-with-borde
   margin: auto;
 }
 
-#our-story{
+/* #our-story{
 
-}
+} */
 
 #our-story .container{
   text-align: center;
