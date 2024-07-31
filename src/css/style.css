@@ -862,6 +862,7 @@ footer li:hover {
         right: 100%;
     }
 }
+
 .work-in-progress__message-title {
     font-family: var(--text-title);
     color: var(--text-primary-color);
@@ -888,9 +889,9 @@ footer li:hover {
 }
 
 @media (max-width: 480px) {
-    .work-in-progress__score {
+    /* .work-in-progress__score {
         font-size: 18px;
-    }
+    } */
 
     .work-in-progress__message-title {
         font-size: 24px;
