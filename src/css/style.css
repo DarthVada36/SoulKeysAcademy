@@ -1270,6 +1270,20 @@ footer li:hover {
         height: 25%;
         left: 5%;
     } 
+
+
+    .game__obstacle {
+        width: 10%;
+        height: 8%;
+    }
+
+    .work-in-progress__message-title {
+        font-size: var(--text-size-xs);
+    }
+
+    .work-in-progress__message-text {
+        font-size: var(--text-size-xxs);
+    }
     }
     /*ENDS WIP responsive adj 480*/
  

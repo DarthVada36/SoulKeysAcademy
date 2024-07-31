@@ -5,7 +5,7 @@ import {burgerMenu} from './main.js';
 // Burger menu
 burgerMenu();
 
-// Función para obtener el valor del parámetro en la URL
+// Función para obtener el valor del parámetro en la URL, para cambiar bg 
 function getParametroURL(parametro) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(parametro);
