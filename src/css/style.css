@@ -383,6 +383,465 @@ q {
     }
 }
 
+/* STARTABOUT US */
+
+
+.h3aboutus{font-size: 2em;}
+p{font-size: 1.25em;}
+ul{list-style: none;}
+
+.color-corporate{
+  color:#9FA0FF
+}
+
+.aboutUs_hero {
+  width: 100%;
+  height: 100%;
+}
+
+.aboutUs_heroContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  margin: 0;
+  justify-content: center;
+}
+
+.aboutUs_main-text {
+  width: 90%;
+  height: 90%;
+  margin: 10;
+  text-align: center;
+}
+
+.aboutus-title {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutus_main-content {
+  background-color: #333;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#aboutushero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  )
+  ,url(public\assets\images\future-aboutus-images\About-us-sax-image.png)
+}
+
+.metrics {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#our-story .aboutuscontainer{
+  text-align: center;
+  padding: 200px 12px;
+}
+
+p {
+    font-weight: 400;
+    transition: all 1s ease-in-out; 
+    &::before {
+        content: attr(data-item);
+        transition: all 1s ease-in-out;
+        color: #8254ff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        overflow: hidden;
+        }
+
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+    }
+}
+
+
+#intro-values{
+  
+  
+  
+  background-color:#BABEBF;
+  color:#6667AB;
+  text-align: center;
+}
+
+#intro-values .aboutuscontainer{
+  padding: 100px 0px;
+  text-align: center;
+}
+
+#intro-values h3{
+  margin-top: 0;
+}
+
+/* #intro-values p{
+} */
+
+/* Timeline */
+
+#timeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url(public\assets\images\future-aboutus-images\big-bang-espacio.avif);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    border: #6667AB;
+    box-shadow: #9FA0FF;
+}
+
+.timeline_story {
+    text-decoration: none;
+    color: var(--pentagram-color);
+    font-size: 24px;
+    font-weight: 400;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+
+    &::before {
+      content: attr(data-item);
+      transition: 0.5s;
+      color: var(--text-secondary-color);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 0;
+      overflow: hidden;
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+}
+
+#metrics .aboutuscarta{
+  background-position: center center;
+  background-size: cover;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 15px;
+}
+
+.aboutuscarta:first-child{
+  background-color:rgb(54, 38, 103);
+}
+
+.aboutuscarta:nth-child(2){
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  )
+  ,url(../../public/assets/images/future-aboutus-images/About-us-sax-image.png);
+}
+
+.aboutuscarta:nth-child(3){
+  background-color: #9FA0FF;
+}
+
+.aboutuscarta:nth-child(4){
+  background-color: #6667AB;
+}
+
+/* FAIL image position on the right */
+.aboutus_main_image {
+  position: relative;
+  top: 10%;
+  bottom: 10%;
+  right: 0;
+  z-index: 1;
+}
+
+
+@keyframes spin1 {
+  0%  {max-width: 0px; border-right: 0px;}
+  1%  {max-width: 0px; border-right: 4px solid  #6667AB;}
+  99% {max-width: 100%; border-right: 4px solid #6667AB;}
+  100% {max-width: 100%; border-right: none}
+}
+/* FAIL insert fluid type effect end*/
+
+.our_story{
+  width: 100%;
+  height: 100%;
+  display: column;
+}
+
+.container__our_story {
+  margin: 10% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100%;
+}
+
+.container{
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* #our-story{
+
+} */
+
+#our-story .container{
+  text-align: center;
+  padding: 200px 12px;
+}
+
+/* OUR VALUES */
+
+.values-card {
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+/* Cards */
+
+#teamcards {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-socials {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+/* .cardlore {
+    text-align:center;
+    position: absolute;
+    left: 100px;
+    width: 250px;
+    height: 350px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: url(public\assets\images\future-aboutus-images\Card-background-Lorena.png);
+    transition:.6s;
+  
+    transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+    box-shadow: 0px 20px 60px rgba(0,0,0, 0.5);
+}
+
+.cardlore:hover {
+    transform: rotatex(0deg);
+    transform: rotatez(0deg);
+    transition:.6s;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+  
+.cardlore img{
+    transform: translateY(15px);
+    width:200px;
+    height:120px;
+} */
+
+.cardanca {
+    /* display: flex;
+    flex-direction: column;
+  text-align:center;
+  justify-content: center; */
+  /* position: absolute;
+  left: 100px;
+  width: 250px;
+  height: 350px; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition:.6s;
+  transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+  box-shadow: 0px 20px 60px rgba(0,0,0, 0.5);
+  background: url(../../public/assets/images/future-aboutus-images/Card-background-Anca.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 15%;
+
+}
+
+.cardanca:hover {
+  transform: rotatex(0deg);
+  transform: rotatez(0deg);
+  transition:.6s;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* .card_image {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    left: -20px;
+} */
+
+.card_box img{
+  transform: translateY(15px);
+  width:200px;
+  height:120px;
+
+}
+
+.teamCard_h3 {
+    font-size:25px;
+    font-family: var(--text-title);
+    color: var(--button-secondary-color);
+    text-shadow: 0 0 2px rgb(255,255,255);
+    transform: translatey(10px);
+
+}
+  
+.teamCard_p {
+    
+    font-family: var(--text-paragraph);
+    color: var(--text-primary-color);
+    text-align:center;
+    width:220px;
+    transform: translatex(12px);
+}
+
+/* .cardjuan {
+    text-align:center;
+    position: absolute;
+    left: 100px;
+    width: 250px;
+    height: 350px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: url(public\assets\images\future-aboutus-images\Card-background-Juan.png);
+    transition:.6s;
+  
+    transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+    box-shadow: 0px 20px 60px rgba(0,0,0, 0.5);
+}
+  
+.cardjuan:hover {
+    transform: rotatex(0deg);
+    transform: rotatez(0deg);
+    transition:.6s;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+  
+.cardjuan img{
+    transform: translateY(15px);
+    width:200px;
+    height:120px;
+}
+
+.cardmoni {
+    text-align:center;
+    position: absolute;
+    left: 100px;
+    width: 250px;
+    height: 350px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: url(public\assets\images\future-aboutus-images\Card-background-Monica.png);
+    transition:.6s;
+  
+    transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+    box-shadow: 0px 20px 60px rgba(0,0,0, 0.5);
+}
+  
+.cardmoni:hover {
+    transform: rotatex(0deg);
+    transform: rotatez(0deg);
+    transition:.6s;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+  
+.cardmoni img{
+    transform: translateY(15px);
+    width:200px;
+    height:120px;
+}
+
+.cardvada {
+    text-align:center;
+    position: absolute;
+    left: 100px;
+    width: 250px;
+    height: 350px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: url(public\assets\images\future-aboutus-images\Card-background-Vada.png);
+    transition:.6s;
+  
+    transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+    box-shadow: 0px 20px 60px rgba(0,0,0, 0.5);
+}
+  
+.cardvada:hover {
+    transform: rotatex(0deg);
+    transform: rotatez(0deg);
+    transition:.6s;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+  
+.cardvada img{
+    transform: translateY(15px);
+    width:200px;
+    height:120px;
+} */
+
+
+/* FIN ABOUT US */
+
+
 /* Instruments (home) */
 .titleInstruments {
     font-size: var(--text-size-l);
