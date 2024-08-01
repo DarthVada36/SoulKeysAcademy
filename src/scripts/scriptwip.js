@@ -75,3 +75,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', control);
     document.addEventListener('touchstart', control, { passive: true }); // Agregar evento touchstart como pasivo
 });
+//ends JS
