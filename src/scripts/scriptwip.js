@@ -32,35 +32,17 @@ switch (instrument) {
             break;
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const note = document.getElementById('note');
-    const obstacle = document.getElementById('obstacle');
-    const scoreElement = document.getElementById('score');
     const game = document.getElementById('game');
 
-    let score = 0;
     let isJumping = false;
-    let isGameOver = false;
     let gravity = 0.9;
     let notePosition = 0;
-    let gameSpeed = 10;
-    let obstaclePosition = 1000;
-
-    function startGame() {
-        score = 0;
-        notePosition = 0;
-        isJumping = false;
-        isGameOver = false;
-        obstaclePosition = 1000;
-
-        document.addEventListener('keydown', control);
-        obstacle.style.right = '-20px';
-        moveObstacle();
-        updateScore();
-    }
 
     function control(e) {
-        if (e.keyCode === 32 && !isJumping) { // Space key
+        if ((e.keyCode === 32 || e.type === 'touchstart') && !isJumping) { // Space key o touchstart
             jump();
         }
     }
@@ -90,35 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 20);
     }
 
-    function moveObstacle() {
-        if (isGameOver) return;
-
-        let timerId = setInterval(() => {
-            if (obstaclePosition < -20) {
-                clearInterval(timerId);
-                score++;
-                obstaclePosition = 1000;
-                moveObstacle();
-            }
-            if (obstaclePosition > 50 && obstaclePosition < 100 && notePosition < 50) {
-                clearInterval(timerId);
-                isGameOver = true;
-                alert('Game Over! Your score is ' + score);
-                document.location.reload();
-            }
-            obstaclePosition -= gameSpeed;
-            obstacle.style.left = obstaclePosition + 'px';
-        }, 20);
-    }
-
-    function updateScore() {
-        setInterval(() => {
-            if (!isGameOver) {
-                score++;
-                scoreElement.innerHTML = 'Score: ' + score;
-            }
-        }, 1000);
-    }
-
-    startGame();
+    document.addEventListener('keydown', control);
+    document.addEventListener('touchstart', control, { passive: true }); // Agregar evento touchstart como pasivo
 });
