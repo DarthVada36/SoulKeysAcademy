@@ -1773,7 +1773,49 @@ footer li:hover {
         padding-left: 10px;
         margin-top: 8px;
         margin-right: 38px;
+    }    
+    /*END NAVBAR CONFIGURATION*/
+
+    /*START HOME CONFIGURATION*/
+    .scrollingContainer {
+        height: 100px;
     }
+
+    .scrollingText {
+        font-size: var(--text-size-l);
+    }
+
+    .heroText {
+        font-size: var(--text-size-s);
+    }
+
+    .heroText__bigText {
+        font-size: var(--text-size-l);
+    }
+
+    .cards {
+        height: 350px;
+        width: auto;
+    }
+
+    .cardIntro {
+    height: 250px;
+    }
+
+    .titleInstruments {
+        font-size: var(--text-size-m);
+    }
+
+    .cardInstruments {
+        height: 150px;
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .instrumentName {
+        font-size: var(--text-size-s);
+    }
+    /*END HOME CONFIGURATION*/
 
     .about-us__container {
         flex-direction: column;
@@ -1817,54 +1859,8 @@ footer li:hover {
     .about-us__values-card:nth-of-type(4),
     .about-us__values-card:nth-of-type(5) {
         grid-column: span 1;
-
+    }
     
-    /*END NAVBAR CONFIGURATION*/
-
-    /*START HOME CONFIGURATION*/
-    .scrollingContainer {
-        height: 100px;
-    }
-
-    .scrollingText {
-        font-size: var(--text-size-l);
-    }
-
-    .heroText {
-        font-size: var(--text-size-s);
-    }
-
-    .heroText__bigText {
-        font-size: var(--text-size-l);
-    }
-
-    .cards {
-        height: 350px;
-        width: auto;
-    }
-
-    .cardIntro {
-    height: 250px;
-    }
-
-    .titleInstruments {
-        font-size: var(--text-size-m);
-    }
-
-    .cardInstruments {
-        height: 150px;
-        width: 150px;
-        margin-bottom: 10px;
-    }
-
-    .instrumentName {
-        font-size: var(--text-size-s);
-    }
-
-    /*END HOME CONFIGURATION*/
-
-    /* WIP - Responsive adjustments 768*/
-        @media (max-width: 768px) {
     .work-in-progress {
         padding: 15%;
     }
@@ -1900,43 +1896,6 @@ footer li:hover {
         margin-left: 0;
         text-align: center;
     }
-    }
-    /*ends WIP responsive adj 768*/
-
-    /*WIP responsive adj 480*/
-    
-    @media (max-width: 480px) {
-    .work-in-progress__game {
-        margin-bottom: 3%;
-    }
-
-    .game {
-        height: 25vh;
-    }
-
-    .game__note {
-        width: 30%;
-        height: 30%;
-        left: 10%;
-    } 
-
-
-    .game__obstacle {
-        width: 10%;
-        height: 10%;
-    }
-
-    .work-in-progress__message-title {
-        font-size: var(--text-size-xs);
-    }
-
-    .work-in-progress__message-text {
-        font-size: var(--text-size-xxs);
-    }
-
-    }
-    /*ENDS WIP responsive adj 480*/
- 
     /*START SCORES CONFIGURATION*/
     .scores-container img,
     .scores-preview img {
@@ -2014,6 +1973,39 @@ footer li:hover {
         font-size: var(--text-size-xs);
     }
 }
+
+    /*WIP responsive adj 480*/
+    
+@media (max-width: 480px) {
+    .work-in-progress__game {
+        margin-bottom: 3%;
+    }
+
+    .game {
+        height: 25vh;
+    }
+
+    .game__note {
+        width: 30%;
+        height: 30%;
+        left: 10%;
+    } 
+
+
+    .game__obstacle {
+        width: 10%;
+        height: 10%;
+    }
+
+    .work-in-progress__message-title {
+        font-size: var(--text-size-xs);
+    }
+
+    .work-in-progress__message-text {
+        font-size: var(--text-size-xxs);
+    }
+}
+/*ENDS WIP responsive adj 480*/
 
 @media (max-width: 600px) {
     .instrument-options {
