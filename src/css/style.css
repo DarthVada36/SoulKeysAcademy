@@ -35,8 +35,7 @@ body {
     background-color: var(--main-bg-color);
     color: var(--text-primary-color);
     font-size: var(--text-size-xs);
-    /* max-width: 100vw; */
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 /* Header // NavBar */
@@ -186,22 +185,6 @@ section {
     top: 0;
     left: 0;
 }
-
-/* .ripple {
-    position: absolute;
-    border-radius: 50%;
-    background: linear-gradient(90deg, rgba(40,40,45,0.2) 0%, rgba(102,103,171,0.2) 25%, rgba(98,97,126,0.2) 50%, rgba(186,190,191,0.2) 75%, rgba(237,241,255,0.2) 100%);
-    transform: scale(0);
-    animation: ripple-animation 1s linear;
-    transition: background 0.8s;
-}
-
-@keyframes ripple-animation {
-    to {
-        transform: scale(3);
-        opacity: 0;
-    }
-} */
 
 .heroTexts {
     margin: 0 10%;
@@ -947,100 +930,88 @@ q {
 }
 
 
-/* Footer */
-footer {
-    max-width: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: var(--text-primary-color);
-    height: 300px;
-    padding: 20px;
-    font-size: var(--text-size-s);
-    color: var(--main-bg-color);
-}
+/*BEGIN WIP STYLES*/
 
-footer div {
+.work-in-progress {
+    /*flex-grow: 1;*/
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    height: 90%;
-    max-width: 100%;
-}
-
-.footerLogo img {
+    flex-direction: column;
+    padding: 2%;
+    width: 100%;
     height: 100%;
 }
 
-footer ul p {
-    font-weight: bold;
+.work-in-progress__content {
+    max-width: 750px;
+    width: 100%;
+} 
+
+.work-in-progress__game {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    margin-bottom: 20 px;
+    margin-left: 1%;
 }
 
-footer li {
-    list-style: none;
-    font-size: var(--text-size-xs);
+.game {
+    width: 100%;
+    height: 40vh;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
 }
 
-footer a {
-    text-decoration-line: none;
-    color: var(--main-bg-color);
+.game__note {
+    width: 15%;
+    height: 15%;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    transition: bottom 0.4s;
 }
 
-footer li:hover {
-    text-decoration-line: underline;
+.game__note img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-@media (768px <= width < 950px) {
-    .heroText__bigText {
-        font-size: var(--text-size-xl);
-    }
+.game__obstacle {
+    width: 5%;
+    height: 13%;
+    background-color: grey;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: moveObstacle 3s linear infinite;
 }
 
-@media (width < 768px) {
-    .scrollingContainer {
-        height: 100px;
+@keyframes moveObstacle {
+    from {
+        right: 0;
     }
-
-    .scrollingText {
-        font-size: var(--text-size-l);
-    }
-
-    .heroText {
-        font-size: var(--text-size-s);
-    }
-
-    .heroText__bigText {
-        font-size: var(--text-size-l);
-    }
-
-    .cards {
-        height: 350px;
-        width: auto;
-    }
-
-    .cardIntro {
-    height: 250px;
-    }
-
-    .titleInstruments {
-        font-size: var(--text-size-m);
-    }
-
-    .cardInstruments {
-        height: 150px;
-        width: 150px;
-        margin-bottom: 10px;
-    }
-
-    .instrumentName {
-        font-size: var(--text-size-s);
+    to {
+        right: 100%;
     }
 }
 
+.work-in-progress__message-title {
+    font-family: var(--text-title);
+    color: var(--text-primary-color);
+    font-size: var(--text-size-m);
+    
+}
 
-
-
+.work-in-progress__message-text {
+    font-family: var(--text-title);
+    font-size: var(--text-size-s);
+    color: var(--text-secondary-color);
+    margin-left: 20%;
+}
+/* ENDING WIP STYLES*/
 
 /* ESTILOS FEATURE-PIANO PAGE */
 
@@ -1084,20 +1055,12 @@ footer li:hover {
 #framePiano{
     padding-top: 0;
     margin: 30px 5%;
-    /* width: 100%; */
 }
 
 #piano {
-    /* background-image: url(../../public/assets/images/piano-images/pianomarco.png); */
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* margin: 20px; */
-    /* background-size: 90%;
-    background-position: center;
-    background-repeat: no-repeat; */
-    /* padding: 70px 0; */
-    /* background-position: calc(50% - 53px); */
     width: 100%;
     height: 100%;
     position: relative;
@@ -1109,14 +1072,13 @@ footer li:hover {
 
 .piano__key {
     top: 25.2%;
-    height: 48%;
+    height: 60%;
     background-color: white;
     border: 1px solid gray;
     display: flex;
     flex-direction: column-reverse;
     transition: background-color 0.3s;
     position: absolute;
-    z-index: 1;
 }
 
 .piano__key:hover {
@@ -1125,19 +1087,20 @@ footer li:hover {
 
 .key-gray {
     background-color: rgb(188, 188, 186);
-    -webkit-box-shadow: inset 10px 9px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: inset 10px 9px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: inset 10px 9px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: inset 10px 9px 5px 0px rgba(94, 91, 94, 1);
+    -moz-box-shadow: inset 10px 9px 5px 0px rgba(94, 91, 94, 1);
+    box-shadow: inset 10px 9px 5px 0px rgba(94, 91, 94, 1);
 }
 
 .piano__black {
-    height: 35%;
+    height: 40%;
     background-color: black;
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 100%;
+    left: 65%;
+    width: 71%;
     background-image: url('../../public/assets/images/piano-images/Sostenidas/Sostenida-Suelta.png');
+    z-index: 1;
 }
 
 .piano__black__transparent {
@@ -1153,16 +1116,64 @@ footer li:hover {
 .piano__button {
     font-family: var(--text-paragraph);
     font-size: 14px;
+    padding: 5px;
 }
 
 .piano__letter {
     text-align: center;
     margin: 0;
     position: relative;
-    top: 90px;
+    top: 80px;
     color: white;
     font-size: 16px;
     font-family: var(--text-title)
+}
+
+.piano__letter__black__container {
+    display: flex;
+    position: absolute;
+    top: 13%;
+    color: white;
+    font-size: 16px;
+    font-family: var(--text-title);
+    
+}
+
+.twoKeys {
+    width: 7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.threeKeys {
+    width: 12%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.twoKeys__1 {
+    left: 22.5%;
+    z-index: 2;
+    top: 27%;
+}
+
+.twoKeys__2 {
+    left: 60%;
+    z-index: 2;
+    top: 27%;
+}
+
+.threeKeys__1 {
+    left: 38.8%;
+    top: 27%;
+    position: absolute;
+    z-index: 2;
+}
+
+.threeKeys__2 {
+    left: 76.5%;
+    z-index: 2;
+    top: 27%;
 }
 
 .color-gold {
@@ -1170,7 +1181,6 @@ footer li:hover {
 }
 
 /*ESTILOS MODAL INICIAL Y POR SI ACASO MODAL PARA OFRECER PLANES*/
-
 .modal {
     display: none;
     /* Oculto por defecto */
@@ -1195,7 +1205,6 @@ footer li:hover {
     align-items: center;
     /* Centrar verticalmente */
 }
-
 
 .modal__content {
     background-color: #9FA0FF;
@@ -1268,7 +1277,6 @@ footer li:hover {
     display: none;
     
 }
-
 
 /*ESTO ES UNA CLASE PARA ESCONDER EN ESTE CASO IDS */
 .hide {
@@ -1544,6 +1552,107 @@ input::placeholder {
     font-family: var(--text-paragraph);
 }
 
+/* .......... END FEATURE-CONTACT PAGE.......... */
+
+/* .......... START FEATURE-SCORES.......... */
+
+.title-scores {
+    font-size: var(--text-size-l);
+}
+
+.titleScores__text1 {
+    width: 9.9ch;
+}
+
+.titleScores__text2 {
+    width: 14.9ch;
+}
+
+.container-s{
+    max-width: 100%;
+    margin: 0;
+    padding: 30px;
+    justify-items: center;
+}
+
+.container-s .title-scores{
+    font-size: .6rem;
+    color:#BABEBF;
+    margin-bottom: 6rem;
+    margin-left: 36px;
+    text-align: center;
+}
+
+.scores-container{
+    justify-items: center;
+    align-items: center;
+}
+
+.scores-container img {
+    max-width: 100%; /* Ajusta el ancho de las imágenes al 100% del contenedor padre */
+}
+
+.container-s .scores-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
+}
+
+.container-s .scores-container .score{
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    cursor: pointer;
+}
+
+.container-s .scores-container .score:hover{
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+.scores-preview{
+    position: fixed;
+    top:0; left:0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.scores-preview .preview-s{
+    display: none;
+    padding: 7rem;
+    text-align: center;
+    background: transparent;
+    position: relative;
+    margin: 1rem;
+    width: 40rem;
+}
+
+.scores-preview .preview-s.active{
+    display: inline-block;
+    margin-top: 0%;
+}
+
+.scores-preview .preview-s img{
+    height: 30rem;
+}
+
+.scores-preview .preview-s .ri-close-fill{
+    position: absolute;
+    top: 7.5rem; right: 10rem;
+    cursor: pointer;
+    color: #28282D;
+    font-size: 2rem;
+}
+
+.scores-preview .preview-s .ri-close-fill:hover{
+    transform:scale(1.2);
+    color: #6667AB;
+}
+/* .......... END FEATURE-CONTACT SCORES.......... */
+
 /* FOOTER */
 footer {
     max-width: 100%;
@@ -1589,14 +1698,7 @@ footer li:hover {
     text-decoration-line: underline;
 }
 
-/* Media Queries */
-@media (max-width: 600px) {
-    .instrument-options {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Responsive adjustments */
+/* RESPONSIVE DESIGN */
 @media (768px <= width < 950px) {
     .heroText__bigText {
         font-size: var(--text-size-xl);
@@ -1761,9 +1863,124 @@ footer li:hover {
 
     /*END HOME CONFIGURATION*/
 
+    /* WIP - Responsive adjustments 768*/
+        @media (max-width: 768px) {
+    .work-in-progress {
+        padding: 15%;
+    }
+
+    .work-in-progress__game {
+        width: 100%;
+        margin-bottom: 2%;
+        margin-left: 0;
+    }
+
+    .game {
+        height: 30vh;
+    }
+
+    .game__note {
+        width: 25%;
+        height: 25%;
+        left: 5%;
+    }
+
+    .game__obstacle {
+        width: 10%;
+        height: 15%;
+    }
+
+    .work-in-progress__message-title {
+        font-size: var(--text-size-s);
+        text-align: center;
+    }
+
+    .work-in-progress__message-text {
+        font-size: var(--text-size-xs);
+        margin-left: 0;
+        text-align: center;
+    }
+    }
+    /*ends WIP responsive adj 768*/
+
+    /*WIP responsive adj 480*/
+    
+    @media (max-width: 480px) {
+    .work-in-progress__game {
+        margin-bottom: 3%;
+    }
+
+    .game {
+        height: 25vh;
+    }
+
+    .game__note {
+        width: 30%;
+        height: 30%;
+        left: 10%;
+    } 
+
+
+    .game__obstacle {
+        width: 10%;
+        height: 10%;
+    }
+
+    .work-in-progress__message-title {
+        font-size: var(--text-size-xs);
+    }
+
+    .work-in-progress__message-text {
+        font-size: var(--text-size-xxs);
+    }
+
+    }
+    /*ENDS WIP responsive adj 480*/
+ 
+    /*START SCORES CONFIGURATION*/
+    .scores-container img,
+    .scores-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    }
+
+    .scores-container {
+        grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
+        gap: 1rem;
+    }
+
+    .scores-preview img {
+        width: 100%;
+        height: auto;
+    }
+
+    .scores-preview .preview-s {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .scores-preview .preview-s img {
+        height: auto;
+        margin-top: 76px;
+    }
+
+    .scores-preview .preview-s .ri-close-fill {
+        top: 6rem; 
+        right: 1.5rem;
+        font-size: 2rem;
+    }
+
+
+    /*END SCORES CONFIGURATION*/
     /*START PIANO CONFIGURATION*/
     .pianoBody .title {
         display: none;
+    }
+
+    .piano__button {
+        padding: 0;
     }
     /*END PIANO CONFIGURATION*/
 
@@ -1798,4 +2015,55 @@ footer li:hover {
     }
 }
 
+@media (max-width: 600px) {
+    .instrument-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Rotar el piano para dispositivos móviles y tablets */
+@media (orientation: portrait) {
+    #piano, .soundSelector, .title__piano {
+        display: none;
+    }
+
+    #framePiano {
+        height: calc(100vh - 350px - var(--height-header));
+    }
+
+    .pianoBody::after {
+        content: "Por favor, gira tu dispositivo para usar el piano.";
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        font-size: 18px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1000;
+        text-align: center;
+    }
+}
+
+@media (orientation: landscape) {
+    #framePiano {
+        display: flex;
+    }
+
+    .pianoBody::after {
+        display: none;
+    }
+
+    .soundSelector {
+        margin: 0;
+    }
+}
+
+/* ESTILOS PARA ADAPATAR EL MODAL A POCOS PIXELES */
+@media (max-width:455px) {
+    #tipBach {
+        width: 300px;
+        height: 290px;
+    }
 }

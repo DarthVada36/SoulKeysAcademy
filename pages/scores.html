@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Scores</title>
     <link rel="stylesheet" href="../src/css/style.css">
     <!--.....Box icons......-->
     <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <!--....Remix icons.....-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+        <!--....Score js.....-->
+
 </head>
 <body>
     <header>
-        <a href="#"><img class="logo" src="../public/assets/images/Logotipo-academy-white-nav-notext.svg" alt="Logo Soul Keys Academy"></a>
+        <a href="../index.html"><img class="logo" src="../public/assets/images/Logotipo-academy-white-nav-notext.svg" alt="Logo Soul Keys Academy"></a>
         <button class="open-menu" id="Abrir"><i class="ri-menu-line"></i></button>
         
     <nav class="nav" id="nav">
@@ -24,28 +26,101 @@
             <div></div>
         </div>
         <ul class="menu">
-            <li id="noteAbout"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="#about">Nuestra Academia</a></li>
-            <li id="noteInstruments"><img class="imgNote" src="../public/assets/images/nota-musical-blanca.png" alt="nota musical"><a href="#instruments">Instrumentos</a></li>
-            <li id="noteScores"><img class="imgNote" src="../public/assets/images/nota-musical2-blanca.png" alt="nota musical"><a href="./pages/scores.html">&nbspPartituras</a></li>
-            <li id="noteContact"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="./pages/contact.html">Contacto</a></li>
+            <li id="noteAbout"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="../pages/aboutus.html">Nuestra Academia</a></li>
+            <li id="noteInstruments"><img class="imgNote" src="../public/assets/images/nota-musical-blanca.png" alt="nota musical"><a href="../pages/piano.html">Instrumentos</a></li>
+            <li id="noteScores"><img class="imgNote" src="../public/assets/images/nota-musical2-blanca.png" alt="nota musical"><a href="#">&nbspPartituras</a></li>
+            <li id="noteContact"><img class="imgNote" src="../public/assets/images/nota-musical-blanca2.png" alt="nota musical"><a href="../pages/contact.html">Contacto</a></li>
         </ul>
     </nav>
 </header>
+    <main>
+        <section class="scores">
+            <div class="container-s">
+                <div class="title-scores title">
+                    <p class="titleInstruments titleScores__text1 typingText">
+                        <span>Partituras</span>
+                    </p>
+                    <p class="titleInstruments titleScores__text2 typingText">
+                        Todos los niveles
+                    </p>
+                </div>
+                <div class="scores-container">
+                    <div class="score" data-name="s-1">
+                        <img src="../public/assets/images/Fur Elise.png" alt="s1">
+                    </div>
+
+                    <div class="score" data-name="s-2">
+                        <img src="../public/assets/images/Joy.png" alt="s2">
+                    </div>
+
+                    <div class="score" data-name="s-3">
+                        <img src="../public/assets/images/Sonata.png" alt="s3">
+                    </div>
+
+                    <div class="score" data-name="s-4">
+                        <img src="../public/assets/images/Pokemon.png" alt="s4">
+                    </div>
+
+                    <div class="score" data-name="s-5">
+                        <img src="../public/assets/images/The hobbit.png" alt="s5">
+                    </div>
+
+                    <div class="score" data-name="s-6">
+                        <img src="../public/assets/images/Imperial.png" alt="s6">
+                    </div>
+                </div>
+            </div>
+            <div class="scores-preview">
+                <div class="preview-s" data-target="s-1">
+                    <i class="ri-close-fill"></i>
+                    <img src="../public/assets/images/partituras/LudwigVanBeethoven-FürElise-AMinor-1.png" alt="furelise">
+                </div>
+
+                <div class="preview-s" data-target="s-2">
+                    <i class="ri-close-fill"></i>
+                    <img src="../public/assets/images/partituras/Bundleo Joy-CMajor-1.png" alt="2">
+                </div>
+
+
+                <div class="preview-s" data-target="s-3">
+                    <i class="ri-close-fill"></i>
+                    <img src="../public/assets/images/partituras/MoonlightSonata-EMinor-1.png" alt="3">
+                </div>
+
+
+                <div class="preview-s" data-target="s-4">
+                    <i class="ri-close-fill"></i>
+                    <img src="../public/assets/images/partituras/HalloftheMountai King-AMinor-1.png" alt="4">
+                </div>
+
+
+                <div class="preview-s" data-target="s-5">
+                    <i class="ri-close-fill"></i>
+                    <img src="../public/assets/images/partituras/HalloftheMountai King-AMinor-1.png" alt="5">
+                </div>
+
+                <div class="preview-s" data-target="s-6">
+                    <i class="ri-close-fill"></i>
+                    <img src="../public/assets/images/partituras/StarWars-StarWars-CMajor-1.png" alt="6">
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
         <div>
             <div class="footerLogo">
-                <img src="./public/assets/images/Logotipo-academy-black.svg" alt="Logo Soul Keys Academy">
+                <img src="../public/assets/images/Logotipo-academy-black.svg" alt="Logo Soul Keys Academy">
             </div>
             <ul class="footerMenu">
                 <p>Nuestra Academia</p>
-                <li><a href="#about">Acerca de nosotros</a></li>
-                <li><a href="./pages/aboutus.html">Nuestra historia</a></li>
-                <li><a href="#instruments">Instrumentos</a></li>
-                <li><a href="./pages/scores.html">Partituras</a></li>
+                <li><a href="../pages/aboutus.html">Acerca de nosotros</a></li>
+                <li><a href="../pages/aboutus.html">Nuestra historia</a></li>
+                <li><a href="../pages/planes.html">Instrumentos</a></li>
+                <li><a href="#">Partituras</a></li>
             </ul>
             <ul class="footerContact">
                 <p>Conecta</p>
-                <li><a href="./pages/contact.html">Escríbenos</a></li>
+                <li><a href="../pages/contact.html">Escríbenos</a></li>
                 <li><a href="https://github.com/DarthVada36/SoulKeysAcademy" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                 <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                 <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
@@ -53,6 +128,7 @@
         </div>
     <p>&copy; 2024 Soul Keys Academy. All rights reserved. Privacy Policy.</p>
     </footer>
-    <script src="./src/scripts/main.js"></script>
+    <script type="module" src="../src/scripts/scores.js" defer></script>
+    <script type="module" src="../src/scripts/main.js"></script>
 </body>
 </html>
